@@ -28,7 +28,7 @@ jobs:
         run: npx --yes markdownlint-cli2@0.24.0 "**/*.md"
 
   node:
-    name: Node.js checks
+    name: Node.js checks and dependency audit
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
@@ -59,7 +59,10 @@ jobs:
             echo "Commit package-lock.json before enabling CI installs." >&2
             exit 1
           fi
-          npm ci --no-audit --no-fund
+          npm ci --no-fund
+      - name: Audit dependencies
+        if: steps.detect.outputs.present == 'true'
+        run: npm audit --audit-level=high
       - name: Run available project checks
         if: steps.detect.outputs.present == 'true'
         run: |
