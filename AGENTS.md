@@ -24,11 +24,20 @@ This repository is being prepared as a website project. Do not assume a framewor
 
 ## Agent workflow
 - Read relevant skill instructions before applying a specialist workflow.
-- Use UI/UX Pro Max for design-system and UX guidance; Taste for art direction and visual QA; GSAP skills for advanced GSAP implementation; 21st.dev and Watermelon MCPs for source-backed component discovery.
+- Use Vercel React best practices when implementing React; use web-design-guidelines for UX, accessibility and visual review.
+- Use UI/UX Pro Max for design-system and UX guidance; Taste for art direction and visual QA; GSAP skills for advanced GSAP implementation; 21st.dev and Watermelon MCPs for source-backed component discovery; Context7 for current library documentation.
 - Inspect a component's source, dependencies, accessibility, license, and responsive behavior before adding it.
 - Adapt imported components to project tokens. Do not leave demo colors or unrelated dependencies in production.
 - Run type checks, lint, tests, and a production build when those scripts exist.
+- Keep the GitHub Actions workflows green. Do not remove a check merely to make a pull request pass; fix the cause or document a justified false positive.
+- Use Playwright for browser behavior, axe/Pa11y for accessibility, and Lighthouse for performance and SEO when the app exists.
 - Use browser-based visual checks for important responsive states.
+
+## Repository automation
+- Keep CI workflows least-privileged; grant only the permissions a job needs.
+- Pin external GitHub Actions to reviewed major versions and allow Dependabot to keep them updated.
+- Never introduce AI security scans, hosted LLM calls, or services that can incur usage charges.
+- Keep manual audits scoped to public URLs; never pass secrets or authenticated URLs as workflow inputs.
 
 ## Security
 - Never commit API keys, tokens, passwords, customer data, or environment files.
