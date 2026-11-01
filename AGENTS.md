@@ -38,7 +38,6 @@ This repository is being prepared as a website project. Do not assume a framewor
 
 ## Agent workflow
 
-
 - Read relevant skill instructions before applying a specialist workflow.
 - Use Vercel's `react-best-practices` skill when implementing React and `web-design-guidelines` for UX, accessibility, and visual review.
 - Use UI/UX Pro Max for design-system and UX guidance; Taste for art direction and visual QA; GSAP skills for advanced GSAP implementation; 21st.dev and Watermelon MCPs for source-backed component discovery; Context7 for current library documentation when available.
@@ -48,7 +47,6 @@ This repository is being prepared as a website project. Do not assume a framewor
 - Use browser-based visual checks for important responsive states.
 
 ## Repository automation
-
 
 - Keep CI workflows least-privileged; grant only the permissions a job needs.
 - Pin external GitHub Actions to reviewed major versions and allow Dependabot to keep them updated.
