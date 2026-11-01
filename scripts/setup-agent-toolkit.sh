@@ -4,6 +4,9 @@ set -euo pipefail
 # Run from the repository root. Installs skills into the detected coding agent.
 # Frontend packages are intentionally not installed before the app scaffold exists.
 
+echo "Installing Motion for React documentation and agent skills..."
+npx motion-ai
+
 echo "Installing GSAP skills..."
 npx skills add https://github.com/greensock/gsap-skills
 
