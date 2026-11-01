@@ -16,7 +16,9 @@ bash scripts/setup-agent-toolkit.sh
 
 Project MCP servers are configured in `.mcp.json`. 21st.dev is optional and has a limited free allowance; set `API_KEY_21ST` only if you choose to use it. Penpot's optional remote MCP uses `PENPOT_MCP_URL`; keep the URL and its private key out of Git. Lunacy's MCP entry is copied from the running desktop app and merged into `.mcp.json`.
 
-See [docs/DEVELOPMENT-TOOLKIT.md](docs/DEVELOPMENT-TOOLKIT.md) for setup, free-tier limits, local Strix security testing and component sources. See [docs/DESIGN-TOOLS.md](docs/DESIGN-TOOLS.md) for Penpot and Lunacy MCP setup.
+See [docs/DEVELOPMENT-TOOLKIT.md](docs/DEVELOPMENT-TOOLKIT.md) for setup, free-tier limits, local Strix security testing and component sources. See [docs/DESIGN-TOOLS.md](docs/DESIGN-TOOLS.md) for Penpot and Lunacy MCP setup, and [docs/MCP-SECURITY.md](docs/MCP-SECURITY.md) for tool trust boundaries, least privilege and credential handling.
+
+Run `python scripts/validate_repo.py` to validate MCP configuration, environment-variable declarations, Git ignore rules and local documentation links. GitHub Actions runs this check and validates the toolkit shell script on pushes and pull requests.
 
 Coding agents should read [AGENTS.md](AGENTS.md) before making changes.
 
