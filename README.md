@@ -10,8 +10,8 @@ This project has a strict zero-spend requirement. Use free/open-source tools, fr
 
 - Agent skills: Motion, GSAP, Taste, Vercel React best practices, Vercel web design guidelines, 21st.dev and UI/UX Pro Max.
 - MCP configuration: shadcn, Watermelon UI, optional 21st.dev and Context7.
-- Quality: Markdown lint and optional Node.js lint/typecheck/test/build jobs.
-- Security: CodeQL for JavaScript/TypeScript when present, Gitleaks history scans and dependency review.
+- Quality: Markdown lint and optional Node.js dependency audit, lint, typecheck, test and build jobs.
+- Security: CodeQL for JavaScript/TypeScript when present, Gitleaks history scans and npm audit when a Node.js app exists.
 - Browser and UX: conditional Playwright tests, manual Pa11y accessibility audit and manual Lighthouse audit.
 - Deployment: manual GitHub Pages workflow for a built static site in `site/`.
 - Dependency maintenance: weekly Dependabot updates for npm and GitHub Actions.
