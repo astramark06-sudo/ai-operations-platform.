@@ -76,7 +76,7 @@ The repository contains GitHub Actions workflows for:
 |---|---|---|---|
 | Quality checks | Push, pull request, manual | Markdown lint; optional npm lint, typecheck, test and build scripts | Markdown check runs now; Node checks wait for a package manifest and lockfile |
 | CodeQL | Push, pull request, weekly schedule | Static security analysis for JavaScript/TypeScript | Skips until JS/TS source files exist |
-| Dependency review | Pull request | Flags newly introduced vulnerable dependencies at high severity or above | Runs when a dependency-changing pull request is opened |
+| npm audit | Push, pull request, manual | Audits locked npm dependencies and fails on high-severity vulnerabilities | Runs when an npm package manifest and lockfile exist |
 | Secret scan | Push, pull request, weekly schedule | Gitleaks scans Git history for accidentally committed credentials | Runs now |
 | Browser tests | Push, pull request, manual | Playwright Chromium tests | Skips until package manifest, lockfile and Playwright config exist |
 | Accessibility audit | Manual | Pa11y CI audit against a supplied public URL | Runs when a target URL is provided |
@@ -101,7 +101,7 @@ When the website is ready, open **Settings → Pages** and set the build/deploym
 
 ### Dependency updates
 
-Dependabot is configured to check npm dependencies and GitHub Actions weekly. It will not create npm update pull requests until an npm project exists.
+Dependabot is configured to check npm dependencies and GitHub Actions weekly. It will not create npm update pull requests until an npm project exists. The Node.js CI job also runs `npm audit --audit-level=high` once a package manifest and lockfile are present.
 
 ## 5. Strix without API spending
 
