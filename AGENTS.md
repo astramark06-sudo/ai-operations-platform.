@@ -3,14 +3,23 @@
 ## Project state
 This repository is being prepared as a website project. Do not assume a framework, package manager, or application structure until the project scaffold is selected and committed.
 
+## Zero-cost requirement
+- Do not add paid services, subscriptions, API-credit dependencies, paid templates, or paid component licenses.
+- Prefer free and open-source tools, local execution, and free tiers with explicit usage limits.
+- Never trigger paid model APIs or hosted scans. Ask before introducing any service that could incur charges.
+- Use public/free React Bits components only; do not depend on React Bits Pro.
+- For 21st.dev, stay within its free allowance; component retrieval is limited on the free account.
+- Strix must use a local Ollama model by default, not a paid LLM API.
+- Do not run cloud CI security scans that require paid inference.
+
 ## Design and implementation
 - Start each page or feature with a clear information hierarchy, responsive layout plan, and accessible interaction model.
 - Build a coherent design system first: semantic color tokens, type scale, spacing, radii, elevation, and motion rules.
 - Prefer custom, purposeful composition over generic template layouts.
 - Use semantic HTML, keyboard-accessible controls, visible focus states, reduced-motion support, and responsive behavior.
 - Keep components composable and source-owned. Add only dependencies required by the selected implementation.
-- Do not combine multiple component libraries for the same primitive. Prefer shadcn/ui as the base primitive layer; use React Bits, Watermelon UI, Motion Primitives, and 21st.dev as selective source libraries.
-- Use GSAP for complex timelines and scroll choreography. Use Motion (the current Framer Motion successor) for React component transitions and layout animation. Avoid running two animation engines on the same element.
+- Prefer shadcn/ui as the base primitive layer; use React Bits, Watermelon UI, Motion Primitives, and 21st.dev as selective source libraries.
+- Use GSAP for complex timelines and scroll choreography. Use Motion for React component transitions and layout animation. Avoid running two animation engines on the same element.
 - Use Haikei for bespoke SVG backgrounds when a page needs them; commit exported assets rather than relying on a runtime generator.
 
 ## Agent workflow
@@ -23,9 +32,8 @@ This repository is being prepared as a website project. Do not assume a framewor
 
 ## Security
 - Never commit API keys, tokens, passwords, customer data, or environment files.
-- Use GitHub Actions Secrets for CI credentials.
-- Run Strix only against this repository or targets the owner has explicitly authorized. Do not add live production URLs to automated scans without explicit scope approval.
-- Treat security findings as actionable evidence; verify affected code and retest fixes.
+- Run Strix only against this repository or targets the owner has explicitly authorized.
+- Treat security findings as actionable evidence; verify the affected code and retest fixes.
 
 ## Source-of-truth rule
 The repository's design tokens and existing components take precedence over imported library defaults. Prefer editing a copied component over introducing a second competing design system.
