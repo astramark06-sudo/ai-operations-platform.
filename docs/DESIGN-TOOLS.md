@@ -12,7 +12,7 @@ Penpot is the preferred open-source design source. Its MCP integration can inspe
 
 1. Open Penpot and go to **Your account → Integrations → MCP Server**.
 2. Enable the MCP server. Generate an MCP key if Penpot asks for one.
-3. Copy the complete server URL shown by Penpot. The URL includes the user token; treat the entire URL as a password.
+3. Copy the complete server URL shown by Penpot. The current remote form is `https://<your-penpot-domain>/mcp/stream?userToken=...`. The URL includes the user token; treat the entire URL as a password.
 4. Set the `PENPOT_MCP_URL` environment variable to that exact URL before launching the MCP client. The project-level `.mcp.json` already contains the optional `penpot` entry.
 5. Restart or reload the MCP client and connect to the active Penpot file.
 
@@ -36,12 +36,12 @@ Remote MCP availability depends on the Penpot deployment/account. If the Integra
 
 ### Local MCP server
 
-Requirements: Node.js 20 or later, a local browser, and a machine that can run Penpot and the MCP process.
+Requirements: Node.js 20 or later (the current documentation reports testing with Node.js 22), a local browser, and a machine that can run Penpot and the MCP process.
 
 1. Start Penpot's local MCP package in a terminal and keep it running:
 
    ```bash
-   npx -y @penpot/mcp@latest
+   npx -y @penpot/mcp@stable
    ```
 
 2. Open a Penpot design file in the browser.
@@ -49,7 +49,7 @@ Requirements: Node.js 20 or later, a local browser, and a machine that can run P
 4. Run the Penpot MCP plugin and select **Connect to MCP server**. Keep the plugin UI open while the agent is using it.
 5. Set `PENPOT_MCP_URL=http://localhost:4401/mcp` in the environment used to launch the MCP client.
 
-The local server's default MCP endpoint is `http://localhost:4401/mcp`. If the browser blocks local network access, allow the connection for Penpot or use a browser that permits the local connection. Start with a read-only request, such as listing pages or reading the selected frame, before asking the agent to edit a design.
+The local server's default Streamable HTTP MCP endpoint is `http://localhost:4401/mcp`; the plugin manifest is served at `http://localhost:4400/manifest.json`. The server defaults to localhost binding. If the browser blocks local network access, allow the connection for Penpot or use a browser that permits the local connection. Keep the Penpot plugin UI open while using MCP. Penpot MCP acts on the currently focused page in the active Penpot tab, so verify the file, tab and page before every operation. Start with read-only requests, such as listing pages or reading the selected frame, before using edit-capable tools.
 
 Official references:
 - [Penpot MCP documentation](https://help.penpot.app/mcp/)
