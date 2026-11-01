@@ -28,7 +28,7 @@ This repository uses optional MCP servers to connect coding agents to design too
 | Penpot | Preferred design source. Inspect only the user-selected file and currently focused page. Begin with list/inspect/analyze operations; do not edit the source design unless asked. |
 | Lunacy | Local-only optional integration. Use the exact server entry copied from the running desktop app; never guess its port or command. |
 
-The 21st.dev limit is documented at https://docs.21st.dev/mcp. Penpot's remote/local transport and focused-page behavior are documented at https://help.penpot.app/mcp/. Lunacy's local integration is documented at https://lunacy.docs.icons8.com/mcp/.
+The 21st.dev limit is documented at [21st.dev MCP docs](https://docs.21st.dev/mcp). Penpot's remote/local transport and focused-page behavior are documented at [Penpot MCP docs](https://help.penpot.app/mcp/). Lunacy's local integration is documented at [Lunacy MCP docs](https://lunacy.docs.icons8.com/mcp/).
 
 ## Supply-chain and runtime controls
 

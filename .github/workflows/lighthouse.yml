@@ -1,0 +1,53 @@
+name: Lighthouse audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Public page URL to audit (HTTP or HTTPS)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  lighthouse:
+    name: Measure performance, accessibility and SEO
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Validate target URL
+        env:
+          TARGET_URL: ${{ inputs.url }}
+        run: |
+          case "$TARGET_URL" in
+            http://*|https://*) ;;
+            *) echo "Target must start with http:// or https://" >&2; exit 1 ;;
+          esac
+      - name: Run Lighthouse
+        env:
+          TARGET_URL: ${{ inputs.url }}
+        run: |
+          npx --yes lighthouse@13.3.0 "$TARGET_URL" \
+            --chrome-flags="--headless --no-sandbox --disable-dev-shm-usage" \
+            --only-categories=performance,accessibility,best-practices,seo \
+            --output=html \
+            --output-path=./lighthouse-report.html \
+            --quiet
+      - name: Save Lighthouse report
+        uses: actions/upload-artifact@v7
+        with:
+          name: lighthouse-report
+          path: lighthouse-report.html
+          if-no-files-found: error
+          retention-days: 3

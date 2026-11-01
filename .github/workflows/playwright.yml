@@ -1,0 +1,52 @@
+name: Browser tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  detect:
+    name: Detect Playwright setup
+    runs-on: ubuntu-latest
+    outputs:
+      enabled: ${{ steps.scan.outputs.enabled }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - id: scan
+        shell: bash
+        run: |
+          if [ -f package.json ] && [ -f package-lock.json ] && { [ -f playwright.config.ts ] || [ -f playwright.config.js ] || [ -f playwright.config.mjs ] || [ -f playwright.config.cjs ]; }; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Playwright checks are dormant until package.json, package-lock.json and a Playwright config are committed."
+          fi
+
+  test:
+    name: Run Chromium browser tests
+    needs: detect
+    if: needs.detect.outputs.enabled == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Install locked dependencies
+        run: npm ci --no-fund
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run Playwright tests
+        run: npx playwright test
