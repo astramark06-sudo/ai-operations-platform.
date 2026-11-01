@@ -14,6 +14,7 @@ The script installs:
 
 | Skill pack | Role |
 |---|---|
+| [Motion AI kit](https://motion.dev/docs/react) | Current Motion for React documentation, examples and agent tooling |
 | [GSAP skills](https://github.com/greensock/gsap-skills) | GSAP timelines, ScrollTrigger, React integration, performance and animation implementation |
 | [Taste](https://github.com/Leonxlnx/taste-skill) | Art direction, layout, typography, motion direction and browser-based visual QA |
 | [21st.dev skills](https://github.com/21st-dev/skill) | Search, inspect, install and adapt 21st.dev components; explore and review UI |
@@ -49,7 +50,7 @@ These are implementation sources, not all permanent runtime dependencies. Choose
 |---|---|
 | [React Bits](https://www.reactbits.dev/) | Animated React components, text effects, backgrounds and micro-interactions. Copy/install only the components actually needed. |
 | [Watermelon UI](https://ui.watermelon.sh/) | Open-source React components, animated components, blocks, dashboards and templates. Its catalog is also available through the configured MCP server. |
-| [Motion Primitives](https://motion-primitives.com/) | Reusable motion-focused React components and interaction patterns. |
+| [Motion Primitives](https://motion-primitives.com/) | Reusable motion-focused React components and interaction patterns; its installer adds components to the app and uses the motion package. |
 | [21st.dev](https://21st.dev/) | Searchable component marketplace and agent-assisted component retrieval. |
 | [shadcn/ui](https://ui.shadcn.com/) | Base component primitives and registry installation workflow. |
 | [Haikei](https://haikei.app/) | Generate and export custom SVG backgrounds and decorative assets. |
@@ -57,7 +58,7 @@ These are implementation sources, not all permanent runtime dependencies. Choose
 
 ### Animation choice
 
-- Use Motion (the current package/API succeeding Framer Motion) for React component transitions, layout animation and gesture-driven UI.
+- Framer Motion is now named Motion. For new React work, install the motion package and import from motion/react; use it for component transitions, layout animation and gesture-driven UI. The setup script runs npx motion-ai to add Motion agent tooling.
 - Use GSAP for complex timelines, scroll choreography and tightly sequenced animation.
 - Do not animate the same element with both engines. Respect prefers-reduced-motion.
 - Use CSS transitions for simple hover/focus states; avoid adding an animation library for trivial effects.
