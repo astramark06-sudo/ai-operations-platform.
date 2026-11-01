@@ -25,19 +25,30 @@ This repository is being prepared as a website project. Do not assume a framewor
 ## Design application integrations
 - Penpot is the preferred open-source design source. When its MCP is connected, inspect the active file/page, layers, components, variables, typography, spacing, and exported assets before implementation.
 - Lunacy is an optional desktop design source. Use its MCP only when the native app is running and the user has selected the relevant document or objects.
-- Treat the design file selected by the user as the source of truth for visual specifications. Do not silently combine Penpot and Lunacy files or assume they contain the same design.
+- Figma may be used through the connected ChatGPT Figma app when available; this is separate from project MCP configuration and is not a Figma MCP server.
+- Treat the design file selected by the user as the source of truth for visual specifications. Do not silently combine Penpot, Lunacy, or Figma files or assume they contain the same design.
 - Translate design values into project-owned semantic tokens and reusable components; do not copy demo styling or create a parallel design system.
 - If an MCP connection is unavailable, state the limitation and work from user-provided exports, screenshots, or specifications instead.
 - Read `.agents/skills/design-to-code/SKILL.md` before substantial design-to-code work.
 - Keep all MCP URLs, access tokens, and keys out of commits, logs, screenshots, and generated documentation.
 
 ## Agent workflow
+
 - Read relevant skill instructions before applying a specialist workflow.
+- Use Vercel's `react-best-practices` skill when implementing React and `web-design-guidelines` for UX, accessibility, and visual review.
+- Use UI/UX Pro Max for design-system and UX guidance; Taste for art direction and visual QA; GSAP skills for advanced GSAP implementation; 21st.dev and Watermelon MCPs for source-backed component discovery; Context7 for current library documentation when available.
 - Use UI/UX Pro Max for design-system and UX guidance; Taste for art direction and visual QA; GSAP skills for advanced GSAP implementation; 21st.dev and Watermelon MCPs for source-backed component discovery.
 - Inspect a component's source, dependencies, accessibility, license, and responsive behavior before adding it.
 - Adapt imported components to project tokens. Do not leave demo colors or unrelated dependencies in production.
 - Run type checks, lint, tests, and a production build when those scripts exist.
 - Use browser-based visual checks for important responsive states.
+
+## Repository automation
+
+- Keep CI workflows least-privileged; grant only the permissions a job needs.
+- Pin external GitHub Actions to reviewed major versions and allow Dependabot to keep them updated.
+- Never introduce AI security scans, hosted LLM calls, paid Actions, or services that can incur charges.
+- Keep manual audits scoped to public URLs; never pass secrets or authenticated URLs as workflow inputs.
 
 ## Security
 - Never commit API keys, tokens, passwords, customer data, or environment files.
