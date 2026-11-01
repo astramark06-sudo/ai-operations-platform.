@@ -134,7 +134,6 @@ Once the scaffold exists:
 7. Export Haikei SVG assets and commit them to the project.
 8. Build into `site/` or update the Pages workflow to match the selected framework's output directory.
 
-
 ## 8. Design sources: Penpot and Lunacy
 
 The repository also includes a design-to-code skill at [`.agents/skills/design-to-code/SKILL.md`](../.agents/skills/design-to-code/SKILL.md) and setup instructions in [`docs/DESIGN-TOOLS.md`](DESIGN-TOOLS.md).
