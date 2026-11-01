@@ -52,6 +52,7 @@ Requirements: Node.js 20 or later, a local browser, and a machine that can run P
 The local server's default MCP endpoint is `http://localhost:4401/mcp`. If the browser blocks local network access, allow the connection for Penpot or use a browser that permits the local connection. Start with a read-only request, such as listing pages or reading the selected frame, before asking the agent to edit a design.
 
 Official references:
+
 - [Penpot MCP documentation](https://help.penpot.app/mcp/)
 - [Penpot MCP source and local setup](https://github.com/penpot/penpot/tree/develop/mcp)
 
@@ -69,6 +70,7 @@ Lunacy is an optional free desktop design application for Windows, macOS, and Li
 Lunacy generates the connection settings for the installed app. Use the copied configuration verbatim; do not guess a port, command, or URL.
 
 Official references:
+
 - [Lunacy MCP / LLM integration](https://lunacy.docs.icons8.com/mcp/)
 - [Lunacy downloads](https://icons8.com/lunacy-download)
 - [Lunacy system requirements](https://lunacy.docs.icons8.com/sysreq/)
