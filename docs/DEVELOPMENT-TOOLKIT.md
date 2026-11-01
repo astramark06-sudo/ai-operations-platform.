@@ -18,10 +18,10 @@ The installer sets up:
 |---|---|---|
 | [Motion AI kit](https://motion.dev/docs/react) | Motion for React documentation and agent tooling | Free/open source |
 | [GSAP skills](https://github.com/greensock/gsap-skills) | Timelines, ScrollTrigger, React integration and performance | Free; GSAP's full toolset is free |
-| [Taste](https://github.com/Leonxlnx/taste-skill) | Art direction, layout, typography and browser-based visual QA | Free; no API key |
+| [Taste](https://github.com/Leonxlnx/taste-skill) | Art direction, layout, typography and browser-based visual QA | Free; no API key |\n| [Vercel React best practices](https://github.com/vercel-labs/agent-skills) | React and Next.js performance guidelines | Open source |\n| [Vercel web design guidelines](https://github.com/vercel-labs/agent-skills) | UX, accessibility, responsive behavior and interface review | Open source |
 | [21st.dev skills](https://github.com/21st-dev/skill) | Discover and adapt component patterns | Free skill; service has free-tier limits |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Design systems, styles, palettes, typography and UX patterns | Open-source basic version |
-| [Design-to-code skill](../.agents/skills/design-to-code/SKILL.md) | Translate Penpot or Lunacy files into accessible, token-based UI | Included in this repository |
+| [Design-to-code skill](../.agents/skills/design-to-code/SKILL.md) | Translate Penpot, Lunacy or connected Figma designs into accessible, token-based UI | Included in this repository |
 
 Taste requires Node.js 22+ and Chrome, Edge or Chromium for its browser inspection script. It does not need API keys.
 
@@ -35,13 +35,13 @@ Project configuration is in [.mcp.json](../.mcp.json).
 | Watermelon UI | Search its component, block, dashboard and template catalog | Public MCP endpoint; no key configured |
 | 21st.dev | Component search and retrieval | Free account supports 2 component-code retrievals per day; paid plan is not needed if we stay within that allowance |
 | Penpot | Read and edit the active design file through Penpot's official MCP | Open source/local option; hosted remote availability depends on the Penpot account/deployment |
-| Lunacy | Inspect selected layers, variables, components and assets in the running Lunacy desktop app | Free desktop app; local MCP, no paid API key |
+| Lunacy | Inspect selected layers, variables, components and assets in the running Lunacy desktop app | Free desktop app; local MCP, no paid API key |\n| Context7 | Retrieve current library documentation and code examples | Public remote MCP; anonymous use has low rate limits |
 
 21st.dev's free tier requires a free account/API token for most MCP clients. Set `API_KEY_21ST` in the environment used to launch the MCP client. Do not purchase Builder or AI credits. Its search/browsing is free and the free account currently includes 2 code retrievals daily. See [21st.dev MCP docs](https://docs.21st.dev/mcp) and [pricing/limits](https://mcp.21st.dev/pricing).
 
 Penpot and Lunacy setup is optional and documented in [DESIGN-TOOLS.md](DESIGN-TOOLS.md). Penpot's project entry reads a complete URL from `PENPOT_MCP_URL`; do not commit the URL because it contains an access key. Lunacy supplies its own server configuration from the running app; copy its entry instead of guessing a local port or endpoint.
 
-The project MCP format may need translation for clients that do not support Claude Code-style `.mcp.json`.
+Context7 is configured at `https://mcp.context7.com/mcp`. Anonymous access is available with lower rate limits; optional authentication raises limits depending on its plan. Do not add a paid plan or API-credit dependency. See [Context7 installation](https://context7.com/docs/installation) and [MCP client guidance](https://context7.com/docs/resources/all-clients).\n\nThe connected ChatGPT Figma app is a separate design integration, not a project MCP server. Its availability and feature limits depend on the user's Figma/ChatGPT accounts.\n\nThe project MCP format may need translation for clients that do not support Claude Code-style `.mcp.json`.
 
 ## 3. Component and visual libraries
 
@@ -66,7 +66,41 @@ Use these as source libraries, not as a reason to install every package.
 
 Do not install animation dependencies until the app framework is selected.
 
-## 4. Strix without API spending
+## 4. Automated repository checks
+
+The repository contains GitHub Actions workflows for:
+
+| Workflow | Trigger | Purpose | Current state |
+|---|---|---|---|
+| Quality checks | Push, pull request, manual | Markdown lint; optional npm dependency audit, lint, typecheck, test and build | Markdown runs now; Node.js checks wait for a package manifest and lockfile |
+| CodeQL | Push, pull request, weekly schedule | Static security analysis for JavaScript/TypeScript | Skips until JS/TS source files exist |
+| Secret scan | Push, pull request, weekly schedule | Gitleaks scans Git history for accidentally committed credentials | Runs now |
+| Browser tests | Push, pull request, manual | Playwright Chromium tests | Skips until package manifest, lockfile and Playwright config exist |
+| Accessibility audit | Manual | Pa11y CI audit against a supplied public URL | Runs when a target URL is provided |
+| Lighthouse audit | Manual | Performance, accessibility, best-practices and SEO report | Runs when a target URL is provided; report stored as a short-retention artifact |
+| GitHub Pages deploy | Manual | Deploys the `site/` directory | Waits for `site/index.html` and Pages configuration |
+
+The public repository uses standard GitHub-hosted runners. The workflows do not call paid AI APIs or paid external scanning services. Lighthouse and accessibility audits target public URLs; do not put credentials or private URLs into workflow inputs.
+
+### Running manual audits from GitHub on mobile
+
+1. Open the repository's **Actions** tab.
+2. Select **Lighthouse audit** or **Accessibility audit**.
+3. Choose **Run workflow**.
+4. Enter the public website URL and start the workflow.
+5. Open the run to see the logs or download the Lighthouse HTML artifact.
+
+These manual audits become useful once the site is deployed.
+
+### GitHub Pages setup
+
+When the website is ready, open **Settings → Pages** and set the build/deployment source to **GitHub Actions**. The included deployment workflow expects the built static site in `site/` and an `index.html` at its root. No custom domain is required.
+
+### Dependency updates
+
+Dependabot checks npm dependencies and GitHub Actions weekly. It will not create npm update pull requests until an npm project exists. The Node.js CI job also runs `npm audit --audit-level=high` once a package manifest and lockfile are present.
+
+## 5. Strix without API spending
 
 Strix is open source. It can use a local model through Ollama, so no paid LLM API key is required. This avoids API charges but requires local compute, disk space, Docker and model downloads. A large model may not run well on modest hardware.
 
@@ -89,16 +123,16 @@ Strix's local-model guide: [Ollama setup](https://github.com/usestrix/strix/blob
 
 **Do not use the removed GitHub Actions Strix workflow.** Cloud CI scans with hosted LLM inference could create charges. Run Strix locally only, with the Ollama endpoint selected. Only test this repository or systems you are authorized to assess.
 
-## 5. What is free and what has limits?
+## 6. What is free and what has limits?
 
-- Free/open source: GSAP, Motion, shadcn/ui, public React Bits components, UI/UX Pro Max basic, Taste, Strix software, Ollama.
-- Free with a usage limit: 21st.dev component retrieval (2/day on its free account).
+- Free/open source: GSAP, Motion, shadcn/ui, public React Bits components, UI/UX Pro Max basic, Taste, Vercel agent skills, Playwright, Pa11y, Lighthouse, Gitleaks, CodeQL for public repositories, Dependabot, Strix software and Ollama.
+- Free with usage limits: 21st.dev component retrieval (2/day on its free account) and Context7 anonymous requests.
 - Penpot is open source; use its local MCP option when remote MCP is unavailable.
 - Lunacy provides a free single-user desktop option; keep use within its free license.
 - No paid React Bits Pro license, 21st.dev subscription, Strix API key, hosted LLM, or AI credits should be purchased.
 - Normal internet/data usage, local electricity, and computer storage are not included in software pricing.
 
-## 6. Pending app scaffold
+## 7. Pending app scaffold
 
 This repository currently has no `package.json`, React app, `components.json`, or deployment target. Do not install React, Next.js, Tailwind, Motion, GSAP, React Bits components, or Watermelon components until the framework and actual site requirements are selected.
 

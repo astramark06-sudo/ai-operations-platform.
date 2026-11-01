@@ -73,6 +73,15 @@ Official references:
 - [Lunacy downloads](https://icons8.com/lunacy-download)
 - [Lunacy system requirements](https://lunacy.docs.icons8.com/sysreq/)
 
+## Figma through ChatGPT
+
+Figma is an optional separate design source when the Figma app is connected to the current ChatGPT session.
+
+- Use the connected Figma app to inspect or work with the design file the user selects.
+- Treat the selected Figma file as authoritative only for that task; do not assume it is synchronized with Penpot or Lunacy.
+- The ChatGPT Figma app connection is not a project MCP server and does not add a `figma` entry to `.mcp.json`.
+- Figma account plans and feature limits are separate from this repository's zero-cost requirement. Do not assume paid-only features are available.
+
 ## Design-to-code workflow
 
 When either integration is connected:

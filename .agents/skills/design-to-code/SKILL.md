@@ -1,6 +1,6 @@
 ---
 name: design-to-code
-description: Use when implementing, reviewing, or documenting a website UI based on a Penpot or Lunacy design file, design tokens, component library, or exported assets.
+description: Use when implementing, reviewing, or documenting a website UI based on a Penpot, Lunacy, or connected Figma design file, design tokens, component library, or exported assets.
 ---
 
 # Design-to-code workflow
@@ -10,8 +10,9 @@ Use this skill when the task depends on a visual design source. Read the reposit
 ## 1. Establish the source of truth
 
 - Ask which source file is authoritative only when the conversation does not already establish it.
-- Use the connected Penpot or Lunacy MCP server when available.
-- Do not assume Penpot and Lunacy contain synchronized copies of the same design.
+- Use the connected Penpot or Lunacy MCP server, or the connected ChatGPT Figma app, when available.
+- The ChatGPT Figma app is separate from project MCP configuration; do not invent a Figma MCP endpoint.
+- Do not assume Penpot, Lunacy, and Figma contain synchronized copies of the same design.
 - If no MCP connection exists, work from supplied screenshots, exported assets, design specs, or explicit descriptions. State which evidence you used.
 
 ## 2. Inspect before implementing
