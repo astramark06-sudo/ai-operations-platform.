@@ -14,8 +14,8 @@ The repository is currently a tooling starter. The application framework and pro
 - Use semantic HTML and accessible interaction patterns.
 - Support narrow mobile layouts, keyboard navigation, visible focus, and reduced motion.
 - Keep design tokens and shared components consistent.
-- Use the package manager and framework already selected by the project. The current CI template expects npm and a committed package-lock.json; update the workflow deliberately if the project adopts another package manager.
-- Never commit .env files, access tokens, passwords, private data, build output, or dependency folders.
+- The current CI template expects npm and a committed `package-lock.json`; update the workflow deliberately if the project adopts another package manager.
+- Never commit `.env` files, access tokens, passwords, private data, build output, or dependency folders.
 
 ## Checks
 
@@ -25,10 +25,4 @@ Before requesting review, run the checks relevant to the files you changed and d
 
 ## Pull requests
 
-Include:
-
-- What changed and why.
-- Screenshots for visible UI changes.
-- Accessibility and responsive behavior considered.
-- Tests and build checks performed.
-- Any new dependency, its purpose, and license.
+Include what changed and why, screenshots for visible UI changes, accessibility and responsive behavior considered, tests/build checks performed, and any new dependency with its purpose and license.
