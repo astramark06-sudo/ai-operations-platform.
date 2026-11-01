@@ -21,6 +21,7 @@ The installer sets up:
 | [Taste](https://github.com/Leonxlnx/taste-skill) | Art direction, layout, typography and browser-based visual QA | Free; no API key |
 | [21st.dev skills](https://github.com/21st-dev/skill) | Discover and adapt component patterns | Free skill; service has free-tier limits |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Design systems, styles, palettes, typography and UX patterns | Open-source basic version |
+| [Design-to-code skill](../.agents/skills/design-to-code/SKILL.md) | Translate Penpot or Lunacy files into accessible, token-based UI | Included in this repository |
 
 Taste requires Node.js 22+ and Chrome, Edge or Chromium for its browser inspection script. It does not need API keys.
 
@@ -33,8 +34,12 @@ Project configuration is in [.mcp.json](../.mcp.json).
 | shadcn | Search and install components from public shadcn-compatible registries | Free/open source |
 | Watermelon UI | Search its component, block, dashboard and template catalog | Public MCP endpoint; no key configured |
 | 21st.dev | Component search and retrieval | Free account supports 2 component-code retrievals per day; paid plan is not needed if we stay within that allowance |
+| Penpot | Read and edit the active design file through Penpot's official MCP | Open source/local option; hosted remote availability depends on the Penpot account/deployment |
+| Lunacy | Inspect selected layers, variables, components and assets in the running Lunacy desktop app | Free desktop app; local MCP, no paid API key |
 
 21st.dev's free tier requires a free account/API token for most MCP clients. Set `API_KEY_21ST` in the environment used to launch the MCP client. Do not purchase Builder or AI credits. Its search/browsing is free and the free account currently includes 2 code retrievals daily. See [21st.dev MCP docs](https://docs.21st.dev/mcp) and [pricing/limits](https://mcp.21st.dev/pricing).
+
+Penpot and Lunacy setup is optional and documented in [DESIGN-TOOLS.md](DESIGN-TOOLS.md). Penpot's project entry reads a complete URL from `PENPOT_MCP_URL`; do not commit the URL because it contains an access key. Lunacy supplies its own server configuration from the running app; copy its entry instead of guessing a local port or endpoint.
 
 The project MCP format may need translation for clients that do not support Claude Code-style `.mcp.json`.
 
@@ -51,8 +56,6 @@ Use these as source libraries, not as a reason to install every package.
 | [shadcn/ui](https://ui.shadcn.com/) | Base component primitives and registry workflow | Free/open source |
 | [Haikei](https://haikei.app/) | Generate/export SVG backgrounds | Use free exports; do not buy assets |
 | [Alibaba Page Agent](https://github.com/alibaba/page-agent) | Browser-side natural-language interaction with existing pages | Open-source project; optional |
-
-React Bits repository is MIT + Commons Clause and describes the components as free for personal and commercial use. Still inspect individual third-party notices when using adapted effects. [Source](https://github.com/DavidHDev/react-bits).
 
 ### Animation choice
 
@@ -90,6 +93,8 @@ Strix's local-model guide: [Ollama setup](https://github.com/usestrix/strix/blob
 
 - Free/open source: GSAP, Motion, shadcn/ui, public React Bits components, UI/UX Pro Max basic, Taste, Strix software, Ollama.
 - Free with a usage limit: 21st.dev component retrieval (2/day on its free account).
+- Penpot is open source; use its local MCP option when remote MCP is unavailable.
+- Lunacy provides a free single-user desktop option; keep use within its free license.
 - No paid React Bits Pro license, 21st.dev subscription, Strix API key, hosted LLM, or AI credits should be purchased.
 - Normal internet/data usage, local electricity, and computer storage are not included in software pricing.
 

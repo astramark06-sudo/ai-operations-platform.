@@ -22,6 +22,15 @@ This repository is being prepared as a website project. Do not assume a framewor
 - Use GSAP for complex timelines and scroll choreography. Use Motion for React component transitions and layout animation. Avoid running two animation engines on the same element.
 - Use Haikei for bespoke SVG backgrounds when a page needs them; commit exported assets rather than relying on a runtime generator.
 
+## Design application integrations
+- Penpot is the preferred open-source design source. When its MCP is connected, inspect the active file/page, layers, components, variables, typography, spacing, and exported assets before implementation.
+- Lunacy is an optional desktop design source. Use its MCP only when the native app is running and the user has selected the relevant document or objects.
+- Treat the design file selected by the user as the source of truth for visual specifications. Do not silently combine Penpot and Lunacy files or assume they contain the same design.
+- Translate design values into project-owned semantic tokens and reusable components; do not copy demo styling or create a parallel design system.
+- If an MCP connection is unavailable, state the limitation and work from user-provided exports, screenshots, or specifications instead.
+- Read `.agents/skills/design-to-code/SKILL.md` before substantial design-to-code work.
+- Keep all MCP URLs, access tokens, and keys out of commits, logs, screenshots, and generated documentation.
+
 ## Agent workflow
 - Read relevant skill instructions before applying a specialist workflow.
 - Use UI/UX Pro Max for design-system and UX guidance; Taste for art direction and visual QA; GSAP skills for advanced GSAP implementation; 21st.dev and Watermelon MCPs for source-backed component discovery.
