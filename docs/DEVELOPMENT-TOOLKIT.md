@@ -1,99 +1,105 @@
 # Website development toolkit
 
-This repository currently has no application scaffold. The setup prepares coding-agent skills and component-discovery integrations without prematurely choosing React, Next.js, Vite, or a package manager.
+This project has a strict zero-spend requirement. The toolkit below uses free/open-source software and optional free tiers. It does not require a paid subscription, paid model API, or paid component license.
+
+The repository currently has no application scaffold, so frontend dependencies will be selected after the framework is chosen.
 
 ## 1. Install agent skills
 
-From the repository root, run:
+Run from the repository root:
 
 ```bash
 bash scripts/setup-agent-toolkit.sh
 ```
 
-The script installs:
+The installer sets up:
 
-| Skill pack | Role |
-|---|---|
-| [Motion AI kit](https://motion.dev/docs/react) | Current Motion for React documentation, examples and agent tooling |
-| [GSAP skills](https://github.com/greensock/gsap-skills) | GSAP timelines, ScrollTrigger, React integration, performance and animation implementation |
-| [Taste](https://github.com/Leonxlnx/taste-skill) | Art direction, layout, typography, motion direction and browser-based visual QA |
-| [21st.dev skills](https://github.com/21st-dev/skill) | Search, inspect, install and adapt 21st.dev components; explore and review UI |
-| [Strix skills](https://github.com/usestrix/strix) | Authorized penetration testing, finding remediation and CI security scanning |
-| [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Searchable design systems, styles, palettes, typography, UX patterns and stack-specific guidance |
+| Tool / skill | Purpose | Cost |
+|---|---|---|
+| [Motion AI kit](https://motion.dev/docs/react) | Motion for React documentation and agent tooling | Free/open source |
+| [GSAP skills](https://github.com/greensock/gsap-skills) | Timelines, ScrollTrigger, React integration and performance | Free; GSAP's full toolset is free |
+| [Taste](https://github.com/Leonxlnx/taste-skill) | Art direction, layout, typography and browser-based visual QA | Free; no API key |
+| [21st.dev skills](https://github.com/21st-dev/skill) | Discover and adapt component patterns | Free skill; service has free-tier limits |
+| [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Design systems, styles, palettes, typography and UX patterns | Open-source basic version |
 
-The skills CLI installs into the coding agent's supported skill directory. UI/UX Pro Max targets the universal .agents/skills directory. Restart the coding agent after installation.
-
-Taste's current skill expects Node.js 22+ and an installed Chromium-based browser for its visual inspection workflow.
+Taste requires Node.js 22+ and Chrome, Edge or Chromium for its browser inspection script. It does not need API keys.
 
 ## 2. MCP integrations
 
-Project-level MCP configuration is in [.mcp.json](../.mcp.json).
+Project configuration is in [.mcp.json](../.mcp.json).
 
-| Server | Purpose | Authentication |
+| Server | Purpose | Cost / limit |
 |---|---|---|
-| shadcn | Search and install components from shadcn-compatible registries | None for public registries |
-| 21st.dev | Discover, inspect and retrieve components from 21st.dev | API_KEY_21ST environment variable |
-| Watermelon UI | Search its public React component, block, dashboard and template catalog | Public hosted MCP; no key |
+| shadcn | Search and install components from public shadcn-compatible registries | Free/open source |
+| Watermelon UI | Search its component, block, dashboard and template catalog | Public MCP endpoint; no key configured |
+| 21st.dev | Component search and retrieval | Free account supports 2 component-code retrievals per day; paid plan is not needed if we stay within that allowance |
 
-Set API_KEY_21ST in the environment used to launch your MCP client. Copy .env.example as a local reference, but do not commit real credentials. The .mcp.json format is compatible with Claude Code-style project MCP configuration; other clients may require translating these entries into their own config format.
+21st.dev's free tier requires a free account/API token for most MCP clients. Set `API_KEY_21ST` in the environment used to launch the MCP client. Do not purchase Builder or AI credits. Its search/browsing is free and the free account currently includes 2 code retrievals daily. See [21st.dev MCP docs](https://docs.21st.dev/mcp) and [pricing/limits](https://mcp.21st.dev/pricing).
 
-Official references:
-- [shadcn MCP](https://ui.shadcn.com/docs/mcp)
-- [21st.dev MCP](https://docs.21st.dev/mcp)
-- [Watermelon UI MCP](https://ui.watermelon.sh/developers/status)
+The project MCP format may need translation for clients that do not support Claude Code-style `.mcp.json`.
 
-## 3. Component and visual source libraries
+## 3. Component and visual libraries
 
-These are implementation sources, not all permanent runtime dependencies. Choose components selectively and adapt them to one project design system.
+Use these as source libraries, not as a reason to install every package.
 
-| Resource | Use |
-|---|---|
-| [React Bits](https://www.reactbits.dev/) | Animated React components, text effects, backgrounds and micro-interactions. Copy/install only the components actually needed. |
-| [Watermelon UI](https://ui.watermelon.sh/) | Open-source React components, animated components, blocks, dashboards and templates. Its catalog is also available through the configured MCP server. |
-| [Motion Primitives](https://motion-primitives.com/) | Reusable motion-focused React components and interaction patterns; its installer adds components to the app and uses the motion package. |
-| [21st.dev](https://21st.dev/) | Searchable component marketplace and agent-assisted component retrieval. |
-| [shadcn/ui](https://ui.shadcn.com/) | Base component primitives and registry installation workflow. |
-| [Haikei](https://haikei.app/) | Generate and export custom SVG backgrounds and decorative assets. |
-| [Alibaba Page Agent](https://github.com/alibaba/page-agent) | Browser-side natural-language agent for interacting with an existing webpage; use for browser automation, not as the core UI component framework. |
+| Resource | Use | Cost guidance |
+|---|---|---|
+| [React Bits](https://www.reactbits.dev/) | Animated React components, text effects, backgrounds and micro-interactions | Use the public open-source components; avoid Pro |
+| [Watermelon UI](https://ui.watermelon.sh/) | React components, blocks, dashboards and templates | Use free/public components |
+| [Motion Primitives](https://motion-primitives.com/) | Reusable motion-focused React components | Use free source components |
+| [21st.dev](https://21st.dev/) | Component marketplace and retrieval | Free tier only; 2 code retrievals/day |
+| [shadcn/ui](https://ui.shadcn.com/) | Base component primitives and registry workflow | Free/open source |
+| [Haikei](https://haikei.app/) | Generate/export SVG backgrounds | Use free exports; do not buy assets |
+| [Alibaba Page Agent](https://github.com/alibaba/page-agent) | Browser-side natural-language interaction with existing pages | Open-source project; optional |
+
+React Bits repository is MIT + Commons Clause and describes the components as free for personal and commercial use. Still inspect individual third-party notices when using adapted effects. [Source](https://github.com/DavidHDev/react-bits).
 
 ### Animation choice
 
-- Framer Motion is now named Motion. For new React work, install the motion package and import from motion/react; use it for component transitions, layout animation and gesture-driven UI. The setup script runs npx motion-ai to add Motion agent tooling.
-- Use GSAP for complex timelines, scroll choreography and tightly sequenced animation.
-- Do not animate the same element with both engines. Respect prefers-reduced-motion.
-- Use CSS transitions for simple hover/focus states; avoid adding an animation library for trivial effects.
+- Use Motion (package `motion`, imports from `motion/react`) for React component transitions, layout animation and gestures. Motion is MIT-licensed and free.
+- Use GSAP for complex timelines and scroll choreography. Its full toolset, including formerly paid plugins, is now free.
+- Do not animate the same element with both engines. Respect `prefers-reduced-motion`.
+- Use CSS transitions for simple hover/focus states.
 
-## 4. React Bits Pro registry
+Do not install animation dependencies until the app framework is selected.
 
-The public React Bits library supports source copying/CLI installation. React Bits Pro additionally requires a paid license key and authenticated registries. Do not add a Pro key to GitHub. If a Pro license is available, follow the [official installation guide](https://pro.reactbits.dev/docs/installation) and store its key in a local ignored environment file.
+## 4. Strix without API spending
 
-## 5. Strix security scanning
+Strix is open source. It can use a local model through Ollama, so no paid LLM API key is required. This avoids API charges but requires local compute, disk space, Docker and model downloads. A large model may not run well on modest hardware.
 
-A GitHub Actions workflow is included at [.github/workflows/strix-security.yml](../.github/workflows/strix-security.yml). It scans the checked-out repository in headless quick mode on pull requests and manual dispatch. It only runs when both secrets are configured:
+Install Ollama, then download a model that your computer can handle. Strix's docs currently show this example:
 
-- STRIX_LLM: LiteLLM-compatible model identifier, e.g. openai/<model-id>
-- LLM_API_KEY: API key for that model provider
+```bash
+ollama pull qwen3-vl
+```
 
-Add them under Repository → Settings → Secrets and variables → Actions. Never put them in workflow YAML or source files.
-
-The workflow caps each scan at USD 10 and fails on high or critical findings. It performs a white-box scan of the repository checkout; it does not target a deployed site. A local directory can be mounted writable by Strix, so use a clean checkout for scans. Only run black-box tests against domains, APIs or IPs you own or have explicit permission to test.
-
-Install Strix locally (Docker and a supported LLM key required) using:
+Install Strix and configure the local model:
 
 ```bash
 curl -fsSL https://strix.ai/install | bash
-export STRIX_LLM="openai/<model-id>"
-export LLM_API_KEY="<provider-api-key>"
-strix -n --target ./ --scan-mode quick --max-budget 10 --fail-on high
+export STRIX_LLM="ollama/qwen3-vl"
+export LLM_API_BASE="http://localhost:11434"
+strix -n --target ./ --scan-mode quick
 ```
 
-## 6. Current limitations / pending scaffold
+Strix's local-model guide: [Ollama setup](https://github.com/usestrix/strix/blob/main/docs/llm-providers/local.mdx).
 
-This repository currently contains no package.json, React app, components.json, or deployment target. Therefore this setup deliberately does not install React, Next.js, Tailwind, Motion, GSAP, React Bits components, or Watermelon components yet. Those dependencies should be selected once the actual site architecture and framework are committed.
+**Do not use the removed GitHub Actions Strix workflow.** Cloud CI scans with hosted LLM inference could create charges. Run Strix locally only, with the Ollama endpoint selected. Only test this repository or systems you are authorized to assess.
 
-After the app scaffold exists:
-1. Initialize shadcn/ui and configure its aliases in components.json.
-2. Add Watermelon UI registry entries only when needed; its components install through the shadcn CLI.
-3. Install React Bits components selectively; Pro registry setup is optional and license-gated.
-4. Add motion and/or gsap only where the animation requirements justify them.
-5. Export Haikei SVG assets into the repository and optimize them before production.
+## 5. What is free and what has limits?
+
+- Free/open source: GSAP, Motion, shadcn/ui, public React Bits components, UI/UX Pro Max basic, Taste, Strix software, Ollama.
+- Free with a usage limit: 21st.dev component retrieval (2/day on its free account).
+- No paid React Bits Pro license, 21st.dev subscription, Strix API key, hosted LLM, or AI credits should be purchased.
+- Normal internet/data usage, local electricity, and computer storage are not included in software pricing.
+
+## 6. Pending app scaffold
+
+This repository currently has no `package.json`, React app, `components.json`, or deployment target. Do not install React, Next.js, Tailwind, Motion, GSAP, React Bits components, or Watermelon components until the framework and actual site requirements are selected.
+
+Once the scaffold exists:
+1. Initialize shadcn/ui.
+2. Add free Watermelon UI components only when they solve a real requirement.
+3. Copy/install public React Bits components selectively.
+4. Add Motion and/or GSAP only where required.
+5. Export Haikei SVG assets and commit them to the project.
