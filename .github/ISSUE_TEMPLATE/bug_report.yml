@@ -1,0 +1,36 @@
+name: Bug report
+description: Report a reproducible defect.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include passwords, API keys, private user data, or other secrets."
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the defect and the expected behavior.
+      placeholder: A clear description of the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: List the steps needed to reproduce the problem.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Device, browser and version
+      placeholder: Android 12, Chrome ...
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Screenshots or logs
+      description: Remove secrets and personal data before attaching evidence.
+    validations:
+      required: false
