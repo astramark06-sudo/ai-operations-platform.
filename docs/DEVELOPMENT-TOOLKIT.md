@@ -18,7 +18,9 @@ The installer sets up:
 |---|---|---|
 | [Motion AI kit](https://motion.dev/docs/react) | Motion for React documentation and agent tooling | Free/open source |
 | [GSAP skills](https://github.com/greensock/gsap-skills) | Timelines, ScrollTrigger, React integration and performance | Free; GSAP's full toolset is free |
-| [Taste](https://github.com/Leonxlnx/taste-skill) | Art direction, layout, typography and browser-based visual QA | Free; no API key |\n| [Vercel React best practices](https://github.com/vercel-labs/agent-skills) | React and Next.js performance guidelines | Open source |\n| [Vercel web design guidelines](https://github.com/vercel-labs/agent-skills) | UX, accessibility, responsive behavior and interface review | Open source |
+| [Taste](https://github.com/Leonxlnx/taste-skill) | Art direction, layout, typography and browser-based visual QA | Free; no API key |
+| [Vercel React best practices](https://github.com/vercel-labs/agent-skills) | React and Next.js performance guidelines | Open source |
+| [Vercel web design guidelines](https://github.com/vercel-labs/agent-skills) | UX, accessibility, responsive behavior and interface review | Open source |
 | [21st.dev skills](https://github.com/21st-dev/skill) | Discover and adapt component patterns | Free skill; service has free-tier limits |
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Design systems, styles, palettes, typography and UX patterns | Open-source basic version |
 | [Design-to-code skill](../.agents/skills/design-to-code/SKILL.md) | Translate Penpot, Lunacy or connected Figma designs into accessible, token-based UI | Included in this repository |
@@ -35,13 +37,18 @@ Project configuration is in [.mcp.json](../.mcp.json).
 | Watermelon UI | Search its component, block, dashboard and template catalog | Public MCP endpoint; no key configured |
 | 21st.dev | Component search and retrieval | Free account supports 2 component-code retrievals per day; paid plan is not needed if we stay within that allowance |
 | Penpot | Read and edit the active design file through Penpot's official MCP | Open source/local option; hosted remote availability depends on the Penpot account/deployment |
-| Lunacy | Inspect selected layers, variables, components and assets in the running Lunacy desktop app | Free desktop app; local MCP, no paid API key |\n| Context7 | Retrieve current library documentation and code examples | Public remote MCP; anonymous use has low rate limits |
+| Lunacy | Inspect selected layers, variables, components and assets in the running Lunacy desktop app | Free desktop app; local MCP, no paid API key |
+| Context7 | Retrieve current library documentation and code examples | Public remote MCP; anonymous use has low rate limits |
 
 21st.dev's free tier requires a free account/API token for most MCP clients. Set `API_KEY_21ST` in the environment used to launch the MCP client. Do not purchase Builder or AI credits. Its search/browsing is free and the free account currently includes 2 code retrievals daily. See [21st.dev MCP docs](https://docs.21st.dev/mcp) and [pricing/limits](https://mcp.21st.dev/pricing).
 
 Penpot and Lunacy setup is optional and documented in [DESIGN-TOOLS.md](DESIGN-TOOLS.md). Penpot's project entry reads a complete URL from `PENPOT_MCP_URL`; do not commit the URL because it contains an access key. Lunacy supplies its own server configuration from the running app; copy its entry instead of guessing a local port or endpoint.
 
-Context7 is configured at `https://mcp.context7.com/mcp`. Anonymous access is available with lower rate limits; optional authentication raises limits depending on its plan. Do not add a paid plan or API-credit dependency. See [Context7 installation](https://context7.com/docs/installation) and [MCP client guidance](https://context7.com/docs/resources/all-clients).\n\nThe connected ChatGPT Figma app is a separate design integration, not a project MCP server. Its availability and feature limits depend on the user's Figma/ChatGPT accounts.\n\nThe project MCP format may need translation for clients that do not support Claude Code-style `.mcp.json`.
+Context7 is configured at `https://mcp.context7.com/mcp`. Anonymous access is available with lower rate limits; optional authentication raises limits depending on its plan. Do not add a paid plan or API-credit dependency. See [Context7 installation](https://context7.com/docs/installation) and [MCP client guidance](https://context7.com/docs/resources/all-clients).
+
+The connected ChatGPT Figma app is a separate design integration, not a project MCP server. Its availability and feature limits depend on the user's Figma/ChatGPT accounts.
+
+The project MCP format may need translation for clients that do not support Claude Code-style `.mcp.json`.
 
 ## 3. Component and visual libraries
 
@@ -140,6 +147,7 @@ Strix's local-model guide: [Ollama setup](https://github.com/usestrix/strix/blob
 This repository currently has no `package.json`, React app, `components.json`, or deployment target. Do not install React, Next.js, Tailwind, Motion, GSAP, React Bits components, or Watermelon components until the framework and actual site requirements are selected.
 
 Once the scaffold exists:
+
 1. Initialize shadcn/ui.
 2. Add free Watermelon UI components only when they solve a real requirement.
 3. Copy/install public React Bits components selectively.
