@@ -18,6 +18,7 @@ Use this skill when the task depends on a visual design source. Read the reposit
 ## 2. Inspect before implementing
 
 Inspect the relevant page/artboard and its hierarchy. Record:
+
 - Frame dimensions and intended responsive breakpoints.
 - Layout method, constraints, alignment, and spacing.
 - Color variables, typography styles, radii, borders, shadows, and effects.
@@ -30,6 +31,7 @@ Do not infer missing states or responsive layouts as facts. Mark those decisions
 ## 3. Create a design handoff
 
 Summarize the design as:
+
 - Semantic token map (for example, surface, text, border, accent, spacing, radius, and type roles).
 - Component inventory and variant map.
 - Page structure and responsive behavior.
