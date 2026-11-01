@@ -1,0 +1,36 @@
+name: Accessibility audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: Public page URL to audit (HTTP or HTTPS)
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  pa11y:
+    name: Audit page accessibility
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Validate target URL
+        env:
+          TARGET_URL: ${{ inputs.url }}
+        run: |
+          case "$TARGET_URL" in
+            http://*|https://*) ;;
+            *) echo "Target must start with http:// or https://" >&2; exit 1 ;;
+          esac
+      - name: Run Pa11y CI
+        env:
+          TARGET_URL: ${{ inputs.url }}
+        run: npx --yes pa11y-ci@5.0.0 "$TARGET_URL"
