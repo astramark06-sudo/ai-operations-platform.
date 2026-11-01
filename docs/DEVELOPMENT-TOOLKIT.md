@@ -133,3 +133,13 @@ Once the scaffold exists:
 6. Add Playwright configuration and meaningful browser tests.
 7. Export Haikei SVG assets and commit them to the project.
 8. Build into `site/` or update the Pages workflow to match the selected framework's output directory.
+
+
+## 8. Design sources: Penpot and Lunacy
+
+The repository also includes a design-to-code skill at [`.agents/skills/design-to-code/SKILL.md`](../.agents/skills/design-to-code/SKILL.md) and setup instructions in [`docs/DESIGN-TOOLS.md`](DESIGN-TOOLS.md).
+
+- **Penpot:** preferred open-source design source. The optional MCP entry reads `PENPOT_MCP_URL` from the environment. The complete URL contains a private key; keep it out of commits and logs.
+- **Lunacy:** optional free desktop design source. Its native application provides a local MCP configuration; copy the configuration from the running app rather than guessing an endpoint.
+- Inspect only the user-selected file/page. Treat the selected design as the source of truth, and translate its styles into reusable project-owned tokens.
+- These design MCPs require a compatible desktop or hosted MCP client. They do not become active inside ChatGPT's Android app merely because they are listed in this repository.
