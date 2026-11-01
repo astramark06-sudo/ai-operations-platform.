@@ -4,26 +4,26 @@ Repository for building the website and its supporting development workflow.
 
 ## Cost policy
 
-This project uses free and open-source tools only. No paid subscriptions, paid API inference, or paid component licenses are required. Optional free tiers may have usage limits.
+This project has a strict zero-spend requirement. Use free/open-source tools, free public-repository GitHub Actions, and GitHub Pages. Do not introduce paid subscriptions, paid model APIs, paid hosting, paid assets, or paid component licenses.
 
-## Getting started
+## Current repository setup
 
-Run the agent toolkit installer from the repository root:
+- Agent skills: Motion, GSAP, Taste, Vercel React best practices, Vercel web design guidelines, 21st.dev and UI/UX Pro Max.
+- MCP configuration: shadcn, Watermelon UI, optional 21st.dev and Context7.
+- Quality: Markdown lint and optional Node.js lint/typecheck/test/build jobs.
+- Security: CodeQL for JavaScript/TypeScript when present, Gitleaks history scans and dependency review.
+- Browser and UX: conditional Playwright tests, manual Pa11y accessibility audit and manual Lighthouse audit.
+- Deployment: manual GitHub Pages workflow for a built static site in `site/`.
+- Dependency maintenance: weekly Dependabot updates for npm and GitHub Actions.
 
-```bash
-bash scripts/setup-agent-toolkit.sh
-```
+See [docs/DEVELOPMENT-TOOLKIT.md](docs/DEVELOPMENT-TOOLKIT.md) for exact workflow behavior, limitations and setup instructions.
 
-Project MCP servers are configured in `.mcp.json`. 21st.dev is optional and has a limited free allowance; set `API_KEY_21ST` only if you choose to use it.
+## Mobile-first workflow
 
-See [docs/DEVELOPMENT-TOOLKIT.md](docs/DEVELOPMENT-TOOLKIT.md) for setup, free-tier limits, local Strix security testing and component sources.
+Repository changes can be managed through GitHub's website or connected GitHub integration. The local agent installer is optional and requires a compatible coding environment; it has not been run on the user's Android device. MCP configuration in this repository does not automatically connect servers to ChatGPT's Android app.
 
-Coding agents should read [AGENTS.md](AGENTS.md) before making changes.
+## Project state
 
-## Current state
+The repository is still a tooling starter. No frontend framework, application scaffold, package manifest or website content has been selected. App-specific CI checks and deployment remain dormant until the corresponding source/configuration exists.
 
-- Free agent skill installation script: available
-- shadcn and Watermelon UI MCP: configured
-- 21st.dev MCP: optional, free tier only
-- Strix: local Ollama model workflow; no paid API key
-- Frontend framework and app scaffold: not yet selected
+Coding agents must read [AGENTS.md](AGENTS.md) before making changes.
