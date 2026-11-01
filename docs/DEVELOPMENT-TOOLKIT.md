@@ -23,7 +23,7 @@ The installer sets up:
 | [UI/UX Pro Max](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Design systems, styles, palettes, typography and UX patterns | Open-source basic version |
 | [Design-to-code skill](../.agents/skills/design-to-code/SKILL.md) | Translate Penpot or Lunacy files into accessible, token-based UI | Included in this repository |
 
-Taste requires Node.js 22+ and Chrome, Edge or Chromium for its browser inspection script. It does not need API keys.
+Taste requires Node.js 22+ and Chrome, Edge or Chromium for its browser inspection script. The current Skills CLI requires Node.js 22.20 or later. The setup script checks that runtime before installing anything, sets `DISABLE_TELEMETRY=1`, and uses `npx --yes` to avoid package-install prompts. It does not need API keys.
 
 ## 2. MCP integrations
 
@@ -41,7 +41,7 @@ Project configuration is in [.mcp.json](../.mcp.json).
 
 Penpot and Lunacy setup is optional and documented in [DESIGN-TOOLS.md](DESIGN-TOOLS.md). Penpot's project entry reads a complete URL from `PENPOT_MCP_URL`; do not commit the URL because it contains an access key. Lunacy supplies its own server configuration from the running app; copy its entry instead of guessing a local port or endpoint.
 
-The project MCP format may need translation for clients that do not support Claude Code-style `.mcp.json`.
+The project MCP format may need translation for clients that do not support Claude Code-style `.mcp.json`. Review each server before first use and follow [MCP security](MCP-SECURITY.md); a local server runs with the permissions of its parent agent, and remote outputs remain untrusted.
 
 ## 3. Component and visual libraries
 
@@ -98,7 +98,18 @@ Strix's local-model guide: [Ollama setup](https://github.com/usestrix/strix/blob
 - No paid React Bits Pro license, 21st.dev subscription, Strix API key, hosted LLM, or AI credits should be purchased.
 - Normal internet/data usage, local electricity, and computer storage are not included in software pricing.
 
-## 6. Pending app scaffold
+## 6. Repository validation and reproducibility
+
+Run the offline validator after editing MCP or environment configuration:
+
+```bash
+python scripts/validate_repo.py
+bash -n scripts/setup-agent-toolkit.sh
+```
+
+The GitHub Actions workflow runs these checks on pushes and pull requests. The installer fetches current skill/package contents from upstream sources; this makes it an update-oriented installer, not a byte-for-byte reproducible lockfile. Review upstream changes and record the installed source commits when a production handoff needs exact reproducibility. Do not interpret a successful configuration check as proof that an MCP service is installed or reachable.
+
+## 7. Pending app scaffold
 
 This repository currently has no `package.json`, React app, `components.json`, or deployment target. Do not install React, Next.js, Tailwind, Motion, GSAP, React Bits components, or Watermelon components until the framework and actual site requirements are selected.
 
