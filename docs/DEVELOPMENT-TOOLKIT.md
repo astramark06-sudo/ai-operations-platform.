@@ -72,6 +72,7 @@ The repository contains GitHub Actions workflows for:
 
 | Workflow | Trigger | Purpose | Current state |
 |---|---|---|---|
+| Repository validation | Every push, pull request, manual | Checks MCP JSON, env placeholders, `.gitignore`, local Markdown links, installer syntax and whitespace | Runs now via `scripts/validate_repo.py` |
 | Quality checks | Push, pull request, manual | Markdown lint; optional npm dependency audit, lint, typecheck, test and build | Markdown runs now; Node.js checks wait for a package manifest and lockfile |
 | CodeQL | Push, pull request, weekly schedule | Static security analysis for JavaScript/TypeScript | Skips until JS/TS source files exist |
 | Secret scan | Push, pull request, weekly schedule | Gitleaks scans Git history for accidentally committed credentials | Runs now |
@@ -79,6 +80,8 @@ The repository contains GitHub Actions workflows for:
 | Accessibility audit | Manual | Pa11y CI audit against a supplied public URL | Runs when a target URL is provided |
 | Lighthouse audit | Manual | Performance, accessibility, best-practices and SEO report | Runs when a target URL is provided; report stored as a short-retention artifact |
 | GitHub Pages deploy | Manual | Deploys the `site/` directory | Waits for `site/index.html` and Pages configuration |
+
+The repository also has a Python-based validator at `scripts/validate_repo.py`; it checks the repository-owned MCP and environment configuration, not whether remote MCP endpoints are reachable. Keep this validation workflow and script when editing `.mcp.json`, `.env.example`, `.gitignore`, or Markdown links.
 
 The public repository uses standard GitHub-hosted runners. The workflows do not call paid AI APIs or paid external scanning services. Lighthouse and accessibility audits target public URLs; do not put credentials or private URLs into workflow inputs.
 
