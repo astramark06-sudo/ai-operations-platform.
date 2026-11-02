@@ -10,12 +10,12 @@ on:
 
 permissions:
   contents: read
-  security-events: write
-  pull-requests: read
 
 jobs:
   detect:
     name: Detect supported source
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     outputs:
       has_source: ${{ steps.scan.outputs.has_source }}
@@ -40,6 +40,10 @@ jobs:
     needs: detect
     if: needs.detect.outputs.has_source == 'true'
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+      security-events: write
     timeout-minutes: 30
     steps:
       - name: Check out repository

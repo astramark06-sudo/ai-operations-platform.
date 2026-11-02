@@ -15,7 +15,7 @@ The repository is currently a tooling starter. The application framework and pro
 - Use semantic HTML and accessible interaction patterns.
 - Support narrow mobile layouts, keyboard navigation, visible focus, and reduced motion.
 - Keep design tokens and shared components consistent with the selected design source.
-- The initial CI template expects npm and a committed `package-lock.json`; update the workflow deliberately if the project adopts another package manager.
+- The current Node.js CI template is npm-specific and requires a committed `package-lock.json`. Enable it only if npm is selected; configure the matching install, audit, and Dependabot behavior deliberately if another package manager is selected.
 - Never commit `.env` files, access tokens, passwords, private data, build output, or dependency folders.
 
 ## Checks

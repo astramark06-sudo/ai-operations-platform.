@@ -108,7 +108,7 @@ When the website is ready, open **Settings → Pages** and set the build/deploym
 
 ### Dependency updates
 
-Dependabot checks npm dependencies and GitHub Actions weekly. It will not create npm update pull requests until an npm project exists. The Node.js CI job also runs `npm audit --audit-level=high` once a package manifest and lockfile are present.
+Dependabot currently checks GitHub Actions weekly. The npm updater is intentionally disabled because this repository has no `package.json`; leaving it enabled produces a failed update job (`/package.json not found`). Add the appropriate Dependabot ecosystem only after selecting the application's package manager and committing its manifest and lockfile. The Node.js CI job runs `npm audit --audit-level=high` only when an npm project and `package-lock.json` are present.
 
 ## 5. Strix without API spending
 
