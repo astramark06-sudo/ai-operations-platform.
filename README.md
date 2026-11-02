@@ -22,7 +22,7 @@ This project has a strict zero-spend requirement. Use free/open-source tools, fr
 
 Repository changes can be managed through GitHub's website and connected GitHub integration. The agent skill installer is optional and requires a compatible coding-agent environment; it has not been run on the user's Android device. MCP configuration in this repository does not automatically connect custom MCP servers to ChatGPT's Android app. Penpot's remote MCP can work only through a compatible MCP client; Lunacy's documented MCP requires its native desktop app. Figma's ChatGPT connection is separate from project MCP configuration.
 
-See [docs/DEVELOPMENT-TOOLKIT.md](docs/DEVELOPMENT-TOOLKIT.md) for setup, free-tier limits, quality/security workflows, local Strix requirements and component sources. See [docs/DESIGN-TOOLS.md](docs/DESIGN-TOOLS.md) for Penpot and Lunacy setup.
+See [docs/DEVELOPMENT-TOOLKIT.md](docs/DEVELOPMENT-TOOLKIT.md) for setup, free-tier limits, quality/security workflows, local Strix requirements and component sources. See [docs/DESIGN-TOOLS.md](docs/DESIGN-TOOLS.md) for Penpot and Lunacy setup. See [docs/REPOSITORY-GOVERNANCE.md](docs/REPOSITORY-GOVERNANCE.md) for the recommended `main` branch protections and current enforcement status.
 
 Coding agents must read [AGENTS.md](AGENTS.md) before making changes and read [.agents/skills/design-to-code/SKILL.md](.agents/skills/design-to-code/SKILL.md) before substantial design-to-code work.
 
