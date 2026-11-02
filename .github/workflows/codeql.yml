@@ -18,7 +18,7 @@ jobs:
       contents: read
     runs-on: ubuntu-latest
     outputs:
-      has_source: ${{ steps.scan.outputs.has_source }}
+      has_source: \${{ steps.scan.outputs.has_source }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v7
@@ -28,34 +28,7 @@ jobs:
         id: scan
         shell: bash
         run: |
-          pattern='\.(js|jsx|ts|tsx|mjs|cjs)          else
-            echo "has_source=false" >> "$GITHUB_OUTPUT"
-            echo "No JavaScript/TypeScript source yet; CodeQL will start after the app is added."
-          fi
-
-  analyze:
-    name: Analyze JavaScript and TypeScript
-    needs: detect
-    if: needs.detect.outputs.has_source == 'true'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: read
-      security-events: write
-    timeout-minutes: 30
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v7
-        with:
-          persist-credentials: false
-      - name: Initialize CodeQL
-        uses: github/codeql-action/init@v4
-        with:
-          languages: javascript-typescript
-          build-mode: none
-      - name: Perform CodeQL analysis
-        uses: github/codeql-action/analyze@v4
-
+          pattern='\.(js|jsx|ts|tsx|mjs|cjs)$'
           for extension in js jsx ts tsx mjs cjs; do
             if ! printf 'codeql-probe.%s\n' "$extension" | grep -Eq "$pattern"; then
               echo "CodeQL source-detection pattern failed for .$extension" >&2
