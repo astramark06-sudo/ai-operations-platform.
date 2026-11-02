@@ -28,7 +28,15 @@ jobs:
         id: scan
         shell: bash
         run: |
-          if git ls-files | grep -Eq '\\.(js|jsx|ts|tsx|mjs|cjs)$'; then
+          pattern='\.(js|jsx|ts|tsx|mjs|cjs)$'
+          for extension in js jsx ts tsx mjs cjs; do
+            if ! printf 'codeql-probe.%s\n' "$extension" | grep -Eq "$pattern"; then
+              echo "CodeQL source-detection pattern failed for .$extension" >&2
+              exit 1
+            fi
+          done
+
+          if git ls-files | grep -Eq "$pattern"; then
             echo "has_source=true" >> "$GITHUB_OUTPUT"
           else
             echo "has_source=false" >> "$GITHUB_OUTPUT"
