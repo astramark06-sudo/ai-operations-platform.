@@ -30,4 +30,29 @@ jobs:
       - name: Validate toolkit installer syntax
         run: bash -n scripts/setup-agent-toolkit.sh
       - name: Check patch whitespace
-        run: git diff --check HEAD^ HEAD
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PUSH_BASE_SHA: ${{ github.event.before }}
+        shell: bash
+        run: |
+          if [ "$EVENT_NAME" = "pull_request" ]; then
+            git diff --check "${PR_BASE_SHA}...HEAD"
+          elif [ "$EVENT_NAME" = "push" ]; then
+            if [[ "$PUSH_BASE_SHA" =~ ^0+$ ]]; then
+              if git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+                git diff --check HEAD^ HEAD
+              else
+                echo "Initial commit; no parent diff to check."
+              fi
+            else
+              git diff --check "${PUSH_BASE_SHA}...HEAD"
+            fi
+          else
+            echo "Manual run: checking the latest commit."
+            if git rev-parse --verify HEAD^ >/dev/null 2>&1; then
+              git diff --check HEAD^ HEAD
+            else
+              echo "No parent commit; no diff to check."
+            fi
+          fi
