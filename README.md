@@ -11,7 +11,7 @@ This project has a strict zero-spend requirement. Use free/open-source tools, fr
 - Agent skills: Motion, GSAP, Taste, Vercel React best practices, Vercel web design guidelines, 21st.dev, UI/UX Pro Max, and the repository's design-to-code skill.
 - MCP configuration: shadcn, Watermelon UI, optional 21st.dev, Penpot remote MCP, and optional Context7 documentation MCP.
 - Design sources: Penpot (preferred open source), Lunacy (optional desktop MCP), and Figma through the connected ChatGPT app when available.
-- Validation: repository validation checks MCP JSON, environment placeholders, `.gitignore`, local Markdown links, installer syntax and whitespace on every push/pull request.
+- Validation: repository validation checks MCP JSON, environment placeholders, `.gitignore`, local Markdown links, installer syntax, GitHub Actions workflow syntax and full-diff whitespace on every push/pull request.
 - Quality: Markdown lint and optional Node.js dependency audit, lint, typecheck, test and build jobs.
 - Security: CodeQL for JavaScript/TypeScript when present, Gitleaks history scans and npm audit when a Node.js project exists.
 - Browser and UX: conditional Playwright tests, manual Pa11y accessibility audit and manual Lighthouse audit.
