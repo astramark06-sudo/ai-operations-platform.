@@ -16,7 +16,7 @@ This project has a strict zero-spend requirement. Use free/open-source tools, fr
 - Security: CodeQL for JavaScript/TypeScript when present, Gitleaks history scans and npm audit when a Node.js project exists.
 - Browser and UX: conditional Playwright tests, manual Pa11y accessibility audit and manual Lighthouse audit.
 - Deployment: manual GitHub Pages workflow for a built static site in `site/`.
-- Dependency maintenance: weekly Dependabot updates for npm and GitHub Actions.
+- Dependency maintenance: weekly Dependabot updates for GitHub Actions; package-manager updates will be enabled when the application manifest and lockfile are added.
 
 ## Mobile-first workflow
 
