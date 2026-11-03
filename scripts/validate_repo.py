@@ -150,6 +150,13 @@ def validate_toolchain_registry_data(data: object, errors: list[str]) -> set[str
             values = tool.get(key)
             if not isinstance(values, list) or any(not isinstance(value, str) or not value for value in values):
                 fail(f"toolchain registry tools[{index}].{key} must be an array of non-empty strings", errors)
+        if isinstance(tool.get("repo_state"), str) and tool["repo_state"].startswith("reviewed-candidate"):
+            for key in ("repo_url", "activation", "selection_rule", "cost_boundary"):
+                if not isinstance(tool.get(key), str) or not tool[key].strip():
+                    fail(f"toolchain registry candidate tools[{index}] must define non-empty {key}", errors)
+            repo_url = tool.get("repo_url", "")
+            if not isinstance(repo_url, str) or not repo_url.startswith("https://github.com/"):
+                fail(f"toolchain registry candidate tools[{index}] repo_url must use an HTTPS GitHub repository URL", errors)
     return ids
 
 
