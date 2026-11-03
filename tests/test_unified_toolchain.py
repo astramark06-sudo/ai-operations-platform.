@@ -48,7 +48,7 @@ class UnifiedToolchainContractTests(unittest.TestCase):
                 self.assertTrue(candidate.get("activation"))
                 self.assertTrue(candidate.get("selection_rule"))
                 self.assertTrue(candidate.get("cost_boundary"))
-                self.assertNotIn("installed", candidate.get("repo_state", ""))
+                self.assertEqual(candidate.get("repo_state"), "reviewed-candidate-not-installed")
 
     def test_duplicate_tool_ids_are_rejected(self) -> None:
         registry, _ = load_contract_files()
