@@ -174,7 +174,7 @@ Once the scaffold exists:
 
 ## 8. Expanded ecosystem: choose specialists by need
 
-The repository's [expanded ecosystem catalogue](references/EXPANDED-WEB-TOOL-ECOSYSTEM.md) and [55-entry tool registry](contracts/toolchain.registry.json) cover more than the original design/motion stack. The 40 additional projects are reviewed candidates, not automatically installed dependencies. Read the catalogue before adding any of them.
+The repository's [expanded ecosystem catalogue](references/EXPANDED-WEB-TOOL-ECOSYSTEM.md) and [60-entry tool registry](contracts/toolchain.registry.json) cover more than the original design/motion stack. The 45 additional projects are reviewed candidates, not automatically installed dependencies. Read the catalogue before adding any of them.
 
 ### Skills and agent capabilities
 
@@ -233,3 +233,13 @@ Supabase and Appwrite are backend alternatives. Umami is an optional privacy-ori
 - No package is added to the application before a framework, feature and acceptance criteria exist.
 - At adoption time, inspect the upstream repository, current release, package-specific license, dependency tree, security posture, client compatibility and possible overage/hosting costs.
 - Add the chosen component/tool and its provenance to the feature handoff contract.
+
+### Further additions in registry 1.2.0
+
+- **TanStack Intent:** version-matched package skills when using TanStack libraries. Review generated instructions/permissions.
+- **Lighthouse CI:** automated Lighthouse budgets in CI against a real preview; do not add a persistent report server by default.
+- **Pa11y CI:** multi-route or sitemap accessibility CI when the site has several pages. Keep manual assistive-technology checks.
+- **Payload CMS:** optional Next.js-native content backend/admin for structured editorial workflows; requires hosting and a database.
+- **CSpell:** spell-check documentation and code terminology when the content volume warrants it.
+
+PocketBase is deliberately excluded from the recommended candidate list because its upstream repository was archived on October 26, 2026. A tool being open source is not enough; active maintenance and acceptable risk still matter.
