@@ -51,7 +51,7 @@ This repository is being prepared as a website project. Do not assume a framewor
 - Keep CI workflows least-privileged; grant only the permissions a job needs.
 - Pin external GitHub Actions to reviewed major versions and allow Dependabot to keep them updated.
 - Never introduce AI security scans, hosted LLM calls, paid Actions, or services that can incur charges.
-- Keep manual audits scoped to public URLs; never pass secrets or authenticated URLs as workflow inputs.
+- Keep manual audits scoped to public HTTPS URLs; the audit workflow validator rejects credentials, local/reserved names, non-default ports, and private/reserved DNS answers. This is a guardrail, not a network sandbox. Never pass secrets or authenticated URLs as workflow inputs.
 
 ## Security
 
