@@ -4,6 +4,24 @@ This project has a strict zero-spend requirement. The toolkit below uses free/op
 
 The repository currently has no application scaffold, so frontend dependencies will be selected after the framework is chosen.
 
+## Unified operation: one contract, many specialist tools
+
+The system is coordinated by [the unified-web-engineering skill](../.agents/skills/unified-web-engineering/SKILL.md), not by assuming that all tools can call one another directly. Before a substantial feature, read [the architecture](UNIFIED-TOOLCHAIN.md) and create or resume one [feature handoff contract](contracts/ui-handoff.template.json). The [tool registry](contracts/toolchain.registry.json) records each tool's responsibility, configured status, inputs and outputs.
+
+The operating chain is:
+
+1. **Design intelligence:** UI/UX Pro Max proposes the information architecture, UX patterns and initial tokens; Taste shapes art direction and later critiques real browser output.
+2. **Design authority:** choose one Penpot, Figma or Lunacy source for the feature and inspect its actual constraints, components, variables and assets.
+3. **Component discovery:** shadcn/ui is the primitive baseline. Watermelon UI and 21st.dev find and compare candidates; React Bits is used through Manus when available; Motion Primitives supplies optional Motion-based components.
+4. **Implementation:** project tokens own the visual system. Motion for React handles React state/gesture/layout transitions; GSAP handles complex timelines and scroll choreography; CSS handles simple states.
+5. **Assets and browser feedback:** Haikei exports versioned assets. Alibaba Page Agent may explore a local/staging preview; Playwright remains the repeatable test runner.
+6. **Security and release:** Strix performs authorized local/staging security work; GitHub Actions, CodeQL, Gitleaks, Pa11y and Lighthouse provide repeatable gates.
+
+All specialist outputs must be written into the same feature handoff: tokens, chosen components, source/licence/dependencies, motion owner per target, data/mock truth, tool runs, defects and test evidence. Never depend on chat history to synchronize different clients.
+
+**Important:** an entry in .mcp.json or an installer command does not prove that a tool is live in the current client. Check connectivity before use. Manus, ChatGPT and other coding clients need their own supported integrations; they synchronize through the committed contract and Git history.
+
+
 ## 1. Install agent skills
 
 Run from the repository root:
@@ -56,22 +74,22 @@ Use these as source libraries, not as a reason to install every package.
 
 | Resource | Use | Cost guidance |
 |---|---|---|
-| [React Bits](https://www.reactbits.dev/) | Animated React components, text effects, backgrounds and micro-interactions | Use the public open-source components; avoid Pro |
+| [React Bits](https://reactbits.dev/) | Animated React components, text effects, backgrounds and micro-interactions; accessed through Manus in the owner's workflow | Select source deliberately; inspect the component-level licence and third-party notices before commercial reuse |
 | [Watermelon UI](https://ui.watermelon.sh/) | React components, blocks, dashboards and templates | Use free/public components |
-| [Motion Primitives](https://motion-primitives.com/) | Reusable motion-focused React components | Use free source components |
+| [Motion Primitives](https://motion-primitives.com/) | Copy-in animated React components built around Motion and Tailwind CSS | Open-source; requires a compatible React/Tailwind application and Motion runtime |
 | [21st.dev](https://21st.dev/) | Component marketplace and retrieval | Free tier only; 2 code retrievals/day |
 | [shadcn/ui](https://ui.shadcn.com/) | Base component primitives and registry workflow | Free/open source |
-| [Haikei](https://haikei.app/) | Generate/export SVG backgrounds | Use free exports; do not buy assets |
-| [Alibaba Page Agent](https://github.com/alibaba/page-agent) | Browser-side natural-language interaction with existing pages | Open-source project; optional |
+| [Haikei](https://haikei.app/) | Generate/export SVG and PNG backgrounds | Free tier currently advertises 15 generators and SVG/PNG export; check current limits before use |
+| [Alibaba Page Agent](https://github.com/alibaba/page-agent) | In-page DOM-aware natural-language browser exploration; optional extension and beta MCP | Open source; requires its own model/runtime configuration. Not a substitute for Playwright |
 
 ### Animation choice
 
-- Use Motion (package `motion`, imports from `motion/react`) for React component transitions, layout animation and gestures. Motion is MIT-licensed and free.
-- Use GSAP for complex timelines and scroll choreography. Its full toolset, including formerly paid plugins, is now free.
+- Use Motion for React (formerly Framer Motion) for React component transitions, layout animation and gestures. For a new app, install the `motion` package and import from `motion/react`; use the legacy `framer-motion` package only when a selected dependency requires it. Do not add both without a documented compatibility reason.
+- Use GSAP for complex timelines and scroll choreography. Its full toolset, including formerly paid plugins, is now free. GSAP skills are agent guidance; the GSAP runtime is a separate app dependency.
 - Do not animate the same element with both engines. Respect `prefers-reduced-motion`.
 - Use CSS transitions for simple hover/focus states.
 
-Do not install animation dependencies until the app framework is selected.
+Motion Primitives is built on Motion and Tailwind CSS; it is a source library, not another animation engine. Do not add animation dependencies until the app framework is selected.
 
 ## 4. Automated repository checks
 
