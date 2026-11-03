@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       url:
-        description: Public page URL to audit (HTTP or HTTPS)
+        description: Public HTTPS page URL to audit
         required: true
         type: string
 
