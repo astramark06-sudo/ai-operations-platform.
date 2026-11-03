@@ -353,7 +353,8 @@
         "playwright"
       ],
       "selection_rule": "Use alongside GSAP/Motion when high-craft motion is required. Install only relevant skills such as animate, review-animations or improve-animations; avoid loading the whole pack by default.",
-      "cost_boundary": "Public skill files are free; requires a compatible coding-agent runtime."
+      "cost_boundary": "Public skill files are free; requires a compatible coding-agent runtime.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "ux-skills",
@@ -382,7 +383,8 @@
         "orchestrator"
       ],
       "selection_rule": "Use when product discovery, user journeys or UX rationale are important. Does not replace UI/UX Pro Max or the design-source authority.",
-      "cost_boundary": "Open skill repository; compatible agent and setup environment required."
+      "cost_boundary": "Open skill repository; compatible agent and setup environment required.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "frontend-ai-skills-catalogue",
@@ -407,7 +409,8 @@
         "unified-web-engineering"
       ],
       "selection_rule": "Search the catalogue for a missing specialist capability. Do not install its entire 70+ skill collection; overlapping skill packs increase conflicts and context load.",
-      "cost_boundary": "Public skill catalogue; no paid model API required, but some individual skills may reference external tools."
+      "cost_boundary": "Public skill catalogue; no paid model API required, but some individual skills may reference external tools.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "playwright-mcp",
@@ -435,7 +438,8 @@
         "orchestrator"
       ],
       "selection_rule": "Use for agent-driven browser exploration. Keep Playwright's test runner for deterministic assertions; isolate browser profiles and avoid authenticated/personal browser data.",
-      "cost_boundary": "Open-source Apache-2.0 server; needs Node.js, browser runtime and a compatible MCP client."
+      "cost_boundary": "Open-source Apache-2.0 server; needs Node.js, browser runtime and a compatible MCP client.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "chrome-devtools-mcp",
@@ -464,7 +468,8 @@
         "playwright"
       ],
       "selection_rule": "Use when Chrome-specific diagnostics or performance traces are needed. Do not add if Playwright traces and Lighthouse already answer the question.",
-      "cost_boundary": "Open-source project; needs Chrome and a compatible computer/client. Its browser context is sensitive and must be isolated."
+      "cost_boundary": "Open-source project; needs Chrome and a compatible computer/client. Its browser context is sensitive and must be isolated.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "storybook-mcp",
@@ -492,7 +497,8 @@
         "playwright"
       ],
       "selection_rule": "Adopt once several reusable components exist or visual variants need a shared catalogue. Storybook MCP moved into the Storybook monorepo in v10.6; follow current official docs, not the old standalone repository.",
-      "cost_boundary": "Open-source Storybook core/addon; requires an app scaffold and compatible agent client."
+      "cost_boundary": "Open-source Storybook core/addon; requires an app scaffold and compatible agent client.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "base-ui",
@@ -518,7 +524,8 @@
         "component-review"
       ],
       "selection_rule": "Compare with the primitive base selected by shadcn. Use Base UI or Radix as the foundation for a given component family, not competing foundations for the same control.",
-      "cost_boundary": "MIT-licensed open-source library; runtime dependency only after framework selection."
+      "cost_boundary": "MIT-licensed open-source library; runtime dependency only after framework selection.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "react-aria-components",
@@ -545,7 +552,8 @@
         "playwright"
       ],
       "selection_rule": "Prefer for demanding accessibility, internationalization or complex interaction requirements. Do not layer it on top of an equivalent shadcn/Radix/Base UI primitive.",
-      "cost_boundary": "Open-source repository; verify the package-specific license and dependencies before use."
+      "cost_boundary": "Open-source repository; verify the package-specific license and dependencies before use.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "radix-primitives",
@@ -571,7 +579,8 @@
         "component-review"
       ],
       "selection_rule": "Use only where the selected shadcn base or an existing project component is not the better fit. Do not mix Radix and Base UI primitives inside one component implementation.",
-      "cost_boundary": "Open-source primitives; verify individual package terms and current API."
+      "cost_boundary": "Open-source primitives; verify individual package terms and current API.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "mantine",
@@ -596,7 +605,8 @@
         "implementation"
       ],
       "selection_rule": "Consider only if the project deliberately chooses a complete library instead of copy-in shadcn primitives. Do not combine Mantine's global styling/theme with shadcn as parallel systems.",
-      "cost_boundary": "MIT-licensed open-source core; inspect any separately sold premium templates or services before use."
+      "cost_boundary": "MIT-licensed open-source core; inspect any separately sold premium templates or services before use.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "tanstack-query",
@@ -623,7 +633,8 @@
         "data-contract"
       ],
       "selection_rule": "Add when the feature has real remote/server state. Keep simple static/local state in React until a query/cache layer is needed.",
-      "cost_boundary": "Open-source MIT library; does not provide a backend or free database."
+      "cost_boundary": "Open-source MIT library; does not provide a backend or free database.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "tanstack-table",
@@ -650,7 +661,8 @@
         "axe-core"
       ],
       "selection_rule": "Use for real data tables with multiple interactions; use a semantic HTML table for simple static/tabular content.",
-      "cost_boundary": "Open-source MIT library; no hosted service required."
+      "cost_boundary": "Open-source MIT library; no hosted service required.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "react-hook-form",
@@ -677,7 +689,8 @@
         "playwright"
       ],
       "selection_rule": "Use for multi-field, dynamic or validated forms. Native HTML forms and controlled React state are enough for small forms.",
-      "cost_boundary": "MIT-licensed open-source library; no hosted API required."
+      "cost_boundary": "MIT-licensed open-source library; no hosted API required.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "zod",
@@ -706,7 +719,8 @@
         "tests"
       ],
       "selection_rule": "Use one schema at boundaries that need runtime validation; avoid duplicating incompatible frontend and backend shapes.",
-      "cost_boundary": "MIT-licensed open-source library."
+      "cost_boundary": "MIT-licensed open-source library.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "msw",
@@ -732,7 +746,8 @@
         "implementation"
       ],
       "selection_rule": "Use for realistic request-level tests and loading/error/empty cases. Do not mistake mock data for a production backend.",
-      "cost_boundary": "Open-source project; no paid API required."
+      "cost_boundary": "Open-source project; no paid API required.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "vitest",
@@ -759,7 +774,8 @@
         "orchestrator"
       ],
       "selection_rule": "Prefer for a Vite-based project. Select the test runner once; do not add Vitest and Jest for the same test layer without a concrete compatibility need.",
-      "cost_boundary": "MIT-licensed open-source test runner; requires Node.js and application scaffold."
+      "cost_boundary": "MIT-licensed open-source test runner; requires Node.js and application scaffold.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "testing-library-react",
@@ -784,7 +800,8 @@
         "axe-core"
       ],
       "selection_rule": "Use with the selected unit test runner for user-observable component behavior. Prefer accessible queries and real interaction simulation.",
-      "cost_boundary": "MIT-licensed open-source test library."
+      "cost_boundary": "MIT-licensed open-source test library.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "axe-core",
@@ -811,7 +828,8 @@
         "taste"
       ],
       "selection_rule": "Integrate into Playwright/component tests where feasible. Automated checks catch only part of accessibility problems; retain keyboard and screen-reader/manual reviews.",
-      "cost_boundary": "Open-source MPL-2.0 engine; no hosted audit service required."
+      "cost_boundary": "Open-source MPL-2.0 engine; no hosted audit service required.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "recharts",
@@ -837,7 +855,8 @@
         "playwright"
       ],
       "selection_rule": "Use for conventional React dashboards and charts. Choose one charting system for a feature; do not introduce charts merely for decoration.",
-      "cost_boundary": "MIT-licensed open-source project; charts still need accessible text/table alternatives."
+      "cost_boundary": "MIT-licensed open-source project; charts still need accessible text/table alternatives.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "lucide",
@@ -861,7 +880,8 @@
         "design-system-contract"
       ],
       "selection_rule": "Recommended default icon family for a new UI. Avoid mixing icon families without an explicit brand or semantic reason.",
-      "cost_boundary": "ISC-licensed and free for commercial/personal use; does not include brand logos."
+      "cost_boundary": "ISC-licensed and free for commercial/personal use; does not include brand logos.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "tabler-icons",
@@ -885,7 +905,8 @@
         "design-system-contract"
       ],
       "selection_rule": "Alternative to Lucide when icon coverage/style better matches. Select Lucide or Tabler as the primary family; do not load both by default.",
-      "cost_boundary": "MIT-licensed icon set; preserve notices where required."
+      "cost_boundary": "MIT-licensed icon set; preserve notices where required.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "threejs",
@@ -911,7 +932,8 @@
         "taste"
       ],
       "selection_rule": "Use only when a 3D experience materially serves the product. Set mobile fallbacks, low-power behavior and a strict performance budget.",
-      "cost_boundary": "MIT-licensed open-source runtime; GPU performance and asset creation remain implementation costs."
+      "cost_boundary": "MIT-licensed open-source runtime; GPU performance and asset creation remain implementation costs.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "react-three-fiber",
@@ -936,7 +958,8 @@
         "performance-qa"
       ],
       "selection_rule": "Use with Three.js when the project is React and declarative scene composition helps. Match the major version to the selected React version.",
-      "cost_boundary": "MIT-licensed open-source project; renderer and GPU constraints still apply."
+      "cost_boundary": "MIT-licensed open-source project; renderer and GPU constraints still apply.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "drei",
@@ -959,7 +982,8 @@
         "performance-qa"
       ],
       "selection_rule": "Add only when a helper saves meaningful code; inspect bundle and per-helper dependencies.",
-      "cost_boundary": "MIT-licensed open-source library."
+      "cost_boundary": "MIT-licensed open-source library.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "dotlottie-web",
@@ -983,7 +1007,8 @@
         "performance-qa"
       ],
       "selection_rule": "Use for supplied/licensed authored vector animations and state-machine assets. Player license does not grant rights to third-party animation files.",
-      "cost_boundary": "MIT-licensed player; verify each animation asset's own license."
+      "cost_boundary": "MIT-licensed player; verify each animation asset's own license.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "lenis",
@@ -1008,7 +1033,8 @@
         "accessibility-qa"
       ],
       "selection_rule": "Not a global default. Preserve native scrolling where possible, honor reduced motion and integrate scroll timing explicitly with GSAP/ScrollTrigger.",
-      "cost_boundary": "MIT-licensed open-source runtime; must be performance and accessibility tested."
+      "cost_boundary": "MIT-licensed open-source runtime; must be performance and accessibility tested.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "svgo",
@@ -1031,7 +1057,8 @@
         "asset-review"
       ],
       "selection_rule": "Run on committed exported SVGs where optimization is beneficial; visually compare output before replacing originals.",
-      "cost_boundary": "MIT-licensed Node.js tool; local or CI execution."
+      "cost_boundary": "MIT-licensed Node.js tool; local or CI execution.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "sharp",
@@ -1055,7 +1082,8 @@
         "lighthouse"
       ],
       "selection_rule": "Use for build-time image processing when needed. Prefer appropriately sized source images and avoid introducing server image processing for a static site.",
-      "cost_boundary": "Open-source; verify current package license and native platform requirements before installation."
+      "cost_boundary": "Open-source; verify current package license and native platform requirements before installation.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "biome",
@@ -1080,7 +1108,8 @@
         "github-ci"
       ],
       "selection_rule": "Choose Biome OR ESLint plus Prettier based on ecosystem needs. Do not run multiple formatters over the same files.",
-      "cost_boundary": "Open-source with MIT/Apache-2.0 licensing; check individual components and versions."
+      "cost_boundary": "Open-source with MIT/Apache-2.0 licensing; check individual components and versions.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "knip",
@@ -1106,7 +1135,8 @@
         "github-ci"
       ],
       "selection_rule": "Run after the app has meaningful source and package metadata; review findings before removing code that may be used dynamically.",
-      "cost_boundary": "Open-source CLI; inspect its current license and release docs before use."
+      "cost_boundary": "Open-source CLI; inspect its current license and release docs before use.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "osv-scanner",
@@ -1132,7 +1162,8 @@
         "security-review"
       ],
       "selection_rule": "Use as a supplementary dependency scanner when a lockfile exists. Avoid duplicating the same scheduled scan in multiple CI workflows.",
-      "cost_boundary": "Open-source scanner and advisory data; network access to advisory sources required."
+      "cost_boundary": "Open-source scanner and advisory data; network access to advisory sources required.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "trivy",
@@ -1160,7 +1191,8 @@
         "github-ci"
       ],
       "selection_rule": "Use when supply-chain, container, IaC or license coverage is required. Keep scans scoped and avoid overlapping every scanner on every commit.",
-      "cost_boundary": "Open-source scanner; local execution or free CI is possible, while hosted platforms and some services may be paid."
+      "cost_boundary": "Open-source scanner; local execution or free CI is possible, while hosted platforms and some services may be paid.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "owasp-zap",
@@ -1186,7 +1218,8 @@
         "retest"
       ],
       "selection_rule": "Only run against owned/authorized staging with test data and a safe scan profile. Never scan third-party sites or production data by default.",
-      "cost_boundary": "Apache-2.0 open-source scanner; requires compatible runtime and careful target authorization."
+      "cost_boundary": "Apache-2.0 open-source scanner; requires compatible runtime and careful target authorization.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "vite",
@@ -1212,7 +1245,8 @@
         "pages-deploy"
       ],
       "selection_rule": "Strong default candidate for a client-rendered React app. Do not select it before the product's rendering and routing needs are decided.",
-      "cost_boundary": "MIT-licensed open-source build tool."
+      "cost_boundary": "MIT-licensed open-source build tool.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "astro",
@@ -1238,7 +1272,8 @@
         "lighthouse"
       ],
       "selection_rule": "Prefer for content-led marketing, documentation and static publishing. Choose React/Vite/Next-style application architecture instead when the product is highly interactive.",
-      "cost_boundary": "MIT-licensed open-source framework; deployment and server adapters may have separate infrastructure costs."
+      "cost_boundary": "MIT-licensed open-source framework; deployment and server adapters may have separate infrastructure costs.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "starlight",
@@ -1263,7 +1298,8 @@
         "lighthouse"
       ],
       "selection_rule": "Use only if the project needs a public documentation portal; it is not the website's application framework.",
-      "cost_boundary": "MIT-licensed open-source framework; static output can be hosted on GitHub Pages."
+      "cost_boundary": "MIT-licensed open-source framework; static output can be hosted on GitHub Pages.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "supabase",
@@ -1292,7 +1328,8 @@
         "security-review"
       ],
       "selection_rule": "Do not add for static/mock-only sites. Self-hosting requires compute and operations; managed free tiers have quotas and can require billing controls. Keep MCP access read-only unless mutations are explicitly needed.",
-      "cost_boundary": "Open-source core; managed cloud quotas/pricing and self-hosting infrastructure are separate. Never assume unlimited free hosting."
+      "cost_boundary": "Open-source core; managed cloud quotas/pricing and self-hosting infrastructure are separate. Never assume unlimited free hosting.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "appwrite",
@@ -1322,7 +1359,8 @@
         "security-review"
       ],
       "selection_rule": "Compare with Supabase only after writing backend requirements. Do not use both for the same backend problem. Self-hosting needs Docker and compute; cloud free plan has limits.",
-      "cost_boundary": "BSD-3-Clause open-source platform; managed free tier is quota-limited and infrastructure is not free when self-hosted."
+      "cost_boundary": "BSD-3-Clause open-source platform; managed free tier is quota-limited and infrastructure is not free when self-hosted.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "umami",
@@ -1347,7 +1385,8 @@
         "improvement-backlog"
       ],
       "selection_rule": "Only add if product metrics are needed and the privacy/consent approach is defined. Self-hosting requires a server and PostgreSQL; repository hosting does not supply this.",
-      "cost_boundary": "MIT-licensed application; self-hosting requires ongoing compute/database. Cloud services may have paid limits."
+      "cost_boundary": "MIT-licensed application; self-hosting requires ongoing compute/database. Cloud services may have paid limits.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "zustand",
@@ -1371,7 +1410,8 @@
         "playwright"
       ],
       "selection_rule": "Start with local React state and context. Add Zustand only when cross-component shared state becomes awkward; do not introduce multiple global-state libraries.",
-      "cost_boundary": "Open-source library; verify current license and API before installation."
+      "cost_boundary": "Open-source library; verify current license and API before installation.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "tanstack-intent",
@@ -1396,7 +1436,8 @@
         "implementation"
       ],
       "selection_rule": "Use when adopting TanStack packages that publish Intent skills. Review generated permissions and guidance diffs before committing; do not run the moving @latest CLI blindly in CI.",
-      "cost_boundary": "MIT-licensed open-source CLI; requires Node.js and compatible coding agent; no hosted AI service included."
+      "cost_boundary": "MIT-licensed open-source CLI; requires Node.js and compatible coding agent; no hosted AI service included.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "lighthouse-ci",
@@ -1423,7 +1464,8 @@
         "orchestrator"
       ],
       "selection_rule": "Prefer when the app has repeatable builds and preview targets. The existing manual Lighthouse workflow is sufficient before an application scaffold exists; do not add a hosted LHCI server unless infrastructure is explicitly approved.",
-      "cost_boundary": "Open-source Lighthouse CI project; local/GitHub-hosted runner possible, but any persistent server/hosting has separate cost."
+      "cost_boundary": "Open-source Lighthouse CI project; local/GitHub-hosted runner possible, but any persistent server/hosting has separate cost.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "pa11y-ci",
@@ -1450,7 +1492,8 @@
         "github-ci"
       ],
       "selection_rule": "Use when a site contains several routes and needs a CI accessibility gate. Existing manual Pa11y URL audit may be enough for a single-page site; retain manual keyboard and assistive-technology testing.",
-      "cost_boundary": "LGPL-3.0-only open-source tool; requires Node.js and a browser. No paid cloud service required."
+      "cost_boundary": "LGPL-3.0-only open-source tool; requires Node.js and a browser. No paid cloud service required.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "payload-cms",
@@ -1479,7 +1522,8 @@
         "security-review"
       ],
       "selection_rule": "Use when editors need structured content and an integrated Next.js backend. Not appropriate for a simple static site; choose one CMS/backend rather than layering it on Supabase/Appwrite without a documented separation.",
-      "cost_boundary": "MIT-licensed source; self-hosting needs a compatible Node/Next.js host and database. Free hosting is not guaranteed."
+      "cost_boundary": "MIT-licensed source; self-hosting needs a compatible Node/Next.js host and database. Free hosting is not guaranteed.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "cspell",
@@ -1505,7 +1549,8 @@
         "docs-review"
       ],
       "selection_rule": "Use when documentation/content volume justifies spell checking. Keep technical names in a checked-in dictionary rather than disabling broad rules.",
-      "cost_boundary": "Open-source spell checker; current major releases have Node.js requirements. Check release support before installing."
+      "cost_boundary": "Open-source spell checker; current major releases have Node.js requirements. Check release support before installing.",
+      "license_note": "Not independently verified in this catalogue. Verify the exact upstream package, plugin, asset and deployment license before adoption."
     },
     {
       "id": "puck-visual-editor",
