@@ -171,7 +171,6 @@ Once the scaffold exists:
 4. Add Motion and/or GSAP only where required.
 5. Export Haikei SVG assets and commit them to the project.
 
-
 ## 8. Expanded ecosystem: choose specialists by need
 
 The repository's [expanded ecosystem catalogue](references/EXPANDED-WEB-TOOL-ECOSYSTEM.md) and [60-entry tool registry](contracts/toolchain.registry.json) cover more than the original design/motion stack. The 45 additional projects are reviewed candidates, not automatically installed dependencies. Read the catalogue before adding any of them.
