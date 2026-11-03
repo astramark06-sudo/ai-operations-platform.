@@ -63,6 +63,12 @@ If the source cannot be inspected, work from supplied screenshots/specifications
 - Use Motion Primitives only when compatible with the selected React/Tailwind stack.
 - Consider Base UI, Radix or React Aria when the selected primitive foundation does not fit; treat Mantine as an alternative complete design system, not an add-on.
 - Use Storybook when reusable component variants need an inspectable catalogue and the app scaffold can support it.
+- Evaluate visual authoring tools by output type: Puck for React page composition, GrapesJS for HTML/CSS builder workflows, Webstudio for a full visual website builder, and Onlook for editing a codebase visually. Select one when visual editing is a real product requirement; preserve a single source of truth.
+- For internal application builders, choose Appsmith, Budibase or ToolJet for low-code visual construction, or Refine/React Admin for code-first React admin apps. Review GPL/AGPL deployment obligations and managed-service pricing.
+- For workflow/diagram UI, choose React Flow for interactive graphs, Rete.js for programmable dataflow, and Excalidraw for freeform canvas/whiteboards.
+- For dynamic layouts, choose React Grid Layout for dashboard widgets, dnd-kit or FormKit Drag and Drop for sortable interactions, and React Resizable Panels for split workspaces. Include keyboard operation, touch behavior, persistence rules and mobile fallbacks.
+- Magic UI, daisyUI, Flowbite React, Chakra UI and MUI are component-system options; Headless UI provides unstyled accessible controls and Floating UI provides positioning. Do not combine several global systems.
+- Open Props and CSS Doodle are optional CSS tools. Next.js, SvelteKit and Nuxt are alternative app frameworks; select one only after requirements are defined.
 - Shortlist before retrieving source, especially with 21st.dev's limited free retrievals.
 - Inspect each candidate's licence, third-party notices, dependencies, accessibility, responsive behavior and state handling.
 - Record selected components and rejected alternatives in the contract.
@@ -83,7 +89,7 @@ Assign one animation owner per animated DOM target:
 
 Motion for React is the successor to Framer Motion. Do not add both packages to a new project. Do not let GSAP and Motion animate the same target/properties. Record owners in motion_ownership.
 
-Use Haikei only for asset generation. Export, optimize and commit original assets; SVGO can optimize SVG exports and Sharp can generate raster variants when needed. dotLottie Web is an optional player for individually licensed authored animation files. Do not create runtime dependencies on the Haikei editor. Three.js/React Three Fiber/Drei and Lenis are specialist options only when explicit 3D/scroll requirements justify their performance and accessibility cost.
+React Spring and Anime.js are optional alternative animation engines, not defaults. Use them only when their spring/timeline model materially fits better than Motion/GSAP/CSS; preserve one owner per animated target. Use Open Props only through the project token contract.\n\nUse Haikei only for asset generation. Export, optimize and commit original assets; SVGO can optimize SVG exports and Sharp can generate raster variants when needed. dotLottie Web is an optional player for individually licensed authored animation files. Do not create runtime dependencies on the Haikei editor. Three.js/React Three Fiber/Drei and Lenis are specialist options only when explicit 3D/scroll requirements justify their performance and accessibility cost.
 
 ### 7. Browser feedback
 
