@@ -6,7 +6,7 @@ The repository currently has no application scaffold, so frontend dependencies w
 
 ## Unified operation: one contract, many specialist tools
 
-The system is coordinated by [the unified-web-engineering skill](../.agents/skills/unified-web-engineering/SKILL.md), not by assuming that all tools can call one another directly. Before a substantial feature, read [the architecture](UNIFIED-TOOLCHAIN.md) and create or resume one [feature handoff contract](contracts/ui-handoff.template.json). The [tool registry](contracts/toolchain.registry.json) records each tool's responsibility, configured status, inputs and outputs.
+The system is coordinated by [the unified-web-engineering skill](../.agents/skills/unified-web-engineering/SKILL.md), not by assuming that all tools can call one another directly. Before a substantial feature, read [the architecture](architecture/UNIFIED-TOOLCHAIN.md) and create or resume one [feature handoff contract](contracts/ui-handoff.template.json). The [tool registry](contracts/toolchain.registry.json) records each tool's responsibility, configured status, inputs and outputs.
 
 The operating chain is:
 
