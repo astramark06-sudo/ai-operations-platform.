@@ -17,6 +17,9 @@ This repository is being prepared as a website project. Do not assume a framewor
 ## Unified toolchain orchestration
 
 - Before substantial website, page, or component design/implementation, follow [.agents/skills/unified-web-engineering/SKILL.md](.agents/skills/unified-web-engineering/SKILL.md).
+- Before selecting additional tools, inspect [the expanded ecosystem catalogue](docs/references/EXPANDED-WEB-TOOL-ECOSYSTEM.md) and machine-readable registry. These contain reviewed candidates, not instructions to install everything.
+- Activate a candidate only when a feature's acceptance criteria require its capability; prefer an existing organ if it already solves the problem. Record the chosen tool, rationale, source/license, dependencies, cost boundary and fallback in the feature contract.
+- Keep optional browser MCPs, backend services, 3D runtimes and security scanners disabled until their environment, permissions, scope and cost are explicitly suitable.
 - Read [the unified toolchain architecture](docs/architecture/UNIFIED-TOOLCHAIN.md), [tool registry](docs/contracts/toolchain.registry.json), and the feature's current UI handoff contract before starting or resuming work.
 - Use one feature contract as shared memory across ChatGPT, Manus, and other compatible coding clients. Record decisions, component provenance, motion ownership, data/mock status, tool availability and test evidence there.
 - Check live skill/MCP availability in the current client. A configured endpoint or installer is not proof of a working connection.
