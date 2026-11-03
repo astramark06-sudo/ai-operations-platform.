@@ -24,6 +24,10 @@ This repository is being prepared as a website project. Do not assume a framewor
 - Use one feature contract as shared memory across ChatGPT, Manus, and other compatible coding clients. Record decisions, component provenance, motion ownership, data/mock status, tool availability and test evidence there.
 - Check live skill/MCP availability in the current client. A configured endpoint or installer is not proof of a working connection.
 - Keep shadcn/ui as the primitive baseline; use 21st.dev, Watermelon UI, React Bits and Motion Primitives as selectively reviewed component sources.
+- For visual webpage authoring, compare Puck, GrapesJS, Webstudio and Onlook; for internal low-code apps, compare Appsmith, Budibase and ToolJet; for code-first admin apps, compare Refine and React Admin. These are architecture choices, not a list to install together.
+- For interactive flows/canvas, evaluate React Flow, Rete.js and Excalidraw. For dynamic dashboards and workspace layouts, evaluate React Grid Layout, dnd-kit, FormKit Drag and Drop and React Resizable Panels. Preserve keyboard/touch access and responsive fallbacks.
+- Treat Magic UI, daisyUI, Flowbite React, Chakra UI and MUI as alternative component systems; Headless UI and Floating UI provide narrower primitive/positioning capabilities. Do not layer competing global design systems.
+- Next.js, SvelteKit and Nuxt are alternative app frameworks. Open Props/CSS Doodle and React Spring/Anime.js are optional CSS/motion specialists, not defaults.
 - Use Motion for React for React state/gesture/layout transitions and GSAP for complex timelines/scroll choreography. Assign one motion owner per animated target.
 - Use Alibaba Page Agent only for approved local/staging exploration; use Playwright for repeatable tests. Run Strix only against explicitly authorized scope with local-model defaults.
 
