@@ -118,12 +118,147 @@ def validate_markdown_links(errors: list[str]) -> int:
     return count
 
 
+
+def validate_toolchain_registry_data(data: object, errors: list[str]) -> set[str]:
+    """Validate the shared registry that defines tool roles and handoffs."""
+    if not isinstance(data, dict):
+        fail("toolchain registry must be a JSON object", errors)
+        return set()
+    if not isinstance(data.get("schema_version"), str) or not data["schema_version"]:
+        fail("toolchain registry must define schema_version", errors)
+
+    tools = data.get("tools")
+    if not isinstance(tools, list) or not tools:
+        fail("toolchain registry must contain a non-empty tools array", errors)
+        return set()
+
+    ids: set[str] = set()
+    required_strings = ("id", "name", "organ", "kind", "repo_state", "client_state", "responsibility")
+    for index, tool in enumerate(tools):
+        if not isinstance(tool, dict):
+            fail(f"toolchain registry tools[{index}] must be an object", errors)
+            continue
+        for key in required_strings:
+            if not isinstance(tool.get(key), str) or not tool[key].strip():
+                fail(f"toolchain registry tools[{index}] must define non-empty {key}", errors)
+        tool_id = tool.get("id")
+        if isinstance(tool_id, str) and tool_id:
+            if tool_id in ids:
+                fail(f"toolchain registry contains duplicate tool id {tool_id!r}", errors)
+            ids.add(tool_id)
+        for key in ("consumes", "produces", "handoff_to"):
+            values = tool.get(key)
+            if not isinstance(values, list) or any(not isinstance(value, str) or not value for value in values):
+                fail(f"toolchain registry tools[{index}].{key} must be an array of non-empty strings", errors)
+    return ids
+
+
+def validate_ui_handoff_template_data(data: object, tool_ids: set[str], errors: list[str]) -> str | None:
+    """Validate the feature handoff contract and enforce one motion owner per target."""
+    if not isinstance(data, dict):
+        fail("UI handoff template must be a JSON object", errors)
+        return None
+
+    required_sections = (
+        "contract_version", "contract_status", "feature", "source_of_truth",
+        "design_system", "component_registry", "interactions", "motion_ownership",
+        "data_contracts", "tool_runs", "quality_gates", "decisions", "defects", "handoff",
+    )
+    for section in required_sections:
+        if section not in data:
+            fail(f"UI handoff template is missing {section}", errors)
+
+    version = data.get("contract_version")
+    if not isinstance(version, str) or not version:
+        fail("UI handoff template must define contract_version", errors)
+        version = None
+
+    source = data.get("source_of_truth")
+    if not isinstance(source, dict) or source.get("design_source") not in {"undecided", "penpot", "figma", "lunacy", "exported-reference"}:
+        fail("UI handoff source_of_truth.design_source must select one supported source or remain undecided", errors)
+
+    design_system = data.get("design_system")
+    if not isinstance(design_system, dict) or not isinstance(design_system.get("tokens"), dict):
+        fail("UI handoff design_system must contain a tokens object", errors)
+    else:
+        for token_group in ("color", "typography", "spacing", "radii", "elevation", "breakpoints", "motion"):
+            if token_group not in design_system["tokens"]:
+                fail(f"UI handoff design tokens are missing {token_group}", errors)
+
+    allowed_motion_owners = {"css", "motion", "gsap", "none"}
+    ownership = data.get("motion_ownership")
+    if not isinstance(ownership, list):
+        fail("UI handoff motion_ownership must be an array", errors)
+    else:
+        targets: set[str] = set()
+        for index, entry in enumerate(ownership):
+            if not isinstance(entry, dict):
+                fail(f"UI handoff motion_ownership[{index}] must be an object", errors)
+                continue
+            target = entry.get("target")
+            owner = entry.get("owner")
+            if not isinstance(target, str) or not target:
+                fail(f"UI handoff motion_ownership[{index}] must define a target", errors)
+            elif target in targets:
+                fail(f"UI handoff has multiple motion owners for target {target!r}", errors)
+            else:
+                targets.add(target)
+            if owner not in allowed_motion_owners:
+                fail(f"UI handoff motion_ownership[{index}] has unsupported owner {owner!r}", errors)
+
+    components = data.get("component_registry")
+    if not isinstance(components, list):
+        fail("UI handoff component_registry must be an array", errors)
+    else:
+        for index, entry in enumerate(components):
+            if not isinstance(entry, dict):
+                fail(f"UI handoff component_registry[{index}] must be an object", errors)
+                continue
+            source_tool = entry.get("source_tool_id")
+            if source_tool not in tool_ids:
+                fail(f"UI handoff component_registry[{index}] references unknown tool {source_tool!r}", errors)
+
+    tool_runs = data.get("tool_runs")
+    if not isinstance(tool_runs, list):
+        fail("UI handoff tool_runs must be an array", errors)
+    else:
+        for index, entry in enumerate(tool_runs):
+            if not isinstance(entry, dict) or entry.get("tool_id") not in tool_ids:
+                tool_id = entry.get("tool_id") if isinstance(entry, dict) else None
+                fail(f"UI handoff tool_runs[{index}] references unknown tool {tool_id!r}", errors)
+
+    for section in ("decisions", "defects", "interactions", "data_contracts"):
+        if section in data and not isinstance(data[section], list):
+            fail(f"UI handoff {section} must be an array", errors)
+
+    return version
+
+
+def validate_unified_toolchain(errors: list[str]) -> tuple[int, str | None]:
+    """Load and validate the tool registry and shared feature contract template."""
+    registry_path = ROOT / "docs" / "contracts" / "toolchain.registry.json"
+    contract_path = ROOT / "docs" / "contracts" / "ui-handoff.template.json"
+    try:
+        registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        fail(f"toolchain registry cannot be parsed: {exc}", errors)
+        return 0, None
+    tool_ids = validate_toolchain_registry_data(registry, errors)
+    try:
+        contract = json.loads(contract_path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeError, json.JSONDecodeError) as exc:
+        fail(f"UI handoff template cannot be parsed: {exc}", errors)
+        return len(tool_ids), None
+    version = validate_ui_handoff_template_data(contract, tool_ids, errors)
+    return len(tool_ids), version
+
 def main() -> int:
     errors: list[str] = []
     env_names = read_env_example(errors)
     validate_mcp_config(env_names, errors)
     validate_env_gitignore(errors)
     local_links = validate_markdown_links(errors)
+    tool_count, contract_version = validate_unified_toolchain(errors)
 
     if errors:
         print("Repository validation failed:")
@@ -139,12 +274,16 @@ def main() -> int:
                     json.loads((ROOT / ".mcp.json").read_text(encoding="utf-8"))["mcpServers"]
                 ),
                 "environment_keys": len(env_names),
+                "toolchain_tools": tool_count,
+                "ui_handoff_contract_version": contract_version,
                 "local_markdown_links_checked": local_links,
                 "checks": [
                     "MCP JSON structure and transport",
                     "MCP environment variable declarations",
                     "secret-safe environment template and Git ignore rules",
                     "local Markdown link integrity",
+                    "tool registry and handoff structure",
+                    "single motion owner per animated target",
                 ],
             },
             indent=2,
