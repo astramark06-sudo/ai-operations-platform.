@@ -1376,5 +1376,9 @@
   ],
   "research_date": "2026-11-03",
   "coverage_note": "Curated public GitHub scan, not an exhaustive enumeration of all GitHub repositories. Candidates are not automatically installed or connected. Each entry distinguishes repository review from active client/runtime availability.",
-  "selection_policy": "Use capability-triggered selection, not tool accumulation. Verify current releases, component/package license, third-party notices, dependencies, permissions, client compatibility and actual cost boundary before activating a candidate."
+  "selection_policy": "Use capability-triggered selection, not tool accumulation. Verify current releases, component/package license, third-party notices, dependencies, permissions, client compatibility and actual cost boundary before activating a candidate.",
+  "core_tool_count": 15,
+  "reviewed_candidate_count": 40,
+  "total_tool_records": 55,
+  "candidate_status_policy": "Every reviewed-candidate record has repo_url, activation, selection_rule and cost_boundary. Candidate records are not considered installed, connected or active."
 }
