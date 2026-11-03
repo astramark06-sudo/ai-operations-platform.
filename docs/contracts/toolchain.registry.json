@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0.0",
+  "purpose": "Single catalogue of responsibilities, availability boundaries and handoffs for the unified website workflow.",
+  "operating_rule": "A tool is active only after the current client confirms it can invoke the tool. Repository configuration or documentation alone is not proof of a live connection.",
+  "tools": [
+    {
+      "id": "ui-ux-pro-max",
+      "name": "UI/UX Pro Max",
+      "organ": "design-intelligence",
+      "kind": "agent-skill",
+      "repo_state": "installer-configured",
+      "client_state": "unverified-per-client",
+      "responsibility": "Propose product-aware information architecture, design patterns, colors, typography, UX and accessibility.",
+      "consumes": [
+        "product-brief"
+      ],
+      "produces": [
+        "design-proposal",
+        "ux-checklist"
+      ],
+      "handoff_to": [
+        "taste",
+        "design-source",
+        "component-discovery"
+      ]
+    },
+    {
+      "id": "taste",
+      "name": "Taste",
+      "organ": "art-direction-and-visual-qa",
+      "kind": "agent-skill",
+      "repo_state": "installer-configured",
+      "client_state": "unverified-per-client",
+      "responsibility": "Establish distinctive art direction, challenge generic layouts, inspect browser output and prioritize visual corrections.",
+      "consumes": [
+        "product-brief",
+        "design-proposal",
+        "browser-preview"
+      ],
+      "produces": [
+        "art-direction-decision",
+        "visual-review",
+        "visual-defect-list"
+      ],
+      "handoff_to": [
+        "design-source",
+        "implementation",
+        "orchestrator"
+      ]
+    },
+    {
+      "id": "design-source",
+      "name": "Penpot / Figma / Lunacy",
+      "organ": "design-source-of-truth",
+      "kind": "design-application",
+      "repo_state": "documented; Penpot MCP placeholder configured",
+      "client_state": "unverified-per-client",
+      "responsibility": "Supply the selected authoritative frames, variables, components, assets and interaction specifications. Select one authority per feature.",
+      "consumes": [
+        "approved-design-direction"
+      ],
+      "produces": [
+        "design-inspection",
+        "design-assets",
+        "token-evidence",
+        "interaction-spec"
+      ],
+      "handoff_to": [
+        "orchestrator",
+        "implementation"
+      ]
+    },
+    {
+      "id": "shadcn",
+      "name": "shadcn/ui MCP",
+      "organ": "primitive-foundation",
+      "kind": "mcp-server",
+      "repo_state": "configured-in-mcp-json",
+      "client_state": "unverified-per-client",
+      "responsibility": "Default accessible primitive foundation and registry path. Adapt source-owned components to project tokens.",
+      "consumes": [
+        "approved-token-contract",
+        "component-requirement",
+        "selected-framework"
+      ],
+      "produces": [
+        "primitive-source",
+        "dependency-manifest",
+        "component-docs"
+      ],
+      "handoff_to": [
+        "implementation",
+        "component-review"
+      ]
+    },
+    {
+      "id": "21st-dev",
+      "name": "21st.dev MCP and skill",
+      "organ": "component-discovery",
+      "kind": "mcp-server-and-skill",
+      "repo_state": "MCP and skill installer configured",
+      "client_state": "unverified-per-client",
+      "responsibility": "Search and compare candidate components; retrieve source only after shortlisting and within the free allowance.",
+      "consumes": [
+        "component-requirement",
+        "approved-token-contract"
+      ],
+      "produces": [
+        "component-candidates",
+        "retrieved-source",
+        "dependency-manifest"
+      ],
+      "handoff_to": [
+        "component-review"
+      ]
+    },
+    {
+      "id": "watermelon-ui",
+      "name": "Watermelon UI MCP",
+      "organ": "component-discovery",
+      "kind": "mcp-server",
+      "repo_state": "configured-in-mcp-json",
+      "client_state": "unverified-per-client",
+      "responsibility": "Search public components, blocks, dashboards and templates; inspect source and dependencies; compose page sections.",
+      "consumes": [
+        "page-requirement",
+        "approved-token-contract"
+      ],
+      "produces": [
+        "component-candidates",
+        "component-source",
+        "page-composition"
+      ],
+      "handoff_to": [
+        "component-review"
+      ]
+    },
+    {
+      "id": "react-bits-manus",
+      "name": "React Bits through Manus",
+      "organ": "component-discovery",
+      "kind": "external-client-library",
+      "repo_state": "documented-as-source; no repo MCP entry",
+      "client_state": "owner-reported-in-manus; not independently verified",
+      "responsibility": "Discover expressive React animations, backgrounds and micro-interactions through Manus; copy selected source only after review.",
+      "consumes": [
+        "component-requirement",
+        "approved-token-contract"
+      ],
+      "produces": [
+        "component-candidates",
+        "component-source",
+        "dependency-manifest"
+      ],
+      "handoff_to": [
+        "component-review"
+      ]
+    },
+    {
+      "id": "motion-primitives",
+      "name": "Motion Primitives",
+      "organ": "motion-component-library",
+      "kind": "source-library",
+      "repo_state": "documented-as-source; not installed",
+      "client_state": "unverified",
+      "responsibility": "Provide copy-in animated React components built around Motion and Tailwind when the chosen stack matches.",
+      "consumes": [
+        "motion-requirement",
+        "approved-token-contract",
+        "selected-framework"
+      ],
+      "produces": [
+        "motion-component-source",
+        "dependency-manifest"
+      ],
+      "handoff_to": [
+        "component-review",
+        "implementation"
+      ]
+    },
+    {
+      "id": "motion",
+      "name": "Motion for React (formerly Framer Motion)",
+      "organ": "component-motion-runtime",
+      "kind": "runtime-library-and-skill",
+      "repo_state": "agent skill installer configured; runtime not installed",
+      "client_state": "unverified-per-client",
+      "responsibility": "Own React component state transitions, gestures, layout animation and enter/exit transitions.",
+      "consumes": [
+        "motion-contract",
+        "selected-framework"
+      ],
+      "produces": [
+        "component-motion-implementation"
+      ],
+      "handoff_to": [
+        "implementation",
+        "browser-qa"
+      ]
+    },
+    {
+      "id": "gsap",
+      "name": "GSAP and GSAP skills",
+      "organ": "timeline-motion-runtime",
+      "kind": "runtime-library-and-agent-skill",
+      "repo_state": "agent skill installer configured; runtime not installed",
+      "client_state": "unverified-per-client",
+      "responsibility": "Own complex timelines, coordinated cross-element choreography, scroll narratives and SVG morphing.",
+      "consumes": [
+        "motion-contract",
+        "selected-framework"
+      ],
+      "produces": [
+        "timeline-implementation"
+      ],
+      "handoff_to": [
+        "implementation",
+        "browser-qa"
+      ]
+    },
+    {
+      "id": "haikei",
+      "name": "Haikei",
+      "organ": "visual-asset-generation",
+      "kind": "external-asset-generator",
+      "repo_state": "documented-as-source; no runtime dependency",
+      "client_state": "browser-service-not-verified",
+      "responsibility": "Generate original SVG/PNG backgrounds. Export, optimize and commit approved assets; never make the editor a runtime dependency.",
+      "consumes": [
+        "approved-art-direction",
+        "asset-requirement"
+      ],
+      "produces": [
+        "exported-visual-assets",
+        "asset-attribution"
+      ],
+      "handoff_to": [
+        "implementation",
+        "asset-review"
+      ]
+    },
+    {
+      "id": "page-agent",
+      "name": "Alibaba Page Agent",
+      "organ": "exploratory-browser-interaction",
+      "kind": "browser-agent-and-beta-mcp",
+      "repo_state": "documented-as-optional; not configured",
+      "client_state": "unverified",
+      "responsibility": "Explore a running local/staging page through DOM-aware natural-language browser interaction. Do not treat it as a repeatable test runner.",
+      "consumes": [
+        "local-or-staging-preview",
+        "exploration-script",
+        "authorized-scope"
+      ],
+      "produces": [
+        "exploration-findings",
+        "interaction-gaps"
+      ],
+      "handoff_to": [
+        "implementation",
+        "playwright"
+      ]
+    },
+    {
+      "id": "playwright",
+      "name": "Playwright browser tests",
+      "organ": "repeatable-browser-qa",
+      "kind": "test-framework-and-ci",
+      "repo_state": "CI setup detection configured; app tests await scaffold",
+      "client_state": "CI-defined",
+      "responsibility": "Run deterministic user journeys, assertions, responsive checks and regression tests.",
+      "consumes": [
+        "testable-build",
+        "acceptance-criteria"
+      ],
+      "produces": [
+        "test-results",
+        "reproducible-defects"
+      ],
+      "handoff_to": [
+        "implementation",
+        "orchestrator"
+      ]
+    },
+    {
+      "id": "strix",
+      "name": "Strix with local Ollama",
+      "organ": "security-immune-system",
+      "kind": "local-security-agent",
+      "repo_state": "documented-as-local-only; not installed or running",
+      "client_state": "requires-local-computer-docker-and-model",
+      "responsibility": "Perform authorized security testing against the repository or explicitly scoped local/staging target; review and retest findings.",
+      "consumes": [
+        "authorized-scope",
+        "local-repository-or-staging-target",
+        "local-model-runtime"
+      ],
+      "produces": [
+        "security-findings",
+        "retest-evidence"
+      ],
+      "handoff_to": [
+        "implementation",
+        "security-review"
+      ]
+    },
+    {
+      "id": "github-ci",
+      "name": "GitHub Actions, CodeQL, Gitleaks, Pa11y and Lighthouse",
+      "organ": "quality-and-release-control",
+      "kind": "ci-and-audit",
+      "repo_state": "configured; app-specific gates conditional on scaffold",
+      "client_state": "CI-defined",
+      "responsibility": "Run repository validation, static analysis, secret scanning, accessibility, performance and release gates.",
+      "consumes": [
+        "pull-request-diff",
+        "testable-build",
+        "public-audit-target"
+      ],
+      "produces": [
+        "ci-results",
+        "quality-reports",
+        "release-evidence"
+      ],
+      "handoff_to": [
+        "orchestrator",
+        "implementation"
+      ]
+    }
+  ]
+}
