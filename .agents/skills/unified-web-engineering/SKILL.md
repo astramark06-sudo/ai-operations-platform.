@@ -47,6 +47,7 @@ Record the feature ID, authoritative design source, pending questions, tool avai
 - Use Taste to challenge generic choices, develop art direction and later critique browser output.
 - Reconcile their output into one token proposal. Do not retain competing palettes or type scales.
 - If a skill is unavailable, state that and apply the repository's checklist; do not simulate a tool run.
+- When a selected TanStack library publishes version-matched skills, consider TanStack Intent to load only the relevant package guidance. Review its permission and guidance diff before committing.
 
 ### 4. Design source
 
@@ -90,11 +91,11 @@ Use Alibaba Page Agent or Playwright MCP for optional agent-driven exploration o
 
 Use Storybook as an optional isolated component/variant catalogue when the app has sufficient reusable components. Use Vitest and React Testing Library for unit/component tests when the selected app stack supports them. Integrate axe-core into browser/component tests for automated accessibility regression checks, but retain manual keyboard and assistive-technology review.
 
-Use Playwright for deterministic regression tests. Use Taste for visual QA. Convert findings into explicit defects and update the shared contract.
+Use Playwright for deterministic regression tests. When several routes exist, Pa11y CI can cover a defined URL list/sitemap and Lighthouse CI can enforce performance budgets against a stable preview. CSpell may enforce terminology quality for substantial documentation. Use Taste for visual QA. Convert findings into explicit defects and update the shared contract.
 
 ### 8. Security and release
 
-Use Strix only for authorized repository/staging scope, preferably with local Ollama and Docker. Do not run against production or third-party targets without explicit authorization. Do not run paid hosted inference or add Strix to cloud CI.
+Use Strix only for authorized repository/staging scope, preferably with local Ollama and Docker. Consider Payload CMS only when structured editorial content, roles and an admin workflow require a Next.js backend; it is not a static-site default. Do not run against production or third-party targets without explicit authorization. Do not run paid hosted inference or add Strix to cloud CI.
 
 Require applicable GitHub CI, accessibility, performance, regression and security gates. Consider OSV-Scanner for dependency advisories, Trivy for filesystem/container/SBOM/license scanning, and OWASP ZAP for a safe, explicitly authorized staging DAST scan. Do not run overlapping scanners without a clear purpose. Treat missing or skipped app-specific checks honestly.
 
