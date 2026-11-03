@@ -21,7 +21,6 @@ All specialist outputs must be written into the same feature handoff: tokens, ch
 
 **Important:** an entry in .mcp.json or an installer command does not prove that a tool is live in the current client. Check connectivity before use. Manus, ChatGPT and other coding clients need their own supported integrations; they synchronize through the committed contract and Git history.
 
-
 ## 1. Install agent skills
 
 Run from the repository root:
