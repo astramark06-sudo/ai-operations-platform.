@@ -6,7 +6,8 @@
     "prompts": "No public seller prompt library found. Prompts are original, inferred from public product briefs and UI behaviors.",
     "note": "Feed categories are editorial classifications. Product names and catalogue counts may change.",
     "component_specs_count": 75,
-    "component_specs_note": "Original implementation briefs synthesized from public component concepts; not seller-authored prompts or copied source."
+    "component_specs_note": "Original implementation briefs synthesized from public component concepts; not seller-authored prompts or copied source.",
+    "components_directory_count": 75
   },
   "advertisedCounts": {
     "templates": 114,
@@ -136,6 +137,7 @@
     "Glyph",
     "Gulp",
     "Gyre",
+    "Halo",
     "Hop",
     "Keel",
     "Keep",
@@ -615,9 +617,6 @@
     "Complete licence, FAQ, seller legal identity and checkout flow were not independently verified.",
     "Direct robots.txt, sitemap.xml and full page fetch were unavailable.",
     "Do not copy paid source, exact branding, illustrations or proprietary assets."
-  ],
-  "components_directory_names": [
-    "Halo"
   ],
   "component_specs": [
     {
