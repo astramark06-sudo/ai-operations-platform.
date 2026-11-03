@@ -157,6 +157,20 @@ def validate_toolchain_registry_data(data: object, errors: list[str]) -> set[str
             repo_url = tool.get("repo_url", "")
             if not isinstance(repo_url, str) or not repo_url.startswith("https://github.com/"):
                 fail(f"toolchain registry candidate tools[{index}] repo_url must use an HTTPS GitHub repository URL", errors)
+    declared_counts = {
+        "core_tool_count": sum(
+            1 for tool in tools
+            if isinstance(tool, dict) and not str(tool.get("repo_state", "")).startswith("reviewed-candidate")
+        ),
+        "reviewed_candidate_count": sum(
+            1 for tool in tools
+            if isinstance(tool, dict) and str(tool.get("repo_state", "")).startswith("reviewed-candidate")
+        ),
+        "total_tool_records": len(tools),
+    }
+    for key, actual in declared_counts.items():
+        if key in data and data[key] != actual:
+            fail(f"toolchain registry {key} says {data[key]!r}, actual value is {actual}", errors)
     return ids
 
 
