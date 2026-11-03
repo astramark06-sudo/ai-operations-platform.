@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.2.0",
   "purpose": "Single catalogue of responsibilities, availability boundaries and handoffs for the unified website workflow.",
   "operating_rule": "A tool is active only after the current client confirms it can invoke the tool. Repository configuration or documentation alone is not proof of a live connection.",
   "tools": [
@@ -1372,13 +1372,147 @@
       ],
       "selection_rule": "Start with local React state and context. Add Zustand only when cross-component shared state becomes awkward; do not introduce multiple global-state libraries.",
       "cost_boundary": "Open-source library; verify current license and API before installation."
+    },
+    {
+      "id": "tanstack-intent",
+      "name": "TanStack Intent",
+      "organ": "package-versioned-agent-skill-bridge",
+      "kind": "agent-skill-installer",
+      "repo_url": "https://github.com/TanStack/intent",
+      "activation": "when-tanstack-library-is-adopted",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-compatible-agent-and-node",
+      "responsibility": "Install and map library-maintained, version-matched Agent Skills into project guidance so the coding agent uses APIs and patterns matching the selected package version.",
+      "consumes": [
+        "installed-tanstack-package",
+        "feature-task"
+      ],
+      "produces": [
+        "version-matched-skill-guidance",
+        "task-to-skill-map"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "implementation"
+      ],
+      "selection_rule": "Use when adopting TanStack packages that publish Intent skills. Review generated permissions and guidance diffs before committing; do not run the moving @latest CLI blindly in CI.",
+      "cost_boundary": "MIT-licensed open-source CLI; requires Node.js and compatible coding agent; no hosted AI service included."
+    },
+    {
+      "id": "lighthouse-ci",
+      "name": "Lighthouse CI",
+      "organ": "continuous-web-performance-regression",
+      "kind": "ci-performance-tool",
+      "repo_url": "https://github.com/GoogleChrome/lighthouse-ci",
+      "activation": "deployed-preview-or-local-build",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-and-runnable-site",
+      "responsibility": "Run repeatable Lighthouse audits against built pages, compare performance budgets and report regressions in CI.",
+      "consumes": [
+        "built-preview-url",
+        "lighthouse-config",
+        "performance-budgets"
+      ],
+      "produces": [
+        "lighthouse-ci-report",
+        "performance-regression-results"
+      ],
+      "handoff_to": [
+        "implementation",
+        "github-ci",
+        "orchestrator"
+      ],
+      "selection_rule": "Prefer when the app has repeatable builds and preview targets. The existing manual Lighthouse workflow is sufficient before an application scaffold exists; do not add a hosted LHCI server unless infrastructure is explicitly approved.",
+      "cost_boundary": "Open-source Lighthouse CI project; local/GitHub-hosted runner possible, but any persistent server/hosting has separate cost."
+    },
+    {
+      "id": "pa11y-ci",
+      "name": "Pa11y CI",
+      "organ": "continuous-accessibility-regression",
+      "kind": "ci-accessibility-tool",
+      "repo_url": "https://github.com/pa11y/pa11y-ci",
+      "activation": "multi-page-preview-or-sitemap",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-and-runnable-site",
+      "responsibility": "Run accessibility checks across a configured list of URLs or sitemap within CI, optionally using axe and HTML_CodeSniffer runners.",
+      "consumes": [
+        "preview-url-or-sitemap",
+        "a11y-policy",
+        "safe-test-scope"
+      ],
+      "produces": [
+        "multi-page-accessibility-report",
+        "ci-accessibility-gate"
+      ],
+      "handoff_to": [
+        "axe-core",
+        "implementation",
+        "github-ci"
+      ],
+      "selection_rule": "Use when a site contains several routes and needs a CI accessibility gate. Existing manual Pa11y URL audit may be enough for a single-page site; retain manual keyboard and assistive-technology testing.",
+      "cost_boundary": "LGPL-3.0-only open-source tool; requires Node.js and a browser. No paid cloud service required."
+    },
+    {
+      "id": "payload-cms",
+      "name": "Payload CMS",
+      "organ": "content-backend-and-admin",
+      "kind": "headless-cms-and-nextjs-backend",
+      "repo_url": "https://github.com/payloadcms/payload",
+      "activation": "structured-content-management-requirement",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-nextjs-and-database-hosting",
+      "responsibility": "Provide an open-source Next.js-native headless CMS with typed collections, an admin panel, APIs, access control and backend functions.",
+      "consumes": [
+        "content-model",
+        "editorial-workflow",
+        "auth-and-access-policy",
+        "deployment-plan"
+      ],
+      "produces": [
+        "cms-schema",
+        "admin-panel",
+        "content-api"
+      ],
+      "handoff_to": [
+        "implementation",
+        "astro-or-nextjs-evaluation",
+        "security-review"
+      ],
+      "selection_rule": "Use when editors need structured content and an integrated Next.js backend. Not appropriate for a simple static site; choose one CMS/backend rather than layering it on Supabase/Appwrite without a documented separation.",
+      "cost_boundary": "MIT-licensed source; self-hosting needs a compatible Node/Next.js host and database. Free hosting is not guaranteed."
+    },
+    {
+      "id": "cspell",
+      "name": "CSpell",
+      "organ": "documentation-and-content-quality",
+      "kind": "spell-checker",
+      "repo_url": "https://github.com/streetsidesoftware/cspell",
+      "activation": "documentation-or-content-volume",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-or-compatible-ci-runtime",
+      "responsibility": "Check spelling in code, Markdown, docs and configuration while supporting project-specific dictionaries and terminology.",
+      "consumes": [
+        "source-and-documentation-files",
+        "project-dictionary"
+      ],
+      "produces": [
+        "spelling-diagnostics",
+        "dictionary-updates"
+      ],
+      "handoff_to": [
+        "implementation",
+        "github-ci",
+        "docs-review"
+      ],
+      "selection_rule": "Use when documentation/content volume justifies spell checking. Keep technical names in a checked-in dictionary rather than disabling broad rules.",
+      "cost_boundary": "Open-source spell checker; current major releases have Node.js requirements. Check release support before installing."
     }
   ],
   "research_date": "2026-11-03",
   "coverage_note": "Curated public GitHub scan, not an exhaustive enumeration of all GitHub repositories. Candidates are not automatically installed or connected. Each entry distinguishes repository review from active client/runtime availability.",
   "selection_policy": "Use capability-triggered selection, not tool accumulation. Verify current releases, component/package license, third-party notices, dependencies, permissions, client compatibility and actual cost boundary before activating a candidate.",
   "core_tool_count": 15,
-  "reviewed_candidate_count": 40,
-  "total_tool_records": 55,
+  "reviewed_candidate_count": 45,
+  "total_tool_records": 60,
   "candidate_status_policy": "Every reviewed-candidate record has repo_url, activation, selection_rule and cost_boundary. Candidate records are not considered installed, connected or active."
 }
