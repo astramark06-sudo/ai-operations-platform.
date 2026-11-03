@@ -11,7 +11,7 @@
 - **Client/runtime required** means a compatible coding agent, Node.js/browser runtime, desktop environment, backend or other host is needed. A GitHub entry alone does not activate a tool.
 - **Zero-cost boundary** refers to the software/project, not necessarily hosting, compute, commercial assets, usage overages or third-party services.
 
-The machine-readable source of truth is [toolchain.registry.json](../contracts/toolchain.registry.json). It now contains 60 tool records: the original 15 plus 45 reviewed candidates. Candidate state is recorded separately from active configuration.
+The machine-readable source of truth is [toolchain.registry.json](../contracts/toolchain.registry.json). It now contains 90 tool records: the original 15 plus 75 reviewed candidates. Candidate state is recorded separately from active configuration.
 
 ## 1. Agent skills and design judgment
 
@@ -169,3 +169,78 @@ Five more candidates are included because they close specific gaps in skill-to-p
 
 - [PocketBase](https://github.com/pocketbase/pocketbase) is excluded from the candidate set because its repository was archived on 2026-10-26. Reassess only if the project is maintained again and the risk is acceptable.
 - Browser automation products requiring a paid cloud browser or paid model API were not added as default organs. Prefer the already documented Playwright/Chrome-local options unless a real feature requires something else.
+
+## 15. Application builders, interactive UI, flows and dynamic layouts (registry 1.3.0)
+
+This section adds 30 candidates because the earlier catalogue focused too heavily on design-engineering infrastructure and not enough on tools that create the actual application surfaces.
+
+### Visual webpage builders and visual editing
+
+| Tool | Main use | Selection boundary |
+|---|---|---|
+| [Puck](https://github.com/puckeditor/puck) | Visual page editing inside React applications | Best when React owns the site and editable page composition is a product feature |
+| [GrapesJS](https://github.com/GrapesJS/grapesjs) | Drag-and-drop HTML/CSS website and template builder | Generated HTML/CSS workflow; not automatically React-native |
+| [Webstudio](https://github.com/webstudio-is/webstudio) | Full visual website builder and Webflow alternative | AGPL-3.0; assess hosting and source-modification obligations |
+| [Onlook](https://github.com/onlook-dev/onlook) | Visually edit real code-backed interfaces | Apache-2.0 core; optional AI integrations may have external model/API costs |
+
+### App builders and admin frameworks
+
+| Tool | Main use | Choose it when |
+|---|---|---|
+| [Appsmith](https://github.com/appsmithorg/appsmith) | Visual internal tools, dashboards and admin panels | Low-code composition and data connectors matter |
+| [Budibase](https://github.com/Budibase/budibase) | Internal business apps and operations workflows | GPLv3 model and package-level terms are acceptable |
+| [ToolJet](https://github.com/ToolJet/ToolJet) | Visual internal applications and workflows | AGPL-3.0 terms are acceptable |
+| [Refine](https://github.com/refinedev/refine) | Code-first React admin/B2B applications | Custom React code and data-provider architecture are preferred |
+| [React Admin](https://github.com/marmelab/react-admin) | CRUD and data-centric admin interfaces | REST/GraphQL resource-driven admin UI is the requirement |
+
+Do not confuse internal app builders with general public website builders. Managed services may charge even when the source is open source; self-hosting still needs compute and maintenance.
+
+### Interactive component systems
+
+- [Magic UI](https://github.com/magicuidesign/magicui) — animated React/Tailwind components and effects.
+- [daisyUI](https://github.com/saadeghi/daisyui) — semantic Tailwind components and theme utilities.
+- [Flowbite React](https://github.com/themesberg/flowbite-react) — broad Tailwind-based React components; verify free versus Pro asset boundaries.
+- [Chakra UI](https://github.com/chakra-ui/chakra-ui) — alternative complete React component system.
+- [MUI](https://github.com/mui/material-ui) — Material Design component system.
+- [Headless UI](https://github.com/tailwindlabs/headlessui) — unstyled accessible interaction primitives.
+- [Floating UI](https://github.com/floating-ui/floating-ui) — positioning engine for popovers, tooltips, menus and anchored elements.
+
+These are not all additive. Keep one primary component system; use Headless UI/Floating UI only for gaps in that system.
+
+### Interactive flows, diagrams and canvas
+
+- [React Flow / Svelte Flow](https://github.com/xyflow/xyflow) — node-based workflow and graph editors.
+- [Rete.js](https://github.com/retejs/rete) — extensible visual programming and dataflow editors.
+- [Excalidraw](https://github.com/excalidraw/excalidraw) — freeform diagrams and whiteboard canvas.
+
+Choose based on whether the user manipulates structured nodes, executable/programmatic dataflow or freeform sketches.
+
+### Dynamic layouts and drag/drop
+
+- [React Grid Layout](https://github.com/react-grid-layout/react-grid-layout) — draggable/resizable responsive dashboard widgets.
+- [dnd-kit](https://github.com/clauderic/dnd-kit) — accessible sortable and nested drag/drop interactions.
+- [FormKit Drag and Drop](https://github.com/formkit/drag-and-drop) — framework-agnostic drag/drop alternative.
+- [React Resizable Panels](https://github.com/bvaughn/react-resizable-panels) — resizable panes and workspace splits.
+
+Every drag/resize interaction needs keyboard alternatives, touch behavior, responsive fallback and a deliberate layout persistence model.
+
+### Dynamic CSS and motion
+
+- [Open Props](https://github.com/argyleink/open-props) — CSS custom-property library for design tokens, spacing, typography and easing. Map values into the project's existing token contract.
+- [CSS Doodle](https://github.com/css-doodle/css-doodle) — generative CSS patterns and creative visuals. Keep decorative effects performant and accessible.
+- [React Spring](https://github.com/pmndrs/react-spring) — spring-physics animation for React.
+- [Anime.js](https://github.com/juliangarnier/anime) — framework-agnostic property, SVG and timeline animation.
+
+React Spring and Anime.js are alternatives to the existing Motion/GSAP/CSS allocation, not extra owners on the same target.
+
+### App framework choices
+
+- [Next.js](https://github.com/vercel/next.js) — React full-stack framework.
+- [SvelteKit](https://github.com/sveltejs/kit) — Svelte full-stack framework.
+- [Nuxt](https://github.com/nuxt/nuxt) — Vue full-stack framework.
+
+Choose one framework for an app. Do not combine multiple app shells simply because they appear in the catalogue.
+
+### License and cost policy
+
+The registry records upstream license metadata for each candidate. That is a screening aid, not legal approval: check the exact package, plugins, templates, assets and deployment model before adoption. AGPL/GPL obligations need explicit review. Free/open-source code does not make managed hosting, AI APIs, storage, database operations or compute free. None of these candidates has been installed or activated in the app.

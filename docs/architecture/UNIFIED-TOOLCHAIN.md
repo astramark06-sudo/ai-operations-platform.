@@ -32,6 +32,14 @@ Feedback from visual review, browser exploration, tests and security returns to 
 | Design memory / sensory input | One of Penpot, Figma or Lunacy | Authoritative frames, variables, components and assets | Treat unsynchronized files as equally authoritative |
 | Primitive skeleton | shadcn/ui | Default accessible primitives and registry workflow | Become a separate visual theme |
 | Component scouts | 21st.dev, Watermelon UI, React Bits through Manus, Motion Primitives | Search and compare candidate components and blocks | Install everything found or bypass licence review |
+| Visual page editors | Puck, GrapesJS, Webstudio, Onlook | Build editable pages/sites visually; choose by output ownership and deployment model | Create a second source of truth beside the chosen design file |
+| Low-code app builders | Appsmith, Budibase, ToolJet | Visually compose internal tools, dashboards and operational apps | Treat them as the default for public marketing sites or ignore AGPL/GPL obligations |
+| Code-first admin frameworks | Refine, React Admin | Build custom data-centric admin/B2B applications | Combine both frameworks in one app without a concrete boundary |
+| Interactive UI systems | Magic UI, daisyUI, Flowbite React, Chakra UI, MUI, Headless UI, Floating UI | Source animated components, coherent component systems, accessible primitives and positioning behavior | Mix multiple global design systems or confuse a positioning engine with a component library |
+| Workflow and canvas editors | React Flow, Rete.js, Excalidraw | Build node graphs, programmable flows, diagrams and whiteboards | Use a freeform canvas where a structured workflow graph is required |
+| Dynamic layout and drag/drop | React Grid Layout, dnd-kit, FormKit Drag and Drop, React Resizable Panels | Create draggable dashboards, sortable lists, split panes and editable workspaces | Ship drag-only interactions without keyboard alternatives or responsive fallbacks |
+| CSS and motion specialists | Open Props, CSS Doodle, React Spring, Anime.js | Supply CSS tokens, generative visual effects and alternative animation models | Introduce competing token systems or multiple animation owners on the same target |
+| Application framework alternatives | Next.js, SvelteKit, Nuxt | Select a full application framework after product and rendering requirements are known | Stack multiple frameworks in one app |
 | Primitive alternatives | Base UI, Radix UI, React Aria, Mantine | Fill a documented primitive/accessibility gap or deliberately select a full UI system | Mix multiple primitive foundations or global themes in one component family |
 | Component memory | Storybook + its MCP addon | Record reusable components, variants, states and implementation guidance | Replace the selected product design file |
 | Versioned skill bridge | TanStack Intent | Load package-maintained skills that match installed TanStack versions | Install unrelated or unreviewed agent instructions |
