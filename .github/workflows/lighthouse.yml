@@ -21,6 +21,10 @@ jobs:
         uses: actions/checkout@v7
         with:
           persist-credentials: false
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
@@ -29,11 +33,7 @@ jobs:
       - name: Validate target URL
         env:
           TARGET_URL: ${{ inputs.url }}
-        run: |
-          case "$TARGET_URL" in
-            http://*|https://*) ;;
-            *) echo "Target must start with http:// or https://" >&2; exit 1 ;;
-          esac
+        run: python scripts/validate_public_url.py "$TARGET_URL"
       - name: Run Lighthouse
         env:
           TARGET_URL: ${{ inputs.url }}
