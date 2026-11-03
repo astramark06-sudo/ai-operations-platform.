@@ -1,7 +1,7 @@
 # Code and Chill — UI reference playbook
 
-**Research date:** 2026-11-03  
-**Primary source:** https://codeandchill.store/  
+**Research date:** 2026-11-03
+**Primary source:** [Code and Chill](https://codeandchill.store/)
 **Purpose:** Public-source design and interaction research for original implementations in this repository.
 
 ## Source and reuse boundaries
@@ -206,12 +206,12 @@ These are reusable prompts derived from the observed public design briefs.
 ## Public source index
 
 - https://codeandchill.store/
-- https://codeandchill.store/new
-- https://codeandchill.store/components
-- https://codeandchill.store/collections
-- https://codeandchill.store/templates/cirrel
-- https://codeandchill.store/templates/lumelle
-- https://codeandchill.store/templates/nimbra
-- https://codeandchill.store/templates/nestra
-- https://codeandchill.store/templates/halvo
-- https://codeandchill.store/templates/sorvo
+- [Code and Chill /new](https://codeandchill.store/new)
+- [Code and Chill /components](https://codeandchill.store/components)
+- [Code and Chill /collections](https://codeandchill.store/collections)
+- [Code and Chill /templates/cirrel](https://codeandchill.store/templates/cirrel)
+- [Code and Chill /templates/lumelle](https://codeandchill.store/templates/lumelle)
+- [Code and Chill /templates/nimbra](https://codeandchill.store/templates/nimbra)
+- [Code and Chill /templates/nestra](https://codeandchill.store/templates/nestra)
+- [Code and Chill /templates/halvo](https://codeandchill.store/templates/halvo)
+- [Code and Chill /templates/sorvo](https://codeandchill.store/templates/sorvo)
