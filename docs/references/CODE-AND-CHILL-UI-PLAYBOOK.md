@@ -205,7 +205,7 @@ These are reusable prompts derived from the observed public design briefs.
 
 ## Public source index
 
-- https://codeandchill.store/
+- [Code and Chill home](https://codeandchill.store/)
 - [Code and Chill /new](https://codeandchill.store/new)
 - [Code and Chill /components](https://codeandchill.store/components)
 - [Code and Chill /collections](https://codeandchill.store/collections)
