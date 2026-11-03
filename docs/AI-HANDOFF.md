@@ -1,9 +1,9 @@
 # AI agent handoff
 
-**Snapshot date:** 2026-11-03  
-**Repository:** [astramark06-sudo/website-creation](https://github.com/astramark06-sudo/website-creation)  
-**Default branch at snapshot:** `main`  
-**Verified main commit:** `3cded413369bc3ce274175015d382e608e936de4`
+- **Snapshot date:** 2026-11-03
+- **Repository:** [astramark06-sudo/website-creation](https://github.com/astramark06-sudo/website-creation)
+- **Default branch at snapshot:** `main`
+- **Verified main commit:** `3cded413369bc3ce274175015d382e608e936de4`
 
 > This is a dated handoff snapshot, not live state. Before acting, fetch the current `main` head, open pull requests, recent Actions runs, and repository rulesets. Another agent or session may have changed the repository since this file was written.
 
