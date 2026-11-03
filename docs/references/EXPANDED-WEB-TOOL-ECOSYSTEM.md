@@ -11,7 +11,7 @@
 - **Client/runtime required** means a compatible coding agent, Node.js/browser runtime, desktop environment, backend or other host is needed. A GitHub entry alone does not activate a tool.
 - **Zero-cost boundary** refers to the software/project, not necessarily hosting, compute, commercial assets, usage overages or third-party services.
 
-The machine-readable source of truth is [toolchain.registry.json](../contracts/toolchain.registry.json). It now contains 55 tool records: the original 15 plus 40 reviewed candidates. Candidate state is recorded separately from active configuration.
+The machine-readable source of truth is [toolchain.registry.json](../contracts/toolchain.registry.json). It now contains 60 tool records: the original 15 plus 45 reviewed candidates. Candidate state is recorded separately from active configuration.
 
 ## 1. Agent skills and design judgment
 
@@ -154,3 +154,18 @@ Selected primary project sources used for this expansion:
 - [Astro](https://github.com/withastro/astro) and [Starlight](https://github.com/withastro/starlight)
 - [Trivy](https://github.com/aquasecurity/trivy), [OSV-Scanner](https://github.com/google/osv-scanner), and [OWASP ZAP](https://github.com/zaproxy/zaproxy)
 - [Appwrite](https://github.com/appwrite/appwrite) and [Umami](https://github.com/umami-software/umami)
+
+## 14. Additional high-leverage additions (registry 1.2.0)
+
+Five more candidates are included because they close specific gaps in skill-to-package alignment, continuous audits, content management and documentation quality:
+
+- [TanStack Intent](https://github.com/TanStack/intent): install and map package-maintained, version-matched Agent Skills for selected TanStack packages. Review generated guidance and permissions; it complements the central orchestrator rather than replacing it.
+- [Lighthouse CI](https://github.com/GoogleChrome/lighthouse-ci): automate repeatable Lighthouse performance budgets against a real local/staging preview. Use GitHub-hosted runners where feasible; a persistent LHCI server is a separate hosting decision.
+- [Pa11y CI](https://github.com/pa11y/pa11y-ci): accessibility checks across multiple routes or a sitemap, including axe and HTML_CodeSniffer runners. Automated results do not certify complete accessibility.
+- [Payload CMS](https://github.com/payloadcms/payload): open-source Next.js-native CMS/admin/API for structured editorial content. It requires an appropriate Next.js deployment and database; not a static-site default.
+- [CSpell](https://github.com/streetsidesoftware/cspell): spell checking for code, Markdown and project terminology. Use only when the documentation volume justifies the check.
+
+### Explicit exclusions
+
+- [PocketBase](https://github.com/pocketbase/pocketbase) is excluded from the candidate set because its repository was archived on 2026-10-26. Reassess only if the project is maintained again and the risk is acceptable.
+- Browser automation products requiring a paid cloud browser or paid model API were not added as default organs. Prefer the already documented Playwright/Chrome-local options unless a real feature requires something else.
