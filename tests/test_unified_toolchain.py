@@ -1,4 +1,4 @@
-""""Tests for the unified toolchain registry and shared UI handoff contract."""
+"""Tests for the unified toolchain registry and shared UI handoff contract."""
 
 from __future__ import annotations
 
