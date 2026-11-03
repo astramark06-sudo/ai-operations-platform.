@@ -243,7 +243,6 @@ Supabase and Appwrite are backend alternatives. Umami is an optional privacy-ori
 
 PocketBase is deliberately excluded from the recommended candidate list because its upstream repository was archived on October 26, 2026. A tool being open source is not enough; active maintenance and acceptable risk still matter.
 
-
 ## 1.3.0 — Application builders, interactive UI and dynamic layout
 
 The latest expansion adds 30 candidates specifically for building apps, editable pages, interactive UI, visual flows, responsive workspaces and dynamic CSS. These tools solve different problems and should not be stacked indiscriminately.
