@@ -1,7 +1,7 @@
 # Expanded open-source web tool ecosystem
 
-**Research date:** 2026-11-03  
-**Repository base:** `e2d03a540f0ea86e7cd19531c7b0ae93b8f0a83e`  
+**Research date:** 2026-11-03
+**Repository base:** `e2d03a540f0ea86e7cd19531c7b0ae93b8f0a83e`
 **Coverage:** Curated public-GitHub research across the repository's full tracked tree and adjacent frontend/design-engineering ecosystems. This is not a literal enumeration of every GitHub repository.
 
 ## How to read this catalogue
