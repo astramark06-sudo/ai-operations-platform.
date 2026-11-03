@@ -28,6 +28,8 @@ jobs:
           python-version: "3.12"
       - name: Validate MCP and environment configuration
         run: python scripts/validate_repo.py
+      - name: Test public audit URL validation
+        run: python -m unittest discover -s tests -v
       - name: Validate toolkit installer syntax
         run: bash -n scripts/setup-agent-toolkit.sh
       - name: Install actionlint
