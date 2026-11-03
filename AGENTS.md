@@ -14,6 +14,16 @@ This repository is being prepared as a website project. Do not assume a framewor
 - Strix must use a local Ollama model by default, not a paid LLM API.
 - Do not run cloud CI security scans that require paid inference.
 
+## Unified toolchain orchestration
+
+- Before substantial website, page, or component design/implementation, follow [.agents/skills/unified-web-engineering/SKILL.md](.agents/skills/unified-web-engineering/SKILL.md).
+- Read [the unified toolchain architecture](docs/architecture/UNIFIED-TOOLCHAIN.md), [tool registry](docs/contracts/toolchain.registry.json), and the feature's current UI handoff contract before starting or resuming work.
+- Use one feature contract as shared memory across ChatGPT, Manus, and other compatible coding clients. Record decisions, component provenance, motion ownership, data/mock status, tool availability and test evidence there.
+- Check live skill/MCP availability in the current client. A configured endpoint or installer is not proof of a working connection.
+- Keep shadcn/ui as the primitive baseline; use 21st.dev, Watermelon UI, React Bits and Motion Primitives as selectively reviewed component sources.
+- Use Motion for React for React state/gesture/layout transitions and GSAP for complex timelines/scroll choreography. Assign one motion owner per animated target.
+- Use Alibaba Page Agent only for approved local/staging exploration; use Playwright for repeatable tests. Run Strix only against explicitly authorized scope with local-model defaults.
+
 ## Design and implementation
 
 - Start each page or feature with a clear information hierarchy, responsive layout plan, and accessible interaction model.

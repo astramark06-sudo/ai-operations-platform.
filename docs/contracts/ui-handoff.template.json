@@ -1,0 +1,179 @@
+{
+  "contract_version": "1.0.0",
+  "contract_status": "template",
+  "feature": {
+    "id": "REPLACE_WITH_STABLE_FEATURE_ID",
+    "name": "REPLACE_WITH_FEATURE_NAME",
+    "objective": "REPLACE_WITH_USER_OUTCOME",
+    "audience": "REPLACE_WITH_TARGET_AUDIENCE",
+    "acceptance_criteria": [
+      "REPLACE_WITH_TESTABLE_CRITERION"
+    ]
+  },
+  "source_of_truth": {
+    "design_source": "undecided",
+    "design_file": null,
+    "page_or_artboard": null,
+    "source_version_or_revision": null,
+    "authority_rule": "Select exactly one authoritative design source for this feature. Record all other sources as inspiration only."
+  },
+  "design_system": {
+    "status": "pending",
+    "owner": "project-token-contract",
+    "tokens": {
+      "color": {
+        "canvas": "REPLACE_ME",
+        "surface": "REPLACE_ME",
+        "surface_elevated": "REPLACE_ME",
+        "text": "REPLACE_ME",
+        "text_muted": "REPLACE_ME",
+        "border": "REPLACE_ME",
+        "accent": "REPLACE_ME",
+        "focus": "REPLACE_ME",
+        "success": "REPLACE_ME",
+        "warning": "REPLACE_ME",
+        "danger": "REPLACE_ME"
+      },
+      "typography": {
+        "font_family": "REPLACE_ME",
+        "type_scale": [
+          "REPLACE_ME"
+        ],
+        "line_heights": [
+          "REPLACE_ME"
+        ],
+        "font_weights": [
+          "REPLACE_ME"
+        ]
+      },
+      "spacing": [
+        "REPLACE_ME"
+      ],
+      "radii": {
+        "small": "REPLACE_ME",
+        "medium": "REPLACE_ME",
+        "large": "REPLACE_ME",
+        "pill": "REPLACE_ME"
+      },
+      "elevation": {
+        "card": "REPLACE_ME",
+        "overlay": "REPLACE_ME"
+      },
+      "breakpoints": {
+        "mobile": "REPLACE_ME",
+        "tablet": "REPLACE_ME",
+        "desktop": "REPLACE_ME"
+      },
+      "motion": {
+        "duration_fast": "REPLACE_ME",
+        "duration_standard": "REPLACE_ME",
+        "duration_slow": "REPLACE_ME",
+        "easing_standard": "REPLACE_ME",
+        "reduced_motion": "required"
+      }
+    },
+    "theme_modes": [
+      "REPLACE_ME"
+    ],
+    "contrast_review": "pending"
+  },
+  "component_registry": [
+    {
+      "id": "example-control",
+      "purpose": "REPLACE_ME",
+      "source_tool_id": "shadcn",
+      "source_url": "REPLACE_WITH_PUBLIC_SOURCE_URL",
+      "implementation_mode": "copy-source",
+      "license_review": "pending",
+      "third_party_notices_review": "pending",
+      "dependencies": [],
+      "token_mapping": "pending",
+      "keyboard_and_screen_reader_review": "pending",
+      "responsive_review": "pending",
+      "motion_owner": "css",
+      "status": "candidate"
+    }
+  ],
+  "interactions": [
+    {
+      "id": "example-interaction",
+      "trigger": "REPLACE_ME",
+      "states": [
+        "idle",
+        "active",
+        "pending",
+        "success",
+        "error"
+      ],
+      "success_condition": "REPLACE_WITH_REAL_OPERATION_RESULT",
+      "failure_condition": "REPLACE_ME",
+      "cancellation_or_undo": "REPLACE_ME",
+      "accessible_status": "required"
+    }
+  ],
+  "motion_ownership": [
+    {
+      "target": "example-control",
+      "owner": "css",
+      "animated_properties": [
+        "opacity",
+        "transform"
+      ],
+      "reason": "Simple local transition",
+      "reduced_motion_behavior": "Disable nonessential movement; preserve state feedback"
+    }
+  ],
+  "data_contracts": [
+    {
+      "entity": "example-entity",
+      "source_type": "mock",
+      "persistence": "none",
+      "authentication": "none",
+      "loading_state": "defined",
+      "empty_state": "defined",
+      "error_state": "defined",
+      "freshness": "REPLACE_ME",
+      "integration_owner": "REPLACE_ME"
+    }
+  ],
+  "tool_runs": [
+    {
+      "tool_id": "ui-ux-pro-max",
+      "status": "not-run",
+      "input_artifact": "product-brief",
+      "output_artifact": null,
+      "decisions": ""
+    }
+  ],
+  "quality_gates": {
+    "viewports": [
+      "mobile",
+      "tablet",
+      "desktop"
+    ],
+    "semantic_html": "required",
+    "keyboard_access": "required",
+    "visible_focus": "required",
+    "contrast": "required",
+    "reduced_motion": "required",
+    "loading_empty_error_states": "required",
+    "automated_checks": [
+      "lint",
+      "typecheck",
+      "unit-tests",
+      "playwright",
+      "pa11y",
+      "lighthouse"
+    ],
+    "security_scope": "authorized-only",
+    "security_review": "required"
+  },
+  "decisions": [],
+  "defects": [],
+  "handoff": {
+    "current_stage": "brief",
+    "next_stage": "design-intelligence",
+    "blocked_by": [],
+    "last_updated_by": "REPLACE_ME"
+  }
+}

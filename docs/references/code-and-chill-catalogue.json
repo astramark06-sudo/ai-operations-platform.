@@ -1,0 +1,1073 @@
+{
+  "metadata": {
+    "source": "https://codeandchill.store/",
+    "researchedAt": "2026-11-03",
+    "scope": "Publicly indexed catalogue and product pages only; not a full crawl or paid-download extraction.",
+    "prompts": "No public seller prompt library found. Prompts are original, inferred from public product briefs and UI behaviors.",
+    "note": "Feed categories are editorial classifications. Product names and catalogue counts may change.",
+    "component_specs_count": 75,
+    "component_specs_note": "Original implementation briefs synthesized from public component concepts; not seller-authored prompts or copied source.",
+    "components_directory_count": 75
+  },
+  "advertisedCounts": {
+    "templates": 114,
+    "dashboards": 71,
+    "businessDashboards": 43
+  },
+  "indexedNewFeedTemplateNames": [
+    "Nestra",
+    "Lumelle",
+    "Sorvo",
+    "Cirrel",
+    "Nimbra",
+    "Halvo",
+    "Lunde",
+    "Kesten",
+    "Glint",
+    "Raye",
+    "Fitlo",
+    "Tilvo",
+    "Pacely",
+    "Merrin",
+    "Wynlo",
+    "Covry",
+    "Moorly",
+    "Ledra",
+    "Kerfa",
+    "Coffra",
+    "Solvik",
+    "Kinlo",
+    "Rivlet",
+    "Tessly",
+    "Corvane",
+    "Ambrel",
+    "Ondra",
+    "Olvara",
+    "Petalo",
+    "Selvar",
+    "Vitrea",
+    "Folka",
+    "Pembra",
+    "Kelvo",
+    "Orvel",
+    "Pelago",
+    "Grista",
+    "Mavora",
+    "Talvo",
+    "Murmura",
+    "Obolo",
+    "Kinby",
+    "Kofra",
+    "Tillo",
+    "Sovra",
+    "Noria",
+    "Kesta",
+    "Rivolo",
+    "Vessa",
+    "Sunrow",
+    "Lumora",
+    "Tavola",
+    "Cadra",
+    "Ivora",
+    "Pane",
+    "Torque",
+    "Lintel",
+    "Hearth",
+    "Corbel",
+    "Kairo",
+    "Tend",
+    "Accord",
+    "Mender",
+    "Sprig",
+    "Rapport",
+    "Parley",
+    "Oria",
+    "Ledge",
+    "Gesso",
+    "Dwella",
+    "Arden",
+    "Solum",
+    "Tandem",
+    "Coffer",
+    "Stride",
+    "Kvist",
+    "Orrery",
+    "Portfolio",
+    "Halden",
+    "Prism",
+    "Camber",
+    "Kestrel",
+    "Wharf",
+    "Fathom",
+    "Sorrel",
+    "Strada",
+    "Fernly",
+    "Norda",
+    "Kessler",
+    "Coterie",
+    "Vanta",
+    "Meridian",
+    "Rivet"
+  ],
+  "componentsDirectoryNames": [
+    "Arachne",
+    "Arc",
+    "Atelier",
+    "Atlas",
+    "Aurelia",
+    "Axis",
+    "Bead",
+    "Brim",
+    "Caddy",
+    "Cart",
+    "Caustic",
+    "Contrail",
+    "Crest",
+    "Dart",
+    "Dash",
+    "Decant",
+    "Decibel",
+    "Deck",
+    "Delete",
+    "Depot",
+    "Dispatch",
+    "Ember",
+    "Gild",
+    "Glance",
+    "Glyph",
+    "Gulp",
+    "Gyre",
+    "Halo",
+    "Hop",
+    "Keel",
+    "Keep",
+    "Lamp",
+    "Lucid",
+    "Lumen Toggle",
+    "Maw",
+    "Meniscus",
+    "Mood",
+    "Nimbus",
+    "Nought",
+    "Nudge",
+    "Opal",
+    "Parachute",
+    "Pebble",
+    "Pivot",
+    "Plimsoll",
+    "Plume",
+    "Pulse",
+    "Quarto",
+    "Quench",
+    "Relay",
+    "Relief",
+    "Reptile",
+    "Ripcord",
+    "Sable",
+    "Scoville",
+    "Scry",
+    "Sigil",
+    "Signet",
+    "Silo",
+    "Snowglobe",
+    "Solstice",
+    "Spindle",
+    "Splay",
+    "Surge",
+    "Swell",
+    "Swipe",
+    "Tender",
+    "Thrum",
+    "Tide",
+    "Tube",
+    "Tumbler",
+    "Upload",
+    "Warden",
+    "Weather",
+    "Wish"
+  ],
+  "componentLikeNamesInNewFeed": [
+    "Thrum",
+    "Caustic",
+    "Dart",
+    "Keel",
+    "Tide",
+    "Gulp",
+    "Lumen Toggle",
+    "Gild",
+    "Contrail",
+    "Splay",
+    "Silo",
+    "Scry",
+    "Relief",
+    "Glyph",
+    "Plume",
+    "Tender",
+    "Nimbus",
+    "Plimsoll",
+    "Maw",
+    "Crest",
+    "Surge",
+    "Ripcord",
+    "Pivot",
+    "Bead",
+    "Glance",
+    "Swell",
+    "Nudge",
+    "Brim",
+    "Atlas",
+    "Dash",
+    "Nought",
+    "Hop",
+    "Caddy",
+    "Relay",
+    "Signet",
+    "Opal",
+    "Keep",
+    "Pebble",
+    "Deck",
+    "Posy",
+    "Quench",
+    "Sleuth",
+    "Tether",
+    "Arc",
+    "Birthday",
+    "Verso",
+    "Depot",
+    "Decant",
+    "Sable",
+    "Atelier",
+    "Gyre",
+    "Huddle",
+    "Spindle",
+    "Sola",
+    "Quarto",
+    "Tumbler",
+    "Mochi",
+    "Meniscus",
+    "Bamboo",
+    "Sigil",
+    "Wish",
+    "Lucid",
+    "Parachute",
+    "Arachne",
+    "Aurelia",
+    "Delete",
+    "Decibel",
+    "Pulse",
+    "Lunara",
+    "Date",
+    "Axis",
+    "Flow",
+    "Warden",
+    "Intro",
+    "Solace",
+    "Vesper",
+    "Scoville",
+    "Swipe",
+    "Upload",
+    "Tube",
+    "Vault",
+    "Dispatch",
+    "Sneakers",
+    "Gungame",
+    "Halo",
+    "Solstice",
+    "Ember",
+    "Snowglobe",
+    "Den",
+    "Portal",
+    "Mood",
+    "Weather",
+    "Cart",
+    "Nocturne",
+    "Love",
+    "Caveman",
+    "Love Letter",
+    "Nero",
+    "Reptile",
+    "Lumen",
+    "Lamp",
+    "Mango",
+    "Heartcode",
+    "Deadline",
+    "Monolith",
+    "Moonart"
+  ],
+  "bundlesUSD": [
+    {
+      "name": "Every template",
+      "count": 114,
+      "price": 4628,
+      "referencePrice": 6170.45,
+      "discount": 25
+    },
+    {
+      "name": "All dashboards",
+      "count": 71,
+      "price": 3946,
+      "referencePrice": 5261.75,
+      "discount": 25
+    },
+    {
+      "name": "Business dashboards",
+      "count": 43,
+      "price": 2496,
+      "referencePrice": 3328,
+      "discount": 25
+    },
+    {
+      "name": "Login and sign-up forms",
+      "count": 14,
+      "price": 100,
+      "discount": 20
+    },
+    {
+      "name": "Shop templates",
+      "count": 9,
+      "price": 410,
+      "discount": 25
+    },
+    {
+      "name": "SaaS and analytics dashboards",
+      "count": 7,
+      "price": 333,
+      "discount": 20
+    },
+    {
+      "name": "Finance dashboards",
+      "count": 21,
+      "price": 1214,
+      "discount": 20
+    },
+    {
+      "name": "Dashboard starter",
+      "count": 2,
+      "price": 86,
+      "discount": 15
+    },
+    {
+      "name": "Product landing pages",
+      "count": 12,
+      "price": 226,
+      "discount": 25
+    },
+    {
+      "name": "Games and playful pages",
+      "count": 3,
+      "price": 28,
+      "discount": 16
+    },
+    {
+      "name": "Love and celebrations",
+      "count": 9,
+      "price": 55,
+      "discount": 25
+    },
+    {
+      "name": "404 pages",
+      "count": 3,
+      "price": 10,
+      "discount": 23
+    },
+    {
+      "name": "Every button",
+      "count": 26,
+      "price": 77,
+      "discount": 25
+    },
+    {
+      "name": "Buttons and toggles",
+      "count": 6,
+      "price": 17,
+      "discount": 18
+    },
+    {
+      "name": "Download and upload buttons",
+      "count": 10,
+      "price": 34,
+      "discount": 21
+    },
+    {
+      "name": "Send and share buttons",
+      "count": 6,
+      "price": 18,
+      "discount": 19
+    },
+    {
+      "name": "Delete buttons",
+      "count": 4,
+      "price": 14,
+      "discount": 17
+    },
+    {
+      "name": "Cart and checkout",
+      "count": 10,
+      "price": 39,
+      "discount": 21
+    },
+    {
+      "name": "Navigation bars",
+      "count": 7,
+      "price": 27,
+      "discount": 13
+    },
+    {
+      "name": "OTP and verification codes",
+      "count": 7,
+      "price": 30,
+      "discount": 24
+    },
+    {
+      "name": "Mobile app interactions",
+      "count": 4,
+      "price": 15,
+      "discount": 18
+    },
+    {
+      "name": "Inputs and feedback",
+      "count": 6,
+      "price": 17,
+      "discount": 18
+    },
+    {
+      "name": "Playful scenes",
+      "count": 7,
+      "price": 14,
+      "discount": 26
+    },
+    {
+      "name": "Cards and sections",
+      "count": 3,
+      "price": 7,
+      "discount": 17
+    }
+  ],
+  "inspectedTemplates": {
+    "Cirrel": {
+      "priceUSD": 84,
+      "stack": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "CSS",
+        "GSAP"
+      ],
+      "data": "Browser-stored sample data; requires real store API",
+      "features": [
+        "shop overview and date-filtered charts",
+        "orders and drag-drop packing board",
+        "products and inventory",
+        "customers and analytics",
+        "P&L, payouts and invoices",
+        "discounts, campaigns and messaging",
+        "CSV export",
+        "collapsible sidebar and Cmd+K search"
+      ],
+      "manifest": [
+        "src/App.tsx",
+        "src/actions.tsx",
+        "src/finder.tsx",
+        "src/main.tsx",
+        "src/motion.ts",
+        "src/pages/*",
+        "src/router.ts",
+        "src/store.ts",
+        "src/ui/charts.tsx",
+        "src/ui/format.ts",
+        "src/ui/icons.tsx"
+      ]
+    },
+    "Lumelle": {
+      "priceUSD": 84,
+      "stack": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "CSS",
+        "GSAP"
+      ],
+      "data": "Browser-stored sample data; requires real store, payments and server",
+      "features": [
+        "orders, products and inventory",
+        "customers and analytics",
+        "campaigns, automations, discounts and gift cards",
+        "storefront preview",
+        "POS till with receipt",
+        "wholesale drag-drop board",
+        "CSV export and responsive navigation"
+      ],
+      "manifest": [
+        "src/App.tsx",
+        "src/actions.tsx",
+        "src/finder.tsx",
+        "src/main.tsx",
+        "src/motion.ts",
+        "src/pages/*",
+        "src/router.ts",
+        "src/store.ts",
+        "src/ui/charts.tsx",
+        "src/ui/format.ts",
+        "src/ui/icons.tsx",
+        "src/ui/kit.tsx",
+        "src/ui/overlay.tsx"
+      ]
+    },
+    "Nimbra": {
+      "priceUSD": 84,
+      "stack": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "CSS",
+        "GSAP"
+      ],
+      "data": "Browser-stored sample data; requires billing, product data and server",
+      "features": [
+        "MRR by plan and churn/new revenue",
+        "NRR and trial-to-paid funnel",
+        "cohort retention",
+        "report builder",
+        "keyword-rule insights (not AI)",
+        "accounts, health scores and segments",
+        "integrations, automation and campaigns",
+        "CSV export"
+      ],
+      "manifest": [
+        "src/App.tsx",
+        "src/actions.tsx",
+        "src/finder.tsx",
+        "src/main.tsx",
+        "src/motion.ts",
+        "src/pages/*",
+        "src/pages/_engage-kit.tsx"
+      ]
+    },
+    "Nestra": {
+      "priceUSD": 91,
+      "stack": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "CSS",
+        "GSAP"
+      ],
+      "data": "Sample data only; no real devices/backend; preset voice replies",
+      "features": [
+        "room-aware photo backgrounds",
+        "draggable thermostat and weekly plan",
+        "energy, solar and battery",
+        "device sheets",
+        "security and PIN alarm",
+        "scenes and automations",
+        "media and family access"
+      ]
+    },
+    "Halvo": {
+      "priceUSD": 91,
+      "stack": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "CSS",
+        "GSAP"
+      ],
+      "data": "Sample data only; connect hub, devices and server",
+      "features": [
+        "room photo backgrounds",
+        "half-degree thermostat",
+        "day/week/month/year energy chart",
+        "device filters and sheets",
+        "heating plan and air quality",
+        "solar/battery, security and routines",
+        "room-based music"
+      ]
+    },
+    "Sorvo": {
+      "priceUSD": 84,
+      "stack": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "CSS",
+        "GSAP"
+      ],
+      "data": "Sample data saved in browser; requires data source and sign-in",
+      "features": [
+        "wallpaper and glass-strength controls",
+        "video retention curve",
+        "audience heatmap",
+        "upload calendar and pipeline",
+        "revenue sources and sponsor board",
+        "comment moderation",
+        "memberships and merch"
+      ]
+    }
+  },
+  "sellerAdvertisedTerms": [
+    "one-time payment",
+    "free updates for life",
+    "unlimited client projects",
+    "Polar checkout",
+    "14-day refund if product does not work like demo"
+  ],
+  "caveats": [
+    "Full 114-template inventory not reconstructed from available public index.",
+    "Individual component ZIP contents were not accessed.",
+    "Complete licence, FAQ, seller legal identity and checkout flow were not independently verified.",
+    "Direct robots.txt, sitemap.xml and full page fetch were unavailable.",
+    "Do not copy paid source, exact branding, illustrations or proprietary assets."
+  ],
+  "component_specs": [
+    {
+      "name": "Arachne",
+      "family": "clock",
+      "observed_concept": "spider-leg clock hands",
+      "original_implementation_prompt": "Implement an original, production-ready clock component centred on this interaction: spider-leg clock hands. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Arc",
+      "family": "navigation dock",
+      "observed_concept": "stretching luminous ring around the active tab",
+      "original_implementation_prompt": "Implement an original, production-ready navigation dock component centred on this interaction: stretching luminous ring around the active tab. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Atelier",
+      "family": "commerce action",
+      "observed_concept": "item-packing add-to-cart action",
+      "original_implementation_prompt": "Implement an original, production-ready commerce action component centred on this interaction: item-packing add-to-cart action. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Atlas",
+      "family": "3D team carousel",
+      "observed_concept": "centre profile becomes prominent while side profiles recede",
+      "original_implementation_prompt": "Implement an original, production-ready 3D team carousel component centred on this interaction: centre profile becomes prominent while side profiles recede. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Aurelia",
+      "family": "playful scene",
+      "observed_concept": "night-time flowers progressively bloom",
+      "original_implementation_prompt": "Implement an original, production-ready playful scene component centred on this interaction: night-time flowers progressively bloom. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Axis",
+      "family": "product card",
+      "observed_concept": "tap-to-expand drink card",
+      "original_implementation_prompt": "Implement an original, production-ready product card component centred on this interaction: tap-to-expand drink card. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Bead",
+      "family": "download control",
+      "observed_concept": "outline doubles as progress indicator",
+      "original_implementation_prompt": "Implement an original, production-ready download control component centred on this interaction: outline doubles as progress indicator. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Brim",
+      "family": "download control",
+      "observed_concept": "container fills as bytes arrive",
+      "original_implementation_prompt": "Implement an original, production-ready download control component centred on this interaction: container fills as bytes arrive. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Caddy",
+      "family": "commerce action",
+      "observed_concept": "cart departs after successful add-to-cart",
+      "original_implementation_prompt": "Implement an original, production-ready commerce action component centred on this interaction: cart departs after successful add-to-cart. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Cart",
+      "family": "purchase action",
+      "observed_concept": "buy action transitions into a delivery vehicle",
+      "original_implementation_prompt": "Implement an original, production-ready purchase action component centred on this interaction: buy action transitions into a delivery vehicle. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Caustic",
+      "family": "destructive action",
+      "observed_concept": "delete control consumes its label",
+      "original_implementation_prompt": "Implement an original, production-ready destructive action component centred on this interaction: delete control consumes its label. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Contrail",
+      "family": "messaging action",
+      "observed_concept": "send action launches a paper plane",
+      "original_implementation_prompt": "Implement an original, production-ready messaging action component centred on this interaction: send action launches a paper plane. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Crest",
+      "family": "navigation tabs",
+      "observed_concept": "liquid-drop active-tab marker",
+      "original_implementation_prompt": "Implement an original, production-ready navigation tabs component centred on this interaction: liquid-drop active-tab marker. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Dart",
+      "family": "messaging action",
+      "observed_concept": "send action folds into a paper plane",
+      "original_implementation_prompt": "Implement an original, production-ready messaging action component centred on this interaction: send action folds into a paper plane. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Dash",
+      "family": "commerce action",
+      "observed_concept": "round cart action sends its cart away",
+      "original_implementation_prompt": "Implement an original, production-ready commerce action component centred on this interaction: round cart action sends its cart away. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Decant",
+      "family": "toggle control",
+      "observed_concept": "glass toggle fills with liquid",
+      "original_implementation_prompt": "Implement an original, production-ready toggle control component centred on this interaction: glass toggle fills with liquid. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Decibel",
+      "family": "volume slider",
+      "observed_concept": "volume control visualizes its level",
+      "original_implementation_prompt": "Implement an original, production-ready volume slider component centred on this interaction: volume control visualizes its level. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Deck",
+      "family": "OTP input",
+      "observed_concept": "four code cards shuffle into position",
+      "original_implementation_prompt": "Implement an original, production-ready OTP input component centred on this interaction: four code cards shuffle into position. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Delete",
+      "family": "destructive action",
+      "observed_concept": "page content shreds into a discard target",
+      "original_implementation_prompt": "Implement an original, production-ready destructive action component centred on this interaction: page content shreds into a discard target. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Depot",
+      "family": "order action",
+      "observed_concept": "order handoff uses a pickup van metaphor",
+      "original_implementation_prompt": "Implement an original, production-ready order action component centred on this interaction: order handoff uses a pickup van metaphor. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Dispatch",
+      "family": "purchase action",
+      "observed_concept": "buy action packs and dispatches an order",
+      "original_implementation_prompt": "Implement an original, production-ready purchase action component centred on this interaction: buy action packs and dispatches an order. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Ember",
+      "family": "playful scene",
+      "observed_concept": "holding an egg triggers a hatching sequence",
+      "original_implementation_prompt": "Implement an original, production-ready playful scene component centred on this interaction: holding an egg triggers a hatching sequence. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Gild",
+      "family": "favourite action",
+      "observed_concept": "favourite state creates a star accent",
+      "original_implementation_prompt": "Implement an original, production-ready favourite action component centred on this interaction: favourite state creates a star accent. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Glance",
+      "family": "payment interaction",
+      "observed_concept": "payment control presents a face-check stage",
+      "original_implementation_prompt": "Implement an original, production-ready payment interaction component centred on this interaction: payment control presents a face-check stage. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Glyph",
+      "family": "button",
+      "observed_concept": "individual letters move on hover",
+      "original_implementation_prompt": "Implement an original, production-ready button component centred on this interaction: individual letters move on hover. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Gulp",
+      "family": "destructive action",
+      "observed_concept": "trash container consumes the delete label",
+      "original_implementation_prompt": "Implement an original, production-ready destructive action component centred on this interaction: trash container consumes the delete label. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Gyre",
+      "family": "OTP input",
+      "observed_concept": "four code fields rotate into a completion mark",
+      "original_implementation_prompt": "Implement an original, production-ready OTP input component centred on this interaction: four code fields rotate into a completion mark. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Halo",
+      "family": "product cards",
+      "observed_concept": "headphone cards tilt and glow on hover",
+      "original_implementation_prompt": "Implement an original, production-ready product cards component centred on this interaction: headphone cards tilt and glow on hover. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Hop",
+      "family": "loading indicator",
+      "observed_concept": "last loading dot jumps to the first position",
+      "original_implementation_prompt": "Implement an original, production-ready loading indicator component centred on this interaction: last loading dot jumps to the first position. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Keel",
+      "family": "upload control",
+      "observed_concept": "upload arrow becomes a rising water level",
+      "original_implementation_prompt": "Implement an original, production-ready upload control component centred on this interaction: upload arrow becomes a rising water level. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Keep",
+      "family": "wallet intro",
+      "observed_concept": "3D coin anchors a wallet welcome screen",
+      "original_implementation_prompt": "Implement an original, production-ready wallet intro component centred on this interaction: 3D coin anchors a wallet welcome screen. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Lamp",
+      "family": "playful control",
+      "observed_concept": "pull cord wakes a desk lamp",
+      "original_implementation_prompt": "Implement an original, production-ready playful control component centred on this interaction: pull cord wakes a desk lamp. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Lucid",
+      "family": "navigation tabs",
+      "observed_concept": "glass tabs include a sun/moon theme switch",
+      "original_implementation_prompt": "Implement an original, production-ready navigation tabs component centred on this interaction: glass tabs include a sun/moon theme switch. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Lumen Toggle",
+      "family": "theme switch",
+      "observed_concept": "theme transition spreads from the toggle",
+      "original_implementation_prompt": "Implement an original, production-ready theme switch component centred on this interaction: theme transition spreads from the toggle. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Maw",
+      "family": "destructive action",
+      "observed_concept": "delete transition zooms into a trash container",
+      "original_implementation_prompt": "Implement an original, production-ready destructive action component centred on this interaction: delete transition zooms into a trash container. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Meniscus",
+      "family": "navigation tabs",
+      "observed_concept": "bottom tab marker moves like liquid",
+      "original_implementation_prompt": "Implement an original, production-ready navigation tabs component centred on this interaction: bottom tab marker moves like liquid. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Mood",
+      "family": "feedback slider",
+      "observed_concept": "slider changes an expressive face",
+      "original_implementation_prompt": "Implement an original, production-ready feedback slider component centred on this interaction: slider changes an expressive face. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Nimbus",
+      "family": "publishing action",
+      "observed_concept": "publish control uses a rolling cloud transition",
+      "original_implementation_prompt": "Implement an original, production-ready publishing action component centred on this interaction: publish control uses a rolling cloud transition. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Nought",
+      "family": "404 scene",
+      "observed_concept": "wind moves the elements of an error page",
+      "original_implementation_prompt": "Implement an original, production-ready 404 scene component centred on this interaction: wind moves the elements of an error page. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Nudge",
+      "family": "contact action",
+      "observed_concept": "contact call-to-action responds to pointer approach",
+      "original_implementation_prompt": "Implement an original, production-ready contact action component centred on this interaction: contact call-to-action responds to pointer approach. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Opal",
+      "family": "navigation bar",
+      "observed_concept": "glass navigation highlight stretches between items",
+      "original_implementation_prompt": "Implement an original, production-ready navigation bar component centred on this interaction: glass navigation highlight stretches between items. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Parachute",
+      "family": "download control",
+      "observed_concept": "download arrow descends with a parachute",
+      "original_implementation_prompt": "Implement an original, production-ready download control component centred on this interaction: download arrow descends with a parachute. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Pebble",
+      "family": "authentication form",
+      "observed_concept": "rounded glass card switches sign-in/sign-up",
+      "original_implementation_prompt": "Implement an original, production-ready authentication form component centred on this interaction: rounded glass card switches sign-in/sign-up. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Pivot",
+      "family": "message composer",
+      "observed_concept": "tool tray swings open",
+      "original_implementation_prompt": "Implement an original, production-ready message composer component centred on this interaction: tool tray swings open. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Plimsoll",
+      "family": "upload control",
+      "observed_concept": "upload fill rises with transfer progress",
+      "original_implementation_prompt": "Implement an original, production-ready upload control component centred on this interaction: upload fill rises with transfer progress. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Plume",
+      "family": "subscription action",
+      "observed_concept": "subscribe control folds into a paper plane",
+      "original_implementation_prompt": "Implement an original, production-ready subscription action component centred on this interaction: subscribe control folds into a paper plane. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Pulse",
+      "family": "visual artwork",
+      "observed_concept": "connected points form a glowing heart",
+      "original_implementation_prompt": "Implement an original, production-ready visual artwork component centred on this interaction: connected points form a glowing heart. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Quarto",
+      "family": "OTP input",
+      "observed_concept": "four code fields fold into a completion mark",
+      "original_implementation_prompt": "Implement an original, production-ready OTP input component centred on this interaction: four code fields fold into a completion mark. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Quench",
+      "family": "form submission",
+      "observed_concept": "submit control fills while request is processed",
+      "original_implementation_prompt": "Implement an original, production-ready form submission component centred on this interaction: submit control fills while request is processed. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Relay",
+      "family": "contact menu",
+      "observed_concept": "contact label expands into contact links",
+      "original_implementation_prompt": "Implement an original, production-ready contact menu component centred on this interaction: contact label expands into contact links. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Relief",
+      "family": "media controls",
+      "observed_concept": "button expands into player/share controls",
+      "original_implementation_prompt": "Implement an original, production-ready media controls component centred on this interaction: button expands into player/share controls. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Reptile",
+      "family": "pointer scene",
+      "observed_concept": "line-drawn lizard follows pointer movement",
+      "original_implementation_prompt": "Implement an original, production-ready pointer scene component centred on this interaction: line-drawn lizard follows pointer movement. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Ripcord",
+      "family": "download control",
+      "observed_concept": "download control becomes its own progress indicator",
+      "original_implementation_prompt": "Implement an original, production-ready download control component centred on this interaction: download control becomes its own progress indicator. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Sable",
+      "family": "checkout form",
+      "observed_concept": "card preview updates as payment details are typed",
+      "original_implementation_prompt": "Implement an original, production-ready checkout form component centred on this interaction: card preview updates as payment details are typed. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Scoville",
+      "family": "feedback slider",
+      "observed_concept": "spice slider increases a visual heat response",
+      "original_implementation_prompt": "Implement an original, production-ready feedback slider component centred on this interaction: spice slider increases a visual heat response. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Scry",
+      "family": "search control",
+      "observed_concept": "search icon expands into input field",
+      "original_implementation_prompt": "Implement an original, production-ready search control component centred on this interaction: search icon expands into input field. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Sigil",
+      "family": "OTP input",
+      "observed_concept": "code field seals after successful completion",
+      "original_implementation_prompt": "Implement an original, production-ready OTP input component centred on this interaction: code field seals after successful completion. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Signet",
+      "family": "OTP input",
+      "observed_concept": "code field uses embossed surface treatment",
+      "original_implementation_prompt": "Implement an original, production-ready OTP input component centred on this interaction: code field uses embossed surface treatment. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Silo",
+      "family": "download control",
+      "observed_concept": "box opens and fills as file downloads",
+      "original_implementation_prompt": "Implement an original, production-ready download control component centred on this interaction: box opens and fills as file downloads. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Snowglobe",
+      "family": "playful scene",
+      "observed_concept": "shake interaction creates snowfall",
+      "original_implementation_prompt": "Implement an original, production-ready playful scene component centred on this interaction: shake interaction creates snowfall. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Solstice",
+      "family": "season slider",
+      "observed_concept": "dragging changes the scene through seasons",
+      "original_implementation_prompt": "Implement an original, production-ready season slider component centred on this interaction: dragging changes the scene through seasons. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Spindle",
+      "family": "OTP input",
+      "observed_concept": "successful code entry opens a safe",
+      "original_implementation_prompt": "Implement an original, production-ready OTP input component centred on this interaction: successful code entry opens a safe. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Splay",
+      "family": "share control",
+      "observed_concept": "share action expands into destinations",
+      "original_implementation_prompt": "Implement an original, production-ready share control component centred on this interaction: share action expands into destinations. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Surge",
+      "family": "navigation",
+      "observed_concept": "active underline jumps between menu items",
+      "original_implementation_prompt": "Implement an original, production-ready navigation component centred on this interaction: active underline jumps between menu items. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Swell",
+      "family": "button",
+      "observed_concept": "surface fills with colour on hover",
+      "original_implementation_prompt": "Implement an original, production-ready button component centred on this interaction: surface fills with colour on hover. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Swipe",
+      "family": "list action",
+      "observed_concept": "swipe exposes a destructive row action",
+      "original_implementation_prompt": "Implement an original, production-ready list action component centred on this interaction: swipe exposes a destructive row action. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Tender",
+      "family": "payment action",
+      "observed_concept": "card-swipe gesture confirms payment state",
+      "original_implementation_prompt": "Implement an original, production-ready payment action component centred on this interaction: card-swipe gesture confirms payment state. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Thrum",
+      "family": "download control",
+      "observed_concept": "arrow becomes wave-shaped progress display",
+      "original_implementation_prompt": "Implement an original, production-ready download control component centred on this interaction: arrow becomes wave-shaped progress display. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Tide",
+      "family": "download control",
+      "observed_concept": "arrow folds into a file representation",
+      "original_implementation_prompt": "Implement an original, production-ready download control component centred on this interaction: arrow folds into a file representation. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Tube",
+      "family": "messaging action",
+      "observed_concept": "send action moves message through a tube",
+      "original_implementation_prompt": "Implement an original, production-ready messaging action component centred on this interaction: send action moves message through a tube. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Tumbler",
+      "family": "OTP input",
+      "observed_concept": "code entry completes a key-cutting visual",
+      "original_implementation_prompt": "Implement an original, production-ready OTP input component centred on this interaction: code entry completes a key-cutting visual. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Upload",
+      "family": "file upload",
+      "observed_concept": "drop zone shows queued/transferring/completed files",
+      "original_implementation_prompt": "Implement an original, production-ready file upload component centred on this interaction: drop zone shows queued/transferring/completed files. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Warden",
+      "family": "password strength",
+      "observed_concept": "meter grows an illustrative creature as rules are met",
+      "original_implementation_prompt": "Implement an original, production-ready password strength component centred on this interaction: meter grows an illustrative creature as rules are met. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Weather",
+      "family": "weather card",
+      "observed_concept": "glass card changes with selected day conditions",
+      "original_implementation_prompt": "Implement an original, production-ready weather card component centred on this interaction: glass card changes with selected day conditions. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    },
+    {
+      "name": "Wish",
+      "family": "celebration scene",
+      "observed_concept": "breath interaction extinguishes birthday candles",
+      "original_implementation_prompt": "Implement an original, production-ready celebration scene component centred on this interaction: breath interaction extinguishes birthday candles. Define appropriate idle, hover/focus, active, pending, success, error and cancellation states. Use semantic keyboard- and touch-accessible controls, visible focus, accessible status announcements and a prefers-reduced-motion fallback. Tie progress and success to real state or callbacks; never fake completion. Use original artwork, timing and copy. Add tests for the important transitions."
+    }
+  ]
+}
