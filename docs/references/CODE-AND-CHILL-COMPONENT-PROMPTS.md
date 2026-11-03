@@ -1,6 +1,6 @@
 # Code and Chill — 75 component implementation prompts
 
-**Research source:** [Code and Chill components catalogue](https://codeandchill.store/components) and [new releases](https://codeandchill.store/new)  
+**Research source:** [Code and Chill components catalogue](https://codeandchill.store/components) and [new releases](https://codeandchill.store/new)
 **Research date:** 2026-11-03
 
 ## Scope
