@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.2.0",
+  "schema_version": "1.3.0",
   "purpose": "Single catalogue of responsibilities, availability boundaries and handoffs for the unified website workflow.",
   "operating_rule": "A tool is active only after the current client confirms it can invoke the tool. Repository configuration or documentation alone is not proof of a live connection.",
   "tools": [
@@ -1506,13 +1506,913 @@
       ],
       "selection_rule": "Use when documentation/content volume justifies spell checking. Keep technical names in a checked-in dictionary rather than disabling broad rules.",
       "cost_boundary": "Open-source spell checker; current major releases have Node.js requirements. Check release support before installing."
+    },
+    {
+      "id": "puck-visual-editor",
+      "name": "Puck visual React page editor",
+      "organ": "visual-page-authoring",
+      "kind": "react-visual-page-editor",
+      "repo_url": "https://github.com/puckeditor/puck",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use when a React application needs an embedded visual page editor with project-owned components and data. It is not a complete hosted website platform.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use when a React application needs an embedded visual page editor with project-owned components and data. It is not a complete hosted website platform.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "grapesjs-builder",
+      "name": "GrapesJS web builder",
+      "organ": "visual-web-authoring",
+      "kind": "framework-agnostic-web-builder",
+      "repo_url": "https://github.com/GrapesJS/grapesjs",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for drag-and-drop HTML/CSS template authoring or a custom CMS/page-builder interface. Review generated markup and plugins; do not assume its output is a React component tree.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for drag-and-drop HTML/CSS template authoring or a custom CMS/page-builder interface. Review generated markup and plugins; do not assume its output is a React component tree.",
+      "cost_boundary": "Upstream repository license: BSD-3-Clause. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares BSD-3-Clause; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "webstudio-builder",
+      "name": "Webstudio visual website builder",
+      "organ": "visual-website-authoring",
+      "kind": "full-visual-website-builder",
+      "repo_url": "https://github.com/webstudio-is/webstudio",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use when the requirement is a full visual website-building environment with CSS-level control. AGPL obligations and self-hosting operations require review; hosted plans are separate.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use when the requirement is a full visual website-building environment with CSS-level control. AGPL obligations and self-hosting operations require review; hosted plans are separate.",
+      "cost_boundary": "Upstream repository license: AGPL-3.0. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares AGPL-3.0; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "onlook-visual-editor",
+      "name": "Onlook visual code editor",
+      "organ": "live-code-visual-editing",
+      "kind": "visual-editor-for-codebases",
+      "repo_url": "https://github.com/onlook-dev/onlook",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use when designers need to select and edit real code-backed UI visually. AI integrations may require external model credentials/cost; use non-AI workflows where possible.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use when designers need to select and edit real code-backed UI visually. AI integrations may require external model credentials/cost; use non-AI workflows where possible.",
+      "cost_boundary": "Upstream repository license: Apache-2.0. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares Apache-2.0; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "appsmith-app-builder",
+      "name": "Appsmith",
+      "organ": "low-code-app-authoring",
+      "kind": "internal-app-builder",
+      "repo_url": "https://github.com/appsmithorg/appsmith",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use to build internal tools, admin panels and data-backed dashboards visually. Not the default for public marketing sites or custom consumer app frontends.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use to build internal tools, admin panels and data-backed dashboards visually. Not the default for public marketing sites or custom consumer app frontends.",
+      "cost_boundary": "Upstream repository license: Apache-2.0. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares Apache-2.0; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "budibase-app-builder",
+      "name": "Budibase",
+      "organ": "low-code-app-authoring",
+      "kind": "internal-app-and-automation-builder",
+      "repo_url": "https://github.com/Budibase/budibase",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for internal business apps and operations workflows when its data connectors and GPLv3 deployment model fit. Check package-level licenses; hosted offerings and infrastructure may cost.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for internal business apps and operations workflows when its data connectors and GPLv3 deployment model fit. Check package-level licenses; hosted offerings and infrastructure may cost.",
+      "cost_boundary": "Upstream repository license: GPL-3.0. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares GPL-3.0; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "tooljet-app-builder",
+      "name": "ToolJet",
+      "organ": "low-code-app-authoring",
+      "kind": "internal-app-and-workflow-builder",
+      "repo_url": "https://github.com/ToolJet/ToolJet",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for internal apps, dashboards and operational workflows when AGPL-3.0 obligations are acceptable. Self-hosting still needs compute and maintenance; hosted tiers are separate.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for internal apps, dashboards and operational workflows when AGPL-3.0 obligations are acceptable. Self-hosting still needs compute and maintenance; hosted tiers are separate.",
+      "cost_boundary": "Upstream repository license: AGPL-3.0. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares AGPL-3.0; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "refine-framework",
+      "name": "Refine",
+      "organ": "code-first-admin-app-framework",
+      "kind": "react-internal-app-framework",
+      "repo_url": "https://github.com/refinedev/refine",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use when building a custom React admin panel, B2B app or internal tool with control over code and data providers. Do not combine with React Admin for the same app.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use when building a custom React admin panel, B2B app or internal tool with control over code and data providers. Do not combine with React Admin for the same app.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "react-admin-framework",
+      "name": "React Admin",
+      "organ": "code-first-admin-app-framework",
+      "kind": "react-admin-framework",
+      "repo_url": "https://github.com/marmelab/react-admin",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for data-centric CRUD admin interfaces over REST/GraphQL APIs. Choose instead of Refine when its resource/data-provider model is the better fit.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for data-centric CRUD admin interfaces over REST/GraphQL APIs. Choose instead of Refine when its resource/data-provider model is the better fit.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "magic-ui-components",
+      "name": "Magic UI",
+      "organ": "animated-component-source",
+      "kind": "animated-react-component-library",
+      "repo_url": "https://github.com/magicuidesign/magicui",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use selectively for polished animated React/Tailwind components and effects. Review source, dependencies, reduced-motion behavior and performance; do not add the whole catalogue.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use selectively for polished animated React/Tailwind components and effects. Review source, dependencies, reduced-motion behavior and performance; do not add the whole catalogue.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "daisyui-components",
+      "name": "daisyUI",
+      "organ": "tailwind-component-system",
+      "kind": "themeable-tailwind-component-library",
+      "repo_url": "https://github.com/saadeghi/daisyui",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use when fast semantic Tailwind component classes and theme switching are more valuable than individually composed shadcn components. Select as a coherent styling layer, not an extra competing theme.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use when fast semantic Tailwind component classes and theme switching are more valuable than individually composed shadcn components. Select as a coherent styling layer, not an extra competing theme.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "flowbite-react",
+      "name": "Flowbite React",
+      "organ": "react-component-library",
+      "kind": "tailwind-react-components",
+      "repo_url": "https://github.com/themesberg/flowbite-react",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use when a broad Tailwind-based React component set fits the app. Distinguish the free open-source core from any separately licensed Pro assets.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use when a broad Tailwind-based React component set fits the app. Distinguish the free open-source core from any separately licensed Pro assets.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "chakra-ui",
+      "name": "Chakra UI",
+      "organ": "react-design-system",
+      "kind": "accessible-react-component-system",
+      "repo_url": "https://github.com/chakra-ui/chakra-ui",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use as an alternative complete React design system when its styling and component APIs fit. Do not layer its global system over shadcn/Mantine/MUI.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use as an alternative complete React design system when its styling and component APIs fit. Do not layer its global system over shadcn/Mantine/MUI.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "mui",
+      "name": "MUI",
+      "organ": "react-design-system",
+      "kind": "material-design-react-system",
+      "repo_url": "https://github.com/mui/material-ui",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use when a mature Material Design system and extensive component coverage are desired. Treat MUI as the app's primary component system rather than mixing it with another global system.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use when a mature Material Design system and extensive component coverage are desired. Treat MUI as the app's primary component system rather than mixing it with another global system.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "headless-ui",
+      "name": "Headless UI",
+      "organ": "unstyled-accessible-components",
+      "kind": "accessible-tailwind-primitives",
+      "repo_url": "https://github.com/tailwindlabs/headlessui",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for accessible unstyled interactive primitives when Tailwind-first composition is preferred. Avoid duplicating controls already provided by the selected primitive foundation.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for accessible unstyled interactive primitives when Tailwind-first composition is preferred. Avoid duplicating controls already provided by the selected primitive foundation.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "floating-ui",
+      "name": "Floating UI",
+      "organ": "interaction-positioning-engine",
+      "kind": "popover-tooltip-menu-positioning",
+      "repo_url": "https://github.com/floating-ui/floating-ui",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use as a low-level positioning engine for robust tooltips, popovers, menus and anchored interactions. It is not a full component library.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use as a low-level positioning engine for robust tooltips, popovers, menus and anchored interactions. It is not a full component library.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "xyflow-react-flow",
+      "name": "React Flow / Svelte Flow",
+      "organ": "node-editor-and-flow-ui",
+      "kind": "visual-node-based-flow-editor",
+      "repo_url": "https://github.com/xyflow/xyflow",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use to build interactive node graphs, workflow designers, automation canvases and data-flow editors. Choose React Flow or Svelte Flow to match the selected app framework.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use to build interactive node graphs, workflow designers, automation canvases and data-flow editors. Choose React Flow or Svelte Flow to match the selected app framework.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "rete-visual-programming",
+      "name": "Rete.js",
+      "organ": "node-editor-and-flow-ui",
+      "kind": "visual-programming-framework",
+      "repo_url": "https://github.com/retejs/rete",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for extensible visual programming and node-based dataflow editors with custom processing controls. Prefer React Flow for simpler graph UIs; do not adopt both without distinct needs.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for extensible visual programming and node-based dataflow editors with custom processing controls. Prefer React Flow for simpler graph UIs; do not adopt both without distinct needs.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "excalidraw-canvas",
+      "name": "Excalidraw",
+      "organ": "interactive-canvas-and-whiteboard",
+      "kind": "whiteboard-diagram-canvas",
+      "repo_url": "https://github.com/excalidraw/excalidraw",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use when a product needs a freeform sketching, diagramming or collaborative whiteboard surface. Not a substitute for a structured node workflow editor.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use when a product needs a freeform sketching, diagramming or collaborative whiteboard surface. Not a substitute for a structured node workflow editor.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "react-grid-layout",
+      "name": "React Grid Layout",
+      "organ": "dynamic-dashboard-layout",
+      "kind": "draggable-resizable-responsive-grid",
+      "repo_url": "https://github.com/react-grid-layout/react-grid-layout",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for user-customizable dashboards with draggable, resizable widgets and responsive breakpoints. Persist layout state and provide keyboard alternatives.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for user-customizable dashboards with draggable, resizable widgets and responsive breakpoints. Persist layout state and provide keyboard alternatives.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "dnd-kit",
+      "name": "dnd-kit",
+      "organ": "drag-drop-interaction-engine",
+      "kind": "accessible-drag-and-drop",
+      "repo_url": "https://github.com/clauderic/dnd-kit",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for sortable lists, kanban boards, nested drag/drop and custom interactive layout editing. Provide keyboard and non-drag alternatives.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for sortable lists, kanban boards, nested drag/drop and custom interactive layout editing. Provide keyboard and non-drag alternatives.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "react-resizable-panels",
+      "name": "React Resizable Panels",
+      "organ": "dynamic-panel-layout",
+      "kind": "resizable-split-pane-layout",
+      "repo_url": "https://github.com/bvaughn/react-resizable-panels",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for resizable workspaces, IDE-like panes, split views and dashboard panels. Keep sensible min/max sizes and mobile stacking behavior.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for resizable workspaces, IDE-like panes, split views and dashboard panels. Keep sensible min/max sizes and mobile stacking behavior.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "formkit-drag-and-drop",
+      "name": "FormKit Drag and Drop",
+      "organ": "drag-drop-interaction-engine",
+      "kind": "framework-agnostic-drag-drop",
+      "repo_url": "https://github.com/formkit/drag-and-drop",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for lightweight drag-and-drop and sortable interfaces across supported frameworks. Choose either this or dnd-kit for a given interaction layer.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for lightweight drag-and-drop and sortable interfaces across supported frameworks. Choose either this or dnd-kit for a given interaction layer.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "react-spring",
+      "name": "React Spring",
+      "organ": "spring-physics-animation",
+      "kind": "physics-based-react-animation",
+      "repo_url": "https://github.com/pmndrs/react-spring",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use when physics-based spring animation is a defining interaction requirement. It is an alternative animation runtime; do not animate the same target with Motion or GSAP.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use when physics-based spring animation is a defining interaction requirement. It is an alternative animation runtime; do not animate the same target with Motion or GSAP.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "animejs",
+      "name": "Anime.js",
+      "organ": "javascript-animation-engine",
+      "kind": "timeline-and-property-animation",
+      "repo_url": "https://github.com/juliangarnier/anime",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for framework-agnostic property, SVG and timeline animation when Motion/GSAP are not the better fit. Assign one engine owner per animated target.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for framework-agnostic property, SVG and timeline animation when Motion/GSAP are not the better fit. Assign one engine owner per animated target.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "organ": "application-framework",
+      "kind": "react-full-stack-framework",
+      "repo_url": "https://github.com/vercel/next.js",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use when React server rendering, routing, server components or integrated full-stack features are required. Do not combine with another app framework.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use when React server rendering, routing, server components or integrated full-stack features are required. Do not combine with another app framework.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "sveltekit",
+      "name": "SvelteKit",
+      "organ": "application-framework",
+      "kind": "svelte-full-stack-framework",
+      "repo_url": "https://github.com/sveltejs/kit",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use as the full-stack app framework when Svelte is selected. It is an alternative to Next.js/Nuxt, not an additive layer.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use as the full-stack app framework when Svelte is selected. It is an alternative to Next.js/Nuxt, not an additive layer.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "nuxt",
+      "name": "Nuxt",
+      "organ": "application-framework",
+      "kind": "vue-full-stack-framework",
+      "repo_url": "https://github.com/nuxt/nuxt",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use as the full-stack framework when Vue is selected. It is an alternative to Next.js/SvelteKit, not an additive layer.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use as the full-stack framework when Vue is selected. It is an alternative to Next.js/SvelteKit, not an additive layer.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "open-props",
+      "name": "Open Props",
+      "organ": "css-design-token-system",
+      "kind": "css-custom-property-library",
+      "repo_url": "https://github.com/argyleink/open-props",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use selectively for CSS custom properties covering color, spacing, typography, easing and responsive design. Map chosen values into the project's one token contract rather than importing a second competing token system.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use selectively for CSS custom properties covering color, spacing, typography, easing and responsive design. Map chosen values into the project's one token contract rather than importing a second competing token system.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
+    },
+    {
+      "id": "css-doodle",
+      "name": "CSS Doodle",
+      "organ": "generative-css-visuals",
+      "kind": "creative-css-web-component",
+      "repo_url": "https://github.com/css-doodle/css-doodle",
+      "activation": "feature-requirement-matched",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-project-stack-or-compatible-runtime",
+      "responsibility": "Use for generative CSS patterns, backgrounds and creative visual effects. Keep decorative output non-interactive, low-cost and hidden from assistive technology where appropriate.",
+      "consumes": [
+        "feature-acceptance-criteria",
+        "selected-design-token-contract",
+        "project-framework-and-accessibility-policy"
+      ],
+      "produces": [
+        "reviewed-tool-or-component-decision",
+        "implementation-guidance",
+        "feature-handoff-evidence"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "design-to-code",
+        "implementation",
+        "qa"
+      ],
+      "selection_rule": "Use for generative CSS patterns, backgrounds and creative visual effects. Keep decorative output non-interactive, low-cost and hidden from assistive technology where appropriate.",
+      "cost_boundary": "Upstream repository license: MIT. Source is available without a paid subscription; hosting, managed tiers, optional AI/model APIs, commercial add-ons or infrastructure may have separate costs. Review the exact package and deployment license before adoption.",
+      "license_note": "Upstream repository declares MIT; verify the exact package, plugins, assets and deployment terms at adoption. This registry entry is not legal approval."
     }
   ],
   "research_date": "2026-11-03",
   "coverage_note": "Curated public GitHub scan, not an exhaustive enumeration of all GitHub repositories. Candidates are not automatically installed or connected. Each entry distinguishes repository review from active client/runtime availability.",
   "selection_policy": "Use capability-triggered selection, not tool accumulation. Verify current releases, component/package license, third-party notices, dependencies, permissions, client compatibility and actual cost boundary before activating a candidate.",
   "core_tool_count": 15,
-  "reviewed_candidate_count": 45,
-  "total_tool_records": 60,
-  "candidate_status_policy": "Every reviewed-candidate record has repo_url, activation, selection_rule and cost_boundary. Candidate records are not considered installed, connected or active."
+  "reviewed_candidate_count": 75,
+  "total_tool_records": 90,
+  "candidate_status_policy": "Reviewed candidates are research references, not installed dependencies, active MCP servers or live connections. Activate only against a feature requirement and after checking package license, environment, accessibility, security and cost."
 }
