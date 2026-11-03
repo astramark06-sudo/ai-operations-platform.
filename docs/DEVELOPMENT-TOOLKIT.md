@@ -173,7 +173,7 @@ Once the scaffold exists:
 
 ## 8. Expanded ecosystem: choose specialists by need
 
-The repository's [expanded ecosystem catalogue](references/EXPANDED-WEB-TOOL-ECOSYSTEM.md) and [60-entry tool registry](contracts/toolchain.registry.json) cover more than the original design/motion stack. The 45 additional projects are reviewed candidates, not automatically installed dependencies. Read the catalogue before adding any of them.
+The repository's [expanded ecosystem catalogue](references/EXPANDED-WEB-TOOL-ECOSYSTEM.md) and [90-entry tool registry](contracts/toolchain.registry.json) cover more than the original design/motion stack. The 75 additional projects are reviewed candidates, not automatically installed dependencies. Read the catalogue before adding any of them.
 
 ### Skills and agent capabilities
 
@@ -242,3 +242,74 @@ Supabase and Appwrite are backend alternatives. Umami is an optional privacy-ori
 - **CSpell:** spell-check documentation and code terminology when the content volume warrants it.
 
 PocketBase is deliberately excluded from the recommended candidate list because its upstream repository was archived on October 26, 2026. A tool being open source is not enough; active maintenance and acceptable risk still matter.
+
+
+## 1.3.0 — Application builders, interactive UI and dynamic layout
+
+The latest expansion adds 30 candidates specifically for building apps, editable pages, interactive UI, visual flows, responsive workspaces and dynamic CSS. These tools solve different problems and should not be stacked indiscriminately.
+
+### Visual webpage and page-authoring systems
+
+- **Puck** — React-native visual page editor. Use when the product itself needs editable page composition inside a React app.
+- **GrapesJS** — framework-agnostic HTML/CSS drag-and-drop builder. Use for template/CMS-style editing; inspect generated markup and plugin licenses.
+- **Webstudio** — full visual website builder. AGPL-3.0; review deployment and modification obligations before self-hosting.
+- **Onlook** — visual editing of real codebases. Core source is Apache-2.0; AI features may need external model services and must not silently create API spend.
+
+### Visual app builders and code-first admin frameworks
+
+- **Appsmith** — low-code internal tools, dashboards and data-backed admin panels.
+- **Budibase** — internal business apps and operations workflows. Overall GPLv3 guidance; check each package's license.
+- **ToolJet** — low-code internal apps and workflows. AGPL-3.0.
+- **Refine** — code-first React framework for custom admin/B2B applications.
+- **React Admin** — data-centric CRUD interfaces over REST/GraphQL.
+
+Appsmith/Budibase/ToolJet are visual low-code builders; Refine/React Admin are code-first frameworks. Choose one architecture based on product requirements. Self-hosting still needs infrastructure; managed tiers can cost money.
+
+### Interactive component systems and primitives
+
+- **Magic UI** — animated React/Tailwind component source.
+- **daisyUI** — semantic Tailwind components and theme layer.
+- **Flowbite React** — Tailwind-based React components; distinguish free core from separately licensed Pro assets.
+- **Chakra UI** and **MUI** — alternative full React component/design systems.
+- **Headless UI** — unstyled accessible interactive primitives.
+- **Floating UI** — low-level tooltip, popover, menu and anchored-element positioning engine.
+
+Do not combine multiple global design systems. Keep shadcn as the existing baseline unless a feature has a documented reason to choose another.
+
+### Flow editors, diagrams and canvas interfaces
+
+- **React Flow / Svelte Flow** — interactive node graphs and workflow designers.
+- **Rete.js** — programmable visual programming and dataflow editors.
+- **Excalidraw** — freeform diagramming and whiteboard canvas.
+
+Use structured node editors for workflows and Excalidraw for freeform sketching; these are not interchangeable.
+
+### Dynamic layouts and drag/drop
+
+- **React Grid Layout** — draggable/resizable dashboard widget grids with responsive breakpoints.
+- **dnd-kit** — sortable, nested and custom drag/drop interactions.
+- **FormKit Drag and Drop** — lighter framework-agnostic drag/drop alternative.
+- **React Resizable Panels** — resizable split panes and workspace layouts.
+
+Every drag interaction needs keyboard alternatives, touch support, responsive behavior and an explicit persistence policy.
+
+### Dynamic CSS and alternative motion models
+
+- **Open Props** — CSS custom properties for design tokens, easing, spacing, colors and typography. Map selected values into the existing project token contract.
+- **CSS Doodle** — generative CSS visuals and backgrounds. Keep effects decorative, performant and accessible.
+- **React Spring** — spring-physics animation for React.
+- **Anime.js** — framework-agnostic property/SVG/timeline animation.
+
+React Spring and Anime.js are alternatives, not additional defaults. Maintain one animation owner per DOM target.
+
+### Application framework alternatives
+
+- **Next.js** — React full-stack framework.
+- **SvelteKit** — Svelte full-stack framework.
+- **Nuxt** — Vue full-stack framework.
+
+These are mutually exclusive app-shell choices for a given application. The repository still has no selected framework.
+
+### Licensing and operating boundaries
+
+All 30 projects have upstream repository license metadata recorded in the registry. The exact package, plugin, template, component and asset license must still be checked before copying or deploying. AGPL/GPL projects require deliberate review. No new runtime package, visual editor, MCP server, hosted backend or paid service was activated by this research.
