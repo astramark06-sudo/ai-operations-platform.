@@ -34,6 +34,10 @@ Feedback from visual review, browser exploration, tests and security returns to 
 | Component scouts | 21st.dev, Watermelon UI, React Bits through Manus, Motion Primitives | Search and compare candidate components and blocks | Install everything found or bypass licence review |
 | Primitive alternatives | Base UI, Radix UI, React Aria, Mantine | Fill a documented primitive/accessibility gap or deliberately select a full UI system | Mix multiple primitive foundations or global themes in one component family |
 | Component memory | Storybook + its MCP addon | Record reusable components, variants, states and implementation guidance | Replace the selected product design file |
+| Versioned skill bridge | TanStack Intent | Load package-maintained skills that match installed TanStack versions | Install unrelated or unreviewed agent instructions |
+| Continuous audits | Lighthouse CI, Pa11y CI | Check performance budgets and multi-route accessibility during CI | Treat automated scores as a complete UX or accessibility review |
+| Editorial content | Payload CMS | Supply a Next.js-native structured content backend and admin when required | Add a CMS to a static site or before hosting/database decisions |
+| Documentation quality | CSpell | Catch terminology and spelling errors across code/docs | Block work over unreviewed product names or a missing vocabulary list |
 | Browser instrumentation | Playwright MCP, Chrome DevTools MCP | Agent inspection, console/network diagnostics and performance traces | Replace deterministic tests or expose personal browser profiles |
 | Data and forms | TanStack Query/Table, React Hook Form, Zod, MSW, Zustand | Real remote data, complex forms, schemas, realistic network tests and shared client state | Add dependencies before their acceptance criteria exist |
 | Accessibility and test organs | Vitest, React Testing Library, axe-core | Unit/component tests and automated WCAG/ARIA checks | Claim automated scans prove full accessibility |
@@ -146,7 +150,7 @@ Use Haikei only when a generated background or vector is needed. Export approved
 
 **Strix** runs only after the repository or staging target exists and scope is explicitly authorized. Prefer local Ollama plus Docker; collect evidence, fix verified findings and retest. Do not run it in cloud CI or introduce hosted paid inference.
 
-GitHub CI remains the release gate: repository validation, Markdown lint, secret scanning, CodeQL when source exists, Playwright when the app exists, accessibility and Lighthouse audits against an authorized public HTTPS deployment. Consider OSV-Scanner for dependency advisories, Trivy for SBOM/container/filesystem/license coverage, and OWASP ZAP for an explicitly authorized staging DAST pass. Keep scanners complementary and scoped. A skipped application test is not a passing application test.
+GitHub CI remains the release gate: repository validation, Markdown lint, secret scanning, CodeQL when source exists, Playwright when the app exists, accessibility and Lighthouse audits against an authorized public HTTPS deployment. For multi-route apps, Pa11y CI can scan a fixed URL list or sitemap; Lighthouse CI can enforce repeatable performance budgets. CSpell can check documentation terminology. These are candidates, not added workflow jobs yet. Consider OSV-Scanner for dependency advisories, Trivy for SBOM/container/filesystem/license coverage, and OWASP ZAP for an explicitly authorized staging DAST pass. Keep scanners complementary and scoped. A skipped application test is not a passing application test.
 
 ## 6. Conflict-resolution rules
 
