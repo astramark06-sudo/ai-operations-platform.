@@ -1,7 +1,7 @@
 # Unified website toolchain — one coordinated system
 
-**Status:** Operating architecture for this repository  
-**Contract version:** 1.0.0  
+**Status:** Operating architecture for this repository
+**Contract version:** 1.0.0
 **Scope:** Design, component discovery, implementation, animation, browser exploration, QA and security
 
 ## 1. What “one body” means
