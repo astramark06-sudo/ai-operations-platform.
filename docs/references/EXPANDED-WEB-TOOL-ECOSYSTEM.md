@@ -170,7 +170,6 @@ Five more candidates are included because they close specific gaps in skill-to-p
 - [PocketBase](https://github.com/pocketbase/pocketbase) is excluded from the candidate set because its repository was archived on 2026-10-26. Reassess only if the project is maintained again and the risk is acceptable.
 - Browser automation products requiring a paid cloud browser or paid model API were not added as default organs. Prefer the already documented Playwright/Chrome-local options unless a real feature requires something else.
 
-
 ## 15. Application builders, interactive UI, flows and dynamic layouts (registry 1.3.0)
 
 This section adds 30 candidates because the earlier catalogue focused too heavily on design-engineering infrastructure and not enough on tools that create the actual application surfaces.
