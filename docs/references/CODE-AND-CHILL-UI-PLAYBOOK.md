@@ -139,7 +139,7 @@ The indexed components catalogue includes patterns such as:
 - 3D team/product cards and swipeable galleries.
 - Playful 404 pages and seasonal/interactive scenes.
 
-The catalogue is useful as a source of interaction concepts; implement original, accessible variants rather than copying a paid component.
+The catalogue is useful as a source of interaction concepts; implement original, accessible variants rather than copying a paid component. The indexed directory contains 75 named components; see the [75 original component implementation prompts](CODE-AND-CHILL-COMPONENT-PROMPTS.md) and the structured `component_specs` array in the JSON catalogue.
 
 ## Original prompts for implementation
 
