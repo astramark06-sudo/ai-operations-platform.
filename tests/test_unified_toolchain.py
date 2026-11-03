@@ -28,9 +28,9 @@ class UnifiedToolchainContractTests(unittest.TestCase):
         errors: list[str] = []
         tool_ids = validate_toolchain_registry_data(registry, errors)
         version = validate_ui_handoff_template_data(handoff, tool_ids, errors)
-        self.assertEqual(len(tool_ids), 60)
+        self.assertEqual(len(tool_ids), 90)
         self.assertEqual(registry["core_tool_count"], 15)
-        self.assertEqual(registry["reviewed_candidate_count"], 45)
+        self.assertEqual(registry["reviewed_candidate_count"], 75)
         self.assertEqual(registry["total_tool_records"], len(tool_ids))
         self.assertEqual(version, "1.0.0")
         self.assertEqual(errors, [])
@@ -41,13 +41,14 @@ class UnifiedToolchainContractTests(unittest.TestCase):
             tool for tool in registry["tools"]
             if tool.get("repo_state", "").startswith("reviewed-candidate")
         ]
-        self.assertEqual(len(candidates), 45)
+        self.assertEqual(len(candidates), 75)
         for candidate in candidates:
             with self.subTest(tool=candidate.get("id")):
                 self.assertTrue(candidate.get("repo_url", "").startswith("https://github.com/"))
                 self.assertTrue(candidate.get("activation"))
                 self.assertTrue(candidate.get("selection_rule"))
                 self.assertTrue(candidate.get("cost_boundary"))
+                self.assertTrue(candidate.get("license_note"))
                 self.assertIn(candidate.get("repo_state"), {"reviewed-candidate-not-installed", "reviewed-candidate-not-configured"})
 
     def test_duplicate_tool_ids_are_rejected(self) -> None:
