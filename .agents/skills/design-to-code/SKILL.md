@@ -45,6 +45,12 @@ Prefer existing repository conventions over importing a second design system.
 
 - Build semantic, responsive HTML and composable components.
 - Use the project's established primitive layer first; prefer shadcn/ui when the project has adopted it.
+- Treat shadcn/ui as the current primitive baseline. Consider Base UI, Radix UI or React Aria only when a specific control needs different behavior/accessibility; Mantine is a complete-system alternative, not a layer to combine with shadcn.
+- Use Storybook for isolated component variants and states when the app has enough reusable components. Record story links or identifiers in the feature handoff.
+- Source expressive components selectively from 21st.dev, Watermelon UI, React Bits or Motion Primitives. Inspect source, license, dependencies, mobile behavior, keyboard behavior and reduced-motion support before adoption.
+- Keep icons consistent: choose one primary family such as Lucide or Tabler. Use Recharts only when real data visualization is required; provide accessible non-visual data alternatives.
+- For data-heavy interfaces, choose supporting tools by need: TanStack Query for remote server state, TanStack Table for complex grids, React Hook Form for complex forms, Zod for runtime data contracts, and Zustand only when shared state outgrows React state/context. Mock Service Worker belongs in tests, never as production persistence.
+- Select one animation owner per target: CSS for simple transitions, Motion for React state/gesture/layout changes, GSAP for complex timelines. Haikei creates exported assets; SVGO/Sharp may optimize those assets. Three.js/React Three Fiber/Drei and Lenis are optional specialist tools, not defaults.
 - Reuse design tokens rather than scattering raw values throughout the code.
 - Import only the assets and packages required by the task.
 - Inspect third-party component code, dependencies, accessibility, license, and responsive behavior before adopting it.

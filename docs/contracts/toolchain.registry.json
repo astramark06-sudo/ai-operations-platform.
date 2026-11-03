@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.2.0",
   "purpose": "Single catalogue of responsibilities, availability boundaries and handoffs for the unified website workflow.",
   "operating_rule": "A tool is active only after the current client confirms it can invoke the tool. Repository configuration or documentation alone is not proof of a live connection.",
   "tools": [
@@ -326,6 +326,1193 @@
         "orchestrator",
         "implementation"
       ]
+    },
+    {
+      "id": "emil-kowalski-skills",
+      "name": "Emil Kowalski design-engineering skills",
+      "organ": "motion-craft-and-critique",
+      "kind": "agent-skill-pack",
+      "repo_url": "https://github.com/emilkowalski/skills",
+      "activation": "selective-skill-install",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "compatible-agent-required",
+      "responsibility": "Build, review and audit motion with explicit purpose, easing, duration, interruptibility, GPU properties, reduced-motion and hover-gating criteria.",
+      "consumes": [
+        "motion-contract",
+        "existing-animation-source"
+      ],
+      "produces": [
+        "motion-implementation",
+        "motion-review",
+        "animation-audit-plan"
+      ],
+      "handoff_to": [
+        "motion",
+        "gsap",
+        "taste",
+        "playwright"
+      ],
+      "selection_rule": "Use alongside GSAP/Motion when high-craft motion is required. Install only relevant skills such as animate, review-animations or improve-animations; avoid loading the whole pack by default.",
+      "cost_boundary": "Public skill files are free; requires a compatible coding-agent runtime."
+    },
+    {
+      "id": "ux-skills",
+      "name": "UX Skills",
+      "organ": "ux-research-and-decision-quality",
+      "kind": "agent-skill-pack",
+      "repo_url": "https://github.com/Tranz007/ux-skills",
+      "activation": "optional-skill-install",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "compatible-agent-required",
+      "responsibility": "Challenge product assumptions, maintain evidence and user intent, interrogate existing design systems and produce engineering-ready UX decisions.",
+      "consumes": [
+        "product-brief",
+        "user-evidence",
+        "design-system-context"
+      ],
+      "produces": [
+        "ux-risk-review",
+        "decision-record",
+        "engineering-handoff"
+      ],
+      "handoff_to": [
+        "ui-ux-pro-max",
+        "taste",
+        "design-source",
+        "orchestrator"
+      ],
+      "selection_rule": "Use when product discovery, user journeys or UX rationale are important. Does not replace UI/UX Pro Max or the design-source authority.",
+      "cost_boundary": "Open skill repository; compatible agent and setup environment required."
+    },
+    {
+      "id": "frontend-ai-skills-catalogue",
+      "name": "Frontend AI Skills catalogue",
+      "organ": "specialist-skill-discovery",
+      "kind": "agent-skill-catalogue",
+      "repo_url": "https://github.com/JustineBijuPaul/frontend-ai-skills",
+      "activation": "reference-catalogue-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "compatible-agent-required",
+      "responsibility": "Discover narrowly scoped frontend skills for React, animation, 3D, accessibility, performance and testing.",
+      "consumes": [
+        "feature-type",
+        "selected-framework",
+        "capability-gap"
+      ],
+      "produces": [
+        "skill-shortlist",
+        "specialist-guidance"
+      ],
+      "handoff_to": [
+        "unified-web-engineering"
+      ],
+      "selection_rule": "Search the catalogue for a missing specialist capability. Do not install its entire 70+ skill collection; overlapping skill packs increase conflicts and context load.",
+      "cost_boundary": "Public skill catalogue; no paid model API required, but some individual skills may reference external tools."
+    },
+    {
+      "id": "playwright-mcp",
+      "name": "Microsoft Playwright MCP",
+      "organ": "browser-interaction-and-agent-observation",
+      "kind": "mcp-server",
+      "repo_url": "https://github.com/microsoft/playwright-mcp",
+      "activation": "optional-local-mcp",
+      "repo_state": "reviewed-candidate-not-configured",
+      "client_state": "requires-node-and-browser-on-compatible-computer",
+      "responsibility": "Allow an MCP agent to inspect and interact with browser pages through structured accessibility snapshots, navigation, forms, network mocking, tracing and screenshots.",
+      "consumes": [
+        "running-preview",
+        "test-scenario",
+        "authorized-browser-scope"
+      ],
+      "produces": [
+        "accessibility-snapshots",
+        "interaction-observations",
+        "browser-traces"
+      ],
+      "handoff_to": [
+        "playwright",
+        "taste",
+        "orchestrator"
+      ],
+      "selection_rule": "Use for agent-driven browser exploration. Keep Playwright's test runner for deterministic assertions; isolate browser profiles and avoid authenticated/personal browser data.",
+      "cost_boundary": "Open-source Apache-2.0 server; needs Node.js, browser runtime and a compatible MCP client."
+    },
+    {
+      "id": "chrome-devtools-mcp",
+      "name": "Chrome DevTools MCP",
+      "organ": "browser-diagnostics-and-performance",
+      "kind": "mcp-server",
+      "repo_url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "activation": "optional-local-mcp",
+      "repo_state": "reviewed-candidate-not-configured",
+      "client_state": "requires-desktop-chrome-and-compatible-mcp-client",
+      "responsibility": "Inspect Chrome console, network, DOM and performance traces; run browser automation and diagnose performance regressions.",
+      "consumes": [
+        "running-preview",
+        "performance-question",
+        "authorized-browser-scope"
+      ],
+      "produces": [
+        "console-findings",
+        "network-diagnostics",
+        "performance-traces",
+        "browser-observations"
+      ],
+      "handoff_to": [
+        "implementation",
+        "lighthouse",
+        "playwright"
+      ],
+      "selection_rule": "Use when Chrome-specific diagnostics or performance traces are needed. Do not add if Playwright traces and Lighthouse already answer the question.",
+      "cost_boundary": "Open-source project; needs Chrome and a compatible computer/client. Its browser context is sensitive and must be isolated."
+    },
+    {
+      "id": "storybook-mcp",
+      "name": "Storybook and Storybook MCP addon",
+      "organ": "component-lab-and-design-system-memory",
+      "kind": "component-workbench-and-mcp-addon",
+      "repo_url": "https://github.com/storybookjs/storybook",
+      "activation": "app-scaffold-optional",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-app-and-compatible-client",
+      "responsibility": "Create isolated component stories, document variants and states, inspect the component system through the Storybook MCP addon, and support component-level review.",
+      "consumes": [
+        "component-source",
+        "design-tokens",
+        "component-states"
+      ],
+      "produces": [
+        "component-stories",
+        "component-docs",
+        "component-observations"
+      ],
+      "handoff_to": [
+        "component-review",
+        "taste",
+        "playwright"
+      ],
+      "selection_rule": "Adopt once several reusable components exist or visual variants need a shared catalogue. Storybook MCP moved into the Storybook monorepo in v10.6; follow current official docs, not the old standalone repository.",
+      "cost_boundary": "Open-source Storybook core/addon; requires an app scaffold and compatible agent client."
+    },
+    {
+      "id": "base-ui",
+      "name": "Base UI",
+      "organ": "accessible-primitive-alternatives",
+      "kind": "react-component-primitives",
+      "repo_url": "https://github.com/mui/base-ui",
+      "activation": "primitive-selection-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-react-app",
+      "responsibility": "Provide unstyled, accessible behavior primitives for overlays, menus, inputs, navigation and other complex controls.",
+      "consumes": [
+        "selected-framework",
+        "design-token-contract",
+        "component-requirement"
+      ],
+      "produces": [
+        "accessible-primitive-source"
+      ],
+      "handoff_to": [
+        "shadcn",
+        "implementation",
+        "component-review"
+      ],
+      "selection_rule": "Compare with the primitive base selected by shadcn. Use Base UI or Radix as the foundation for a given component family, not competing foundations for the same control.",
+      "cost_boundary": "MIT-licensed open-source library; runtime dependency only after framework selection."
+    },
+    {
+      "id": "react-aria-components",
+      "name": "Adobe React Aria Components",
+      "organ": "accessible-primitive-alternatives",
+      "kind": "react-component-primitives",
+      "repo_url": "https://github.com/adobe/react-spectrum",
+      "activation": "accessibility-heavy-component-choice",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-react-app",
+      "responsibility": "Provide interaction and accessibility behavior for complex widgets, internationalization, focus management and keyboard navigation.",
+      "consumes": [
+        "accessibility-requirement",
+        "component-requirement",
+        "selected-framework"
+      ],
+      "produces": [
+        "accessible-component-source",
+        "keyboard-behavior"
+      ],
+      "handoff_to": [
+        "implementation",
+        "axe-core",
+        "playwright"
+      ],
+      "selection_rule": "Prefer for demanding accessibility, internationalization or complex interaction requirements. Do not layer it on top of an equivalent shadcn/Radix/Base UI primitive.",
+      "cost_boundary": "Open-source repository; verify the package-specific license and dependencies before use."
+    },
+    {
+      "id": "radix-primitives",
+      "name": "Radix UI Primitives",
+      "organ": "accessible-primitive-alternatives",
+      "kind": "react-component-primitives",
+      "repo_url": "https://github.com/radix-ui/primitives",
+      "activation": "primitive-selection-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-react-app",
+      "responsibility": "Provide unstyled accessible React primitives with keyboard navigation, focus management, collision handling and composable state.",
+      "consumes": [
+        "selected-framework",
+        "design-token-contract",
+        "component-requirement"
+      ],
+      "produces": [
+        "accessible-primitive-source"
+      ],
+      "handoff_to": [
+        "shadcn",
+        "implementation",
+        "component-review"
+      ],
+      "selection_rule": "Use only where the selected shadcn base or an existing project component is not the better fit. Do not mix Radix and Base UI primitives inside one component implementation.",
+      "cost_boundary": "Open-source primitives; verify individual package terms and current API."
+    },
+    {
+      "id": "mantine",
+      "name": "Mantine",
+      "organ": "complete-component-system-alternative",
+      "kind": "react-component-library",
+      "repo_url": "https://github.com/mantinedev/mantine",
+      "activation": "alternative-design-system-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-react-app",
+      "responsibility": "Offer a cohesive full React component system, hooks, form handling, notifications, charts and higher-level components.",
+      "consumes": [
+        "framework-decision",
+        "design-system-requirements"
+      ],
+      "produces": [
+        "component-system",
+        "hooks-and-utilities"
+      ],
+      "handoff_to": [
+        "design-system-contract",
+        "implementation"
+      ],
+      "selection_rule": "Consider only if the project deliberately chooses a complete library instead of copy-in shadcn primitives. Do not combine Mantine's global styling/theme with shadcn as parallel systems.",
+      "cost_boundary": "MIT-licensed open-source core; inspect any separately sold premium templates or services before use."
+    },
+    {
+      "id": "tanstack-query",
+      "name": "TanStack Query",
+      "organ": "server-state-and-data-synchronization",
+      "kind": "runtime-library",
+      "repo_url": "https://github.com/TanStack/query",
+      "activation": "data-integration-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-app-and-data-source",
+      "responsibility": "Fetch, cache, synchronize, retry, paginate and mutate remote server data with explicit loading/error/stale states.",
+      "consumes": [
+        "api-contract",
+        "data-freshness-policy"
+      ],
+      "produces": [
+        "query-state",
+        "cache-policy",
+        "mutation-state"
+      ],
+      "handoff_to": [
+        "implementation",
+        "playwright",
+        "data-contract"
+      ],
+      "selection_rule": "Add when the feature has real remote/server state. Keep simple static/local state in React until a query/cache layer is needed.",
+      "cost_boundary": "Open-source MIT library; does not provide a backend or free database."
+    },
+    {
+      "id": "tanstack-table",
+      "name": "TanStack Table",
+      "organ": "data-dense-interface",
+      "kind": "headless-table-library",
+      "repo_url": "https://github.com/TanStack/table",
+      "activation": "complex-table-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-app-and-data-schema",
+      "responsibility": "Power sortable, filterable, groupable, pageable and virtualizable data grids while leaving markup and styling under project control.",
+      "consumes": [
+        "table-schema",
+        "data-source",
+        "table-interaction-spec"
+      ],
+      "produces": [
+        "table-state-model",
+        "table-row-model"
+      ],
+      "handoff_to": [
+        "implementation",
+        "playwright",
+        "axe-core"
+      ],
+      "selection_rule": "Use for real data tables with multiple interactions; use a semantic HTML table for simple static/tabular content.",
+      "cost_boundary": "Open-source MIT library; no hosted service required."
+    },
+    {
+      "id": "react-hook-form",
+      "name": "React Hook Form",
+      "organ": "form-state-and-validation",
+      "kind": "runtime-library",
+      "repo_url": "https://github.com/react-hook-form/react-hook-form",
+      "activation": "complex-form-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-react-app",
+      "responsibility": "Manage performant form state, field registration, validation lifecycle, submission and complex dynamic forms.",
+      "consumes": [
+        "form-schema",
+        "interaction-contract"
+      ],
+      "produces": [
+        "form-state",
+        "validation-results",
+        "submission-state"
+      ],
+      "handoff_to": [
+        "zod",
+        "implementation",
+        "playwright"
+      ],
+      "selection_rule": "Use for multi-field, dynamic or validated forms. Native HTML forms and controlled React state are enough for small forms.",
+      "cost_boundary": "MIT-licensed open-source library; no hosted API required."
+    },
+    {
+      "id": "zod",
+      "name": "Zod",
+      "organ": "shared-data-contract-validation",
+      "kind": "runtime-library",
+      "repo_url": "https://github.com/colinhacks/zod",
+      "activation": "schema-validation-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-typescript-or-javascript-app",
+      "responsibility": "Define runtime schemas and infer static types for form inputs, API payloads, configuration and persisted data.",
+      "consumes": [
+        "domain-model",
+        "api-contract",
+        "form-schema"
+      ],
+      "produces": [
+        "validated-data",
+        "inferred-types",
+        "validation-errors"
+      ],
+      "handoff_to": [
+        "react-hook-form",
+        "tanstack-query",
+        "implementation",
+        "tests"
+      ],
+      "selection_rule": "Use one schema at boundaries that need runtime validation; avoid duplicating incompatible frontend and backend shapes.",
+      "cost_boundary": "MIT-licensed open-source library."
+    },
+    {
+      "id": "msw",
+      "name": "Mock Service Worker",
+      "organ": "test-data-and-network-simulation",
+      "kind": "test-library",
+      "repo_url": "https://github.com/mswjs/msw",
+      "activation": "integration-tests-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-app-and-test-runner",
+      "responsibility": "Mock REST/GraphQL/network responses at the request boundary so UI states can be tested without a paid or live backend.",
+      "consumes": [
+        "api-contract",
+        "test-scenarios"
+      ],
+      "produces": [
+        "deterministic-network-fixtures",
+        "error-and-loading-scenarios"
+      ],
+      "handoff_to": [
+        "vitest",
+        "playwright",
+        "implementation"
+      ],
+      "selection_rule": "Use for realistic request-level tests and loading/error/empty cases. Do not mistake mock data for a production backend.",
+      "cost_boundary": "Open-source project; no paid API required."
+    },
+    {
+      "id": "vitest",
+      "name": "Vitest",
+      "organ": "unit-and-component-test-engine",
+      "kind": "test-runner",
+      "repo_url": "https://github.com/vitest-dev/vitest",
+      "activation": "vite-app-test-runner",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-and-app-scaffold",
+      "responsibility": "Run unit, integration and component tests with coverage, mocks, browser mode and Vite-consistent module handling.",
+      "consumes": [
+        "test-source",
+        "app-config",
+        "fixtures"
+      ],
+      "produces": [
+        "test-results",
+        "coverage-report"
+      ],
+      "handoff_to": [
+        "implementation",
+        "github-ci",
+        "orchestrator"
+      ],
+      "selection_rule": "Prefer for a Vite-based project. Select the test runner once; do not add Vitest and Jest for the same test layer without a concrete compatibility need.",
+      "cost_boundary": "MIT-licensed open-source test runner; requires Node.js and application scaffold."
+    },
+    {
+      "id": "testing-library-react",
+      "name": "React Testing Library",
+      "organ": "user-centered-component-tests",
+      "kind": "test-library",
+      "repo_url": "https://github.com/testing-library/react-testing-library",
+      "activation": "react-component-tests",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-react-and-test-runner",
+      "responsibility": "Test React components through accessible roles, labels, text and user-visible behavior instead of implementation details.",
+      "consumes": [
+        "component-contract",
+        "acceptance-criteria"
+      ],
+      "produces": [
+        "component-behavior-tests"
+      ],
+      "handoff_to": [
+        "vitest",
+        "playwright",
+        "axe-core"
+      ],
+      "selection_rule": "Use with the selected unit test runner for user-observable component behavior. Prefer accessible queries and real interaction simulation.",
+      "cost_boundary": "MIT-licensed open-source test library."
+    },
+    {
+      "id": "axe-core",
+      "name": "axe-core",
+      "organ": "automated-accessibility-testing",
+      "kind": "accessibility-engine",
+      "repo_url": "https://github.com/dequelabs/axe-core",
+      "activation": "component-and-browser-qa",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-browser-test-harness",
+      "responsibility": "Check rendered HTML interfaces for common WCAG and ARIA accessibility defects inside component and browser tests.",
+      "consumes": [
+        "rendered-ui",
+        "accessibility-test-scope"
+      ],
+      "produces": [
+        "a11y-violations",
+        "incomplete-manual-review-items"
+      ],
+      "handoff_to": [
+        "implementation",
+        "playwright",
+        "pa11y",
+        "taste"
+      ],
+      "selection_rule": "Integrate into Playwright/component tests where feasible. Automated checks catch only part of accessibility problems; retain keyboard and screen-reader/manual reviews.",
+      "cost_boundary": "Open-source MPL-2.0 engine; no hosted audit service required."
+    },
+    {
+      "id": "recharts",
+      "name": "Recharts",
+      "organ": "data-visualization",
+      "kind": "react-chart-library",
+      "repo_url": "https://github.com/recharts/recharts",
+      "activation": "chart-requirement-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-react-app-and-chart-data",
+      "responsibility": "Build composable React charts with axes, tooltips, legends and responsive behavior for real datasets.",
+      "consumes": [
+        "validated-chart-data",
+        "chart-spec"
+      ],
+      "produces": [
+        "chart-components",
+        "chart-accessibility-review"
+      ],
+      "handoff_to": [
+        "implementation",
+        "axe-core",
+        "playwright"
+      ],
+      "selection_rule": "Use for conventional React dashboards and charts. Choose one charting system for a feature; do not introduce charts merely for decoration.",
+      "cost_boundary": "MIT-licensed open-source project; charts still need accessible text/table alternatives."
+    },
+    {
+      "id": "lucide",
+      "name": "Lucide Icons",
+      "organ": "iconography",
+      "kind": "icon-library",
+      "repo_url": "https://github.com/lucide-icons/lucide",
+      "activation": "default-icon-family",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "framework-agnostic-source",
+      "responsibility": "Provide consistent lightweight outline icons with web framework packages and SVG sources.",
+      "consumes": [
+        "icon-role",
+        "design-token-contract"
+      ],
+      "produces": [
+        "consistent-icon-assets"
+      ],
+      "handoff_to": [
+        "implementation",
+        "design-system-contract"
+      ],
+      "selection_rule": "Recommended default icon family for a new UI. Avoid mixing icon families without an explicit brand or semantic reason.",
+      "cost_boundary": "ISC-licensed and free for commercial/personal use; does not include brand logos."
+    },
+    {
+      "id": "tabler-icons",
+      "name": "Tabler Icons",
+      "organ": "iconography",
+      "kind": "icon-library",
+      "repo_url": "https://github.com/tabler/tabler-icons",
+      "activation": "alternative-icon-family",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "framework-agnostic-source",
+      "responsibility": "Provide a large set of consistent outline and filled icons across React, SVG, webfont and other framework packages.",
+      "consumes": [
+        "icon-role",
+        "design-token-contract"
+      ],
+      "produces": [
+        "consistent-icon-assets"
+      ],
+      "handoff_to": [
+        "implementation",
+        "design-system-contract"
+      ],
+      "selection_rule": "Alternative to Lucide when icon coverage/style better matches. Select Lucide or Tabler as the primary family; do not load both by default.",
+      "cost_boundary": "MIT-licensed icon set; preserve notices where required."
+    },
+    {
+      "id": "threejs",
+      "name": "Three.js",
+      "organ": "immersive-3d-rendering",
+      "kind": "graphics-runtime",
+      "repo_url": "https://github.com/mrdoob/three.js",
+      "activation": "explicit-3d-requirement",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-webgl-capable-browser-and-app",
+      "responsibility": "Render custom 3D scenes, geometry, materials, lights, cameras, shader effects and spatial interactions in WebGL/WebGPU-capable browsers.",
+      "consumes": [
+        "3d-art-direction",
+        "scene-spec",
+        "performance-budget"
+      ],
+      "produces": [
+        "interactive-3d-scene"
+      ],
+      "handoff_to": [
+        "react-three-fiber",
+        "performance-qa",
+        "taste"
+      ],
+      "selection_rule": "Use only when a 3D experience materially serves the product. Set mobile fallbacks, low-power behavior and a strict performance budget.",
+      "cost_boundary": "MIT-licensed open-source runtime; GPU performance and asset creation remain implementation costs."
+    },
+    {
+      "id": "react-three-fiber",
+      "name": "React Three Fiber",
+      "organ": "reactive-3d-scene-composition",
+      "kind": "react-renderer-for-threejs",
+      "repo_url": "https://github.com/pmndrs/react-three-fiber",
+      "activation": "react-3d-requirement",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-react-and-threejs",
+      "responsibility": "Compose interactive Three.js scenes declaratively with reusable React components and hooks.",
+      "consumes": [
+        "react-app",
+        "threejs-scene-spec"
+      ],
+      "produces": [
+        "react-scene-components"
+      ],
+      "handoff_to": [
+        "drei",
+        "implementation",
+        "performance-qa"
+      ],
+      "selection_rule": "Use with Three.js when the project is React and declarative scene composition helps. Match the major version to the selected React version.",
+      "cost_boundary": "MIT-licensed open-source project; renderer and GPU constraints still apply."
+    },
+    {
+      "id": "drei",
+      "name": "Drei",
+      "organ": "3d-component-helpers",
+      "kind": "react-three-fiber-helper-library",
+      "repo_url": "https://github.com/pmndrs/drei",
+      "activation": "react-three-fiber-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-react-three-fiber",
+      "responsibility": "Provide maintained helpers, controls, loaders, abstractions and common scene building blocks for React Three Fiber.",
+      "consumes": [
+        "react-three-fiber-scene"
+      ],
+      "produces": [
+        "3d-helper-components"
+      ],
+      "handoff_to": [
+        "implementation",
+        "performance-qa"
+      ],
+      "selection_rule": "Add only when a helper saves meaningful code; inspect bundle and per-helper dependencies.",
+      "cost_boundary": "MIT-licensed open-source library."
+    },
+    {
+      "id": "dotlottie-web",
+      "name": "dotLottie Web",
+      "organ": "authored-vector-animation-playback",
+      "kind": "animation-player",
+      "repo_url": "https://github.com/LottieFiles/dotlottie-web",
+      "activation": "authored-lottie-asset-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-web-or-react-app",
+      "responsibility": "Play Lottie and dotLottie animations through a WebAssembly renderer with React and other framework integrations.",
+      "consumes": [
+        "approved-lottie-asset",
+        "animation-trigger"
+      ],
+      "produces": [
+        "vector-animation-playback"
+      ],
+      "handoff_to": [
+        "implementation",
+        "performance-qa"
+      ],
+      "selection_rule": "Use for supplied/licensed authored vector animations and state-machine assets. Player license does not grant rights to third-party animation files.",
+      "cost_boundary": "MIT-licensed player; verify each animation asset's own license."
+    },
+    {
+      "id": "lenis",
+      "name": "Lenis",
+      "organ": "optional-scroll-experience",
+      "kind": "scroll-library",
+      "repo_url": "https://github.com/darkroomengineering/lenis",
+      "activation": "justified-scroll-design-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-browser-and-app-runtime",
+      "responsibility": "Coordinate smooth scroll behavior for carefully designed scroll-led or WebGL-synchronized experiences.",
+      "consumes": [
+        "scroll-experience-spec",
+        "reduced-motion-requirements"
+      ],
+      "produces": [
+        "scroll-controller"
+      ],
+      "handoff_to": [
+        "gsap",
+        "performance-qa",
+        "accessibility-qa"
+      ],
+      "selection_rule": "Not a global default. Preserve native scrolling where possible, honor reduced motion and integrate scroll timing explicitly with GSAP/ScrollTrigger.",
+      "cost_boundary": "MIT-licensed open-source runtime; must be performance and accessibility tested."
+    },
+    {
+      "id": "svgo",
+      "name": "SVGO",
+      "organ": "vector-asset-optimization",
+      "kind": "build-tool",
+      "repo_url": "https://github.com/svg/svgo",
+      "activation": "svg-asset-pipeline",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-or-ci",
+      "responsibility": "Remove redundant SVG metadata and optimize exported vector assets while preserving intended appearance.",
+      "consumes": [
+        "exported-svg-assets"
+      ],
+      "produces": [
+        "optimized-svg-assets"
+      ],
+      "handoff_to": [
+        "implementation",
+        "asset-review"
+      ],
+      "selection_rule": "Run on committed exported SVGs where optimization is beneficial; visually compare output before replacing originals.",
+      "cost_boundary": "MIT-licensed Node.js tool; local or CI execution."
+    },
+    {
+      "id": "sharp",
+      "name": "Sharp",
+      "organ": "raster-image-optimization",
+      "kind": "build-tool-and-image-library",
+      "repo_url": "https://github.com/lovell/sharp",
+      "activation": "image-processing-requirement",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-supported-platform",
+      "responsibility": "Resize, crop, convert and optimize raster images for responsive web delivery and build pipelines.",
+      "consumes": [
+        "source-raster-assets",
+        "responsive-image-spec"
+      ],
+      "produces": [
+        "optimized-responsive-image-variants"
+      ],
+      "handoff_to": [
+        "implementation",
+        "lighthouse"
+      ],
+      "selection_rule": "Use for build-time image processing when needed. Prefer appropriately sized source images and avoid introducing server image processing for a static site.",
+      "cost_boundary": "Open-source; verify current package license and native platform requirements before installation."
+    },
+    {
+      "id": "biome",
+      "name": "Biome",
+      "organ": "code-hygiene",
+      "kind": "formatter-and-linter",
+      "repo_url": "https://github.com/biomejs/biome",
+      "activation": "javascript-typescript-project",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-app-scaffold",
+      "responsibility": "Format and lint JavaScript, TypeScript, JSX, JSON, CSS and other supported files with one fast toolchain.",
+      "consumes": [
+        "source-files",
+        "project-config"
+      ],
+      "produces": [
+        "format-check",
+        "lint-diagnostics"
+      ],
+      "handoff_to": [
+        "implementation",
+        "github-ci"
+      ],
+      "selection_rule": "Choose Biome OR ESLint plus Prettier based on ecosystem needs. Do not run multiple formatters over the same files.",
+      "cost_boundary": "Open-source with MIT/Apache-2.0 licensing; check individual components and versions."
+    },
+    {
+      "id": "knip",
+      "name": "Knip",
+      "organ": "dependency-and-dead-code-cleanup",
+      "kind": "static-analysis-tool",
+      "repo_url": "https://github.com/webpro-nl/knip",
+      "activation": "javascript-typescript-project",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-app-manifest",
+      "responsibility": "Find unused files, exports, dependencies, devDependencies and binaries to reduce project bloat and maintenance risks.",
+      "consumes": [
+        "package-manifest",
+        "source-graph"
+      ],
+      "produces": [
+        "unused-code-report",
+        "dependency-cleanup-plan"
+      ],
+      "handoff_to": [
+        "implementation",
+        "dependabot",
+        "github-ci"
+      ],
+      "selection_rule": "Run after the app has meaningful source and package metadata; review findings before removing code that may be used dynamically.",
+      "cost_boundary": "Open-source CLI; inspect its current license and release docs before use."
+    },
+    {
+      "id": "osv-scanner",
+      "name": "Google OSV-Scanner",
+      "organ": "dependency-vulnerability-intelligence",
+      "kind": "security-scanner",
+      "repo_url": "https://github.com/google/osv-scanner",
+      "activation": "dependency-security-gate",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-lockfile-or-sbom",
+      "responsibility": "Match resolved dependencies and lockfiles against the open OSV vulnerability database and optionally check dependency license policies.",
+      "consumes": [
+        "lockfile-or-sbom",
+        "license-allowlist"
+      ],
+      "produces": [
+        "dependency-vulnerability-report",
+        "license-report"
+      ],
+      "handoff_to": [
+        "implementation",
+        "github-ci",
+        "security-review"
+      ],
+      "selection_rule": "Use as a supplementary dependency scanner when a lockfile exists. Avoid duplicating the same scheduled scan in multiple CI workflows.",
+      "cost_boundary": "Open-source scanner and advisory data; network access to advisory sources required."
+    },
+    {
+      "id": "trivy",
+      "name": "Trivy",
+      "organ": "supply-chain-and-artifact-security",
+      "kind": "security-scanner",
+      "repo_url": "https://github.com/aquasecurity/trivy",
+      "activation": "filesystem-or-container-security",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-scanner-runtime-and-scope",
+      "responsibility": "Scan filesystems, dependency inventories, containers, IaC, secrets and licenses; generate SBOM and vulnerability evidence.",
+      "consumes": [
+        "authorized-repository-or-image",
+        "dependency-inventory"
+      ],
+      "produces": [
+        "sbom",
+        "vulnerability-report",
+        "misconfiguration-report",
+        "license-findings"
+      ],
+      "handoff_to": [
+        "security-review",
+        "implementation",
+        "github-ci"
+      ],
+      "selection_rule": "Use when supply-chain, container, IaC or license coverage is required. Keep scans scoped and avoid overlapping every scanner on every commit.",
+      "cost_boundary": "Open-source scanner; local execution or free CI is possible, while hosted platforms and some services may be paid."
+    },
+    {
+      "id": "owasp-zap",
+      "name": "OWASP ZAP",
+      "organ": "dynamic-web-security-testing",
+      "kind": "web-security-scanner",
+      "repo_url": "https://github.com/zaproxy/zaproxy",
+      "activation": "authorized-staging-dast-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-staging-site-and-java-or-container-runtime",
+      "responsibility": "Perform dynamic web application security testing against an explicitly authorized staging target and report common web vulnerabilities.",
+      "consumes": [
+        "authorized-staging-url",
+        "test-account-or-safe-unauthenticated-scope"
+      ],
+      "produces": [
+        "dast-alerts",
+        "security-report"
+      ],
+      "handoff_to": [
+        "security-review",
+        "implementation",
+        "retest"
+      ],
+      "selection_rule": "Only run against owned/authorized staging with test data and a safe scan profile. Never scan third-party sites or production data by default.",
+      "cost_boundary": "Apache-2.0 open-source scanner; requires compatible runtime and careful target authorization."
+    },
+    {
+      "id": "vite",
+      "name": "Vite",
+      "organ": "frontend-build-and-dev-server",
+      "kind": "build-tool",
+      "repo_url": "https://github.com/vitejs/vite",
+      "activation": "framework-selection-candidate",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-and-framework-choice",
+      "responsibility": "Provide development server, hot-module replacement, plugin integration and optimized frontend build output.",
+      "consumes": [
+        "framework-choice",
+        "source-entrypoints"
+      ],
+      "produces": [
+        "dev-server",
+        "production-bundle"
+      ],
+      "handoff_to": [
+        "vitest",
+        "github-ci",
+        "pages-deploy"
+      ],
+      "selection_rule": "Strong default candidate for a client-rendered React app. Do not select it before the product's rendering and routing needs are decided.",
+      "cost_boundary": "MIT-licensed open-source build tool."
+    },
+    {
+      "id": "astro",
+      "name": "Astro",
+      "organ": "content-first-web-framework",
+      "kind": "web-framework",
+      "repo_url": "https://github.com/withastro/astro",
+      "activation": "content-led-site-choice",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-and-framework-choice",
+      "responsibility": "Build content-heavy websites with static-first output and optional interactive islands or framework integrations.",
+      "consumes": [
+        "content-model",
+        "rendering-requirements",
+        "framework-choice"
+      ],
+      "produces": [
+        "static-site-or-hybrid-app"
+      ],
+      "handoff_to": [
+        "starlight",
+        "github-pages",
+        "lighthouse"
+      ],
+      "selection_rule": "Prefer for content-led marketing, documentation and static publishing. Choose React/Vite/Next-style application architecture instead when the product is highly interactive.",
+      "cost_boundary": "MIT-licensed open-source framework; deployment and server adapters may have separate infrastructure costs."
+    },
+    {
+      "id": "starlight",
+      "name": "Astro Starlight",
+      "organ": "documentation-publishing",
+      "kind": "documentation-framework",
+      "repo_url": "https://github.com/withastro/starlight",
+      "activation": "documentation-site-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-astro-project",
+      "responsibility": "Create accessible, high-performance documentation sites with navigation, search and content conventions.",
+      "consumes": [
+        "documentation-source",
+        "astro-framework"
+      ],
+      "produces": [
+        "documentation-site"
+      ],
+      "handoff_to": [
+        "astro",
+        "github-pages",
+        "lighthouse"
+      ],
+      "selection_rule": "Use only if the project needs a public documentation portal; it is not the website's application framework.",
+      "cost_boundary": "MIT-licensed open-source framework; static output can be hosted on GitHub Pages."
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "organ": "managed-or-self-hosted-backend-option",
+      "kind": "backend-platform-and-optional-mcp",
+      "repo_url": "https://github.com/supabase/supabase",
+      "activation": "real-backend-requirement-only",
+      "repo_state": "reviewed-candidate-not-configured",
+      "client_state": "requires-project-and-credential-review",
+      "responsibility": "Provide Postgres database, authentication, storage, realtime and server-side functions for features needing a backend.",
+      "consumes": [
+        "data-model",
+        "auth-and-access-policy",
+        "backend-requirement"
+      ],
+      "produces": [
+        "database-api",
+        "auth-flow",
+        "storage-and-realtime-contract"
+      ],
+      "handoff_to": [
+        "tanstack-query",
+        "zod",
+        "implementation",
+        "security-review"
+      ],
+      "selection_rule": "Do not add for static/mock-only sites. Self-hosting requires compute and operations; managed free tiers have quotas and can require billing controls. Keep MCP access read-only unless mutations are explicitly needed.",
+      "cost_boundary": "Open-source core; managed cloud quotas/pricing and self-hosting infrastructure are separate. Never assume unlimited free hosting."
+    },
+    {
+      "id": "appwrite",
+      "name": "Appwrite",
+      "organ": "managed-or-self-hosted-backend-option",
+      "kind": "backend-platform-and-mcp",
+      "repo_url": "https://github.com/appwrite/appwrite",
+      "activation": "real-backend-requirement-only",
+      "repo_state": "reviewed-candidate-not-configured",
+      "client_state": "requires-project-and-credential-review",
+      "responsibility": "Provide authentication, database, file storage, functions, messaging, realtime and hosted/self-managed app infrastructure with agent-oriented MCP support.",
+      "consumes": [
+        "data-model",
+        "auth-and-access-policy",
+        "backend-requirement"
+      ],
+      "produces": [
+        "database-api",
+        "auth-flow",
+        "file-storage",
+        "function-contract"
+      ],
+      "handoff_to": [
+        "tanstack-query",
+        "zod",
+        "implementation",
+        "security-review"
+      ],
+      "selection_rule": "Compare with Supabase only after writing backend requirements. Do not use both for the same backend problem. Self-hosting needs Docker and compute; cloud free plan has limits.",
+      "cost_boundary": "BSD-3-Clause open-source platform; managed free tier is quota-limited and infrastructure is not free when self-hosted."
+    },
+    {
+      "id": "umami",
+      "name": "Umami Analytics",
+      "organ": "privacy-conscious-product-measurement",
+      "kind": "self-hosted-analytics",
+      "repo_url": "https://github.com/umami-software/umami",
+      "activation": "analytics-requirement-and-consent-review",
+      "repo_state": "reviewed-candidate-not-configured",
+      "client_state": "requires-server-and-postgresql",
+      "responsibility": "Provide privacy-oriented web analytics, traffic and conversion metrics under a self-hosted deployment or its separately governed cloud service.",
+      "consumes": [
+        "analytics-requirements",
+        "privacy-and-retention-policy"
+      ],
+      "produces": [
+        "traffic-and-event-metrics"
+      ],
+      "handoff_to": [
+        "product-review",
+        "privacy-review",
+        "improvement-backlog"
+      ],
+      "selection_rule": "Only add if product metrics are needed and the privacy/consent approach is defined. Self-hosting requires a server and PostgreSQL; repository hosting does not supply this.",
+      "cost_boundary": "MIT-licensed application; self-hosting requires ongoing compute/database. Cloud services may have paid limits."
+    },
+    {
+      "id": "zustand",
+      "name": "Zustand",
+      "organ": "shared-client-state",
+      "kind": "react-state-library",
+      "repo_url": "https://github.com/pmndrs/zustand",
+      "activation": "shared-client-state-only",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-react-app",
+      "responsibility": "Manage small shared client-side state stores with low ceremony and selector-based subscriptions.",
+      "consumes": [
+        "client-state-model",
+        "feature-boundary"
+      ],
+      "produces": [
+        "shared-client-state-store"
+      ],
+      "handoff_to": [
+        "implementation",
+        "playwright"
+      ],
+      "selection_rule": "Start with local React state and context. Add Zustand only when cross-component shared state becomes awkward; do not introduce multiple global-state libraries.",
+      "cost_boundary": "Open-source library; verify current license and API before installation."
+    },
+    {
+      "id": "tanstack-intent",
+      "name": "TanStack Intent",
+      "organ": "package-versioned-agent-skill-bridge",
+      "kind": "agent-skill-installer",
+      "repo_url": "https://github.com/TanStack/intent",
+      "activation": "when-tanstack-library-is-adopted",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-compatible-agent-and-node",
+      "responsibility": "Install and map library-maintained, version-matched Agent Skills into project guidance so the coding agent uses APIs and patterns matching the selected package version.",
+      "consumes": [
+        "installed-tanstack-package",
+        "feature-task"
+      ],
+      "produces": [
+        "version-matched-skill-guidance",
+        "task-to-skill-map"
+      ],
+      "handoff_to": [
+        "unified-web-engineering",
+        "implementation"
+      ],
+      "selection_rule": "Use when adopting TanStack packages that publish Intent skills. Review generated permissions and guidance diffs before committing; do not run the moving @latest CLI blindly in CI.",
+      "cost_boundary": "MIT-licensed open-source CLI; requires Node.js and compatible coding agent; no hosted AI service included."
+    },
+    {
+      "id": "lighthouse-ci",
+      "name": "Lighthouse CI",
+      "organ": "continuous-web-performance-regression",
+      "kind": "ci-performance-tool",
+      "repo_url": "https://github.com/GoogleChrome/lighthouse-ci",
+      "activation": "deployed-preview-or-local-build",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-and-runnable-site",
+      "responsibility": "Run repeatable Lighthouse audits against built pages, compare performance budgets and report regressions in CI.",
+      "consumes": [
+        "built-preview-url",
+        "lighthouse-config",
+        "performance-budgets"
+      ],
+      "produces": [
+        "lighthouse-ci-report",
+        "performance-regression-results"
+      ],
+      "handoff_to": [
+        "implementation",
+        "github-ci",
+        "orchestrator"
+      ],
+      "selection_rule": "Prefer when the app has repeatable builds and preview targets. The existing manual Lighthouse workflow is sufficient before an application scaffold exists; do not add a hosted LHCI server unless infrastructure is explicitly approved.",
+      "cost_boundary": "Open-source Lighthouse CI project; local/GitHub-hosted runner possible, but any persistent server/hosting has separate cost."
+    },
+    {
+      "id": "pa11y-ci",
+      "name": "Pa11y CI",
+      "organ": "continuous-accessibility-regression",
+      "kind": "ci-accessibility-tool",
+      "repo_url": "https://github.com/pa11y/pa11y-ci",
+      "activation": "multi-page-preview-or-sitemap",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-and-runnable-site",
+      "responsibility": "Run accessibility checks across a configured list of URLs or sitemap within CI, optionally using axe and HTML_CodeSniffer runners.",
+      "consumes": [
+        "preview-url-or-sitemap",
+        "a11y-policy",
+        "safe-test-scope"
+      ],
+      "produces": [
+        "multi-page-accessibility-report",
+        "ci-accessibility-gate"
+      ],
+      "handoff_to": [
+        "axe-core",
+        "implementation",
+        "github-ci"
+      ],
+      "selection_rule": "Use when a site contains several routes and needs a CI accessibility gate. Existing manual Pa11y URL audit may be enough for a single-page site; retain manual keyboard and assistive-technology testing.",
+      "cost_boundary": "LGPL-3.0-only open-source tool; requires Node.js and a browser. No paid cloud service required."
+    },
+    {
+      "id": "payload-cms",
+      "name": "Payload CMS",
+      "organ": "content-backend-and-admin",
+      "kind": "headless-cms-and-nextjs-backend",
+      "repo_url": "https://github.com/payloadcms/payload",
+      "activation": "structured-content-management-requirement",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-nextjs-and-database-hosting",
+      "responsibility": "Provide an open-source Next.js-native headless CMS with typed collections, an admin panel, APIs, access control and backend functions.",
+      "consumes": [
+        "content-model",
+        "editorial-workflow",
+        "auth-and-access-policy",
+        "deployment-plan"
+      ],
+      "produces": [
+        "cms-schema",
+        "admin-panel",
+        "content-api"
+      ],
+      "handoff_to": [
+        "implementation",
+        "astro-or-nextjs-evaluation",
+        "security-review"
+      ],
+      "selection_rule": "Use when editors need structured content and an integrated Next.js backend. Not appropriate for a simple static site; choose one CMS/backend rather than layering it on Supabase/Appwrite without a documented separation.",
+      "cost_boundary": "MIT-licensed source; self-hosting needs a compatible Node/Next.js host and database. Free hosting is not guaranteed."
+    },
+    {
+      "id": "cspell",
+      "name": "CSpell",
+      "organ": "documentation-and-content-quality",
+      "kind": "spell-checker",
+      "repo_url": "https://github.com/streetsidesoftware/cspell",
+      "activation": "documentation-or-content-volume",
+      "repo_state": "reviewed-candidate-not-installed",
+      "client_state": "requires-node-or-compatible-ci-runtime",
+      "responsibility": "Check spelling in code, Markdown, docs and configuration while supporting project-specific dictionaries and terminology.",
+      "consumes": [
+        "source-and-documentation-files",
+        "project-dictionary"
+      ],
+      "produces": [
+        "spelling-diagnostics",
+        "dictionary-updates"
+      ],
+      "handoff_to": [
+        "implementation",
+        "github-ci",
+        "docs-review"
+      ],
+      "selection_rule": "Use when documentation/content volume justifies spell checking. Keep technical names in a checked-in dictionary rather than disabling broad rules.",
+      "cost_boundary": "Open-source spell checker; current major releases have Node.js requirements. Check release support before installing."
     }
-  ]
+  ],
+  "research_date": "2026-11-03",
+  "coverage_note": "Curated public GitHub scan, not an exhaustive enumeration of all GitHub repositories. Candidates are not automatically installed or connected. Each entry distinguishes repository review from active client/runtime availability.",
+  "selection_policy": "Use capability-triggered selection, not tool accumulation. Verify current releases, component/package license, third-party notices, dependencies, permissions, client compatibility and actual cost boundary before activating a candidate.",
+  "core_tool_count": 15,
+  "reviewed_candidate_count": 45,
+  "total_tool_records": 60,
+  "candidate_status_policy": "Every reviewed-candidate record has repo_url, activation, selection_rule and cost_boundary. Candidate records are not considered installed, connected or active."
 }

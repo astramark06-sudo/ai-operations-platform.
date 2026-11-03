@@ -170,3 +170,75 @@ Once the scaffold exists:
 3. Copy/install public React Bits components selectively.
 4. Add Motion and/or GSAP only where required.
 5. Export Haikei SVG assets and commit them to the project.
+
+## 8. Expanded ecosystem: choose specialists by need
+
+The repository's [expanded ecosystem catalogue](references/EXPANDED-WEB-TOOL-ECOSYSTEM.md) and [60-entry tool registry](contracts/toolchain.registry.json) cover more than the original design/motion stack. The 45 additional projects are reviewed candidates, not automatically installed dependencies. Read the catalogue before adding any of them.
+
+### Skills and agent capabilities
+
+- [Emil Kowalski skills](https://github.com/emilkowalski/skills): build/review/audit motion with a high craft bar. Install only the specific skill needed.
+- [UX Skills](https://github.com/Tranz007/ux-skills): challenge assumptions, preserve user evidence and produce engineering-ready UX decisions.
+- [Frontend AI Skills](https://github.com/JustineBijuPaul/frontend-ai-skills): broad specialist-skill discovery pool. Do not install the entire 70+ skill collection.
+
+These add methods and guidance. They do not install the frontend runtime packages they describe, and they must not create competing design-token systems.
+
+### Browser, component and accessibility capabilities
+
+- [Microsoft Playwright MCP](https://github.com/microsoft/playwright-mcp): agent-driven browser exploration using accessibility snapshots. Optional local MCP; Node.js and browser runtime required.
+- [Chrome DevTools MCP](https://github.com/ChromeDevTools/chrome-devtools-mcp): Chrome console, network and performance diagnostics. Optional local MCP; desktop Chrome required.
+- [Storybook](https://github.com/storybookjs/storybook): isolated component stories and component documentation; Storybook MCP addon is in the Storybook monorepo from v10.6.
+- [axe-core](https://github.com/dequelabs/axe-core): automated accessibility checks that can run inside component/browser tests. It does not replace manual accessibility review.
+
+Keep Page Agent/Playwright MCP as exploratory agents, Playwright Test as deterministic regression coverage and Chrome DevTools MCP as a diagnostics specialist.
+
+### Component and application behavior candidates
+
+Use the registry's trigger rules:
+
+- **Primitives:** Base UI, Radix UI or React Aria are alternatives/underlying primitive choices. Mantine is a complete UI-system alternative. Do not blend multiple global systems.
+- **Remote state and tables:** TanStack Query and TanStack Table.
+- **Forms and schemas:** React Hook Form and Zod.
+- **Mock APIs:** Mock Service Worker.
+- **Client state:** Zustand only when ordinary React state/context no longer fits.
+- **Charts:** Recharts only for real data-visualization needs.
+- **Icons:** choose Lucide or Tabler Icons as the main family.
+
+### Build, motion and asset capabilities
+
+- **Tests:** Vitest and React Testing Library for unit/component behavior when the app stack supports them.
+- **Motion/3D:** dotLottie Web for authored/licensed vector animations; Lenis only for a justified scroll experience; Three.js + React Three Fiber + Drei only for an explicit 3D requirement.
+- **Assets:** SVGO for SVG optimization and Sharp for raster image variants.
+- **Framework candidates:** Vite for a client-side app; Astro for content-first static/hybrid pages; Starlight for a separate documentation site. No framework is selected yet.
+
+### Security and supply chain
+
+- **Biome:** possible single formatter/linter choice; use Biome OR ESLint plus Prettier over the same files.
+- **Knip:** unused files/exports/dependencies after a package manifest exists.
+- **OSV-Scanner:** dependency advisories and optional license checks against a lockfile/SBOM.
+- **Trivy:** filesystem, container, secret, IaC, SBOM and license scans.
+- **OWASP ZAP:** dynamic security testing against explicitly authorized staging only.
+
+These supplement existing CodeQL, Gitleaks, npm audit, Strix and the manual Pa11y/Lighthouse workflows. Add scanners only to fill a named coverage gap; do not run every scanner on every commit.
+
+### Backend and analytics candidates
+
+Supabase and Appwrite are backend alternatives. Umami is an optional privacy-oriented analytics system. All are conditional on an actual product requirement. Open-source software does not pay for hosting: self-hosting requires compute, storage, backups and maintenance; managed free tiers have quotas and may require billing controls. Do not configure them until the data model, access policy and ongoing cost boundary are clear.
+
+### Activation policy
+
+- The catalogue and registry are shared references, not proof of active connections.
+- Optional MCP servers remain out of `.mcp.json` until a compatible client and desktop runtime can actually run them. ChatGPT Android cannot launch local Node.js/Chrome MCP processes from a GitHub commit.
+- No package is added to the application before a framework, feature and acceptance criteria exist.
+- At adoption time, inspect the upstream repository, current release, package-specific license, dependency tree, security posture, client compatibility and possible overage/hosting costs.
+- Add the chosen component/tool and its provenance to the feature handoff contract.
+
+### Further additions in registry 1.2.0
+
+- **TanStack Intent:** version-matched package skills when using TanStack libraries. Review generated instructions/permissions.
+- **Lighthouse CI:** automated Lighthouse budgets in CI against a real preview; do not add a persistent report server by default.
+- **Pa11y CI:** multi-route or sitemap accessibility CI when the site has several pages. Keep manual assistive-technology checks.
+- **Payload CMS:** optional Next.js-native content backend/admin for structured editorial workflows; requires hosting and a database.
+- **CSpell:** spell-check documentation and code terminology when the content volume warrants it.
+
+PocketBase is deliberately excluded from the recommended candidate list because its upstream repository was archived on October 26, 2026. A tool being open source is not enough; active maintenance and acceptable risk still matter.

@@ -31,7 +31,21 @@ Feedback from visual review, browser exploration, tests and security returns to 
 | Art direction / visual cortex | Taste | Distinctive visual direction, browser review and prioritized visual corrections | Create a competing token system |
 | Design memory / sensory input | One of Penpot, Figma or Lunacy | Authoritative frames, variables, components and assets | Treat unsynchronized files as equally authoritative |
 | Primitive skeleton | shadcn/ui | Default accessible primitives and registry workflow | Become a separate visual theme |
-| Component scouts | 21st.dev, Watermelon UI, React Bits through Manus | Search and compare candidate components and blocks | Install everything found or bypass licence review |
+| Component scouts | 21st.dev, Watermelon UI, React Bits through Manus, Motion Primitives | Search and compare candidate components and blocks | Install everything found or bypass licence review |
+| Primitive alternatives | Base UI, Radix UI, React Aria, Mantine | Fill a documented primitive/accessibility gap or deliberately select a full UI system | Mix multiple primitive foundations or global themes in one component family |
+| Component memory | Storybook + its MCP addon | Record reusable components, variants, states and implementation guidance | Replace the selected product design file |
+| Versioned skill bridge | TanStack Intent | Load package-maintained skills that match installed TanStack versions | Install unrelated or unreviewed agent instructions |
+| Continuous audits | Lighthouse CI, Pa11y CI | Check performance budgets and multi-route accessibility during CI | Treat automated scores as a complete UX or accessibility review |
+| Editorial content | Payload CMS | Supply a Next.js-native structured content backend and admin when required | Add a CMS to a static site or before hosting/database decisions |
+| Documentation quality | CSpell | Catch terminology and spelling errors across code/docs | Block work over unreviewed product names or a missing vocabulary list |
+| Browser instrumentation | Playwright MCP, Chrome DevTools MCP | Agent inspection, console/network diagnostics and performance traces | Replace deterministic tests or expose personal browser profiles |
+| Data and forms | TanStack Query/Table, React Hook Form, Zod, MSW, Zustand | Real remote data, complex forms, schemas, realistic network tests and shared client state | Add dependencies before their acceptance criteria exist |
+| Accessibility and test organs | Vitest, React Testing Library, axe-core | Unit/component tests and automated WCAG/ARIA checks | Claim automated scans prove full accessibility |
+| Visual/asset specialists | Lucide, Tabler, Recharts, SVGO, Sharp, dotLottie | Consistent icons/charts, optimized exports and authored vector animation | Mix icon/chart systems without reason or treat animation-player licence as asset licence |
+| 3D and scroll specialists | Three.js, React Three Fiber, Drei, Lenis | Explicit 3D scenes and justified scroll-led experiences | Add GPU-heavy or smooth-scroll dependencies by default |
+| Build and framework candidates | Vite, Astro, Starlight | Select a suitable app/content/docs build model | Choose a framework before requirements are defined |
+| Backend and analytics candidates | Supabase, Appwrite, Umami | Real backend or privacy-conscious product metrics | Confuse open-source software with free hosted infrastructure |
+| Code and supply-chain quality | Biome, Knip, OSV-Scanner, Trivy, OWASP ZAP | Hygiene, dead-code/dependency checks, dependency/SBOM and authorized DAST scanning | Run duplicate overlapping scanners on every change or scan unauthorized targets |
 | Motion component organ | Motion for React | React state transitions, gestures, layout and enter/exit | Co-own a DOM target with GSAP |
 | Timeline organ | GSAP | Complex timelines, scroll choreography, SVG morphs and sequencing | Replace Motion for routine React state transitions |
 | Motion tissue library | Motion Primitives | Copy-in Motion-based components where stack-compatible | Add a second motion runtime unnecessarily |
@@ -94,15 +108,24 @@ Output: token evidence, component map, asset list and unresolved questions.
 2. Search Watermelon UI and 21st.dev for alternatives and composed blocks.
 3. Search React Bits through Manus when available for expressive effects.
 4. Search Motion Primitives for Motion-based interactions that fit the selected React/Tailwind stack.
-5. Compare candidates; do not merge several implementations of the same pattern.
+5. Consider Base UI, Radix or React Aria only where the selected shadcn primitive does not fit; Mantine is a complete-system alternative, not an additive theme.
+6. Use Storybook when the project has enough reusable components to need isolated stories, variants and component documentation.
+7. Compare candidates; do not merge several implementations of the same pattern.
 
 Before adoption, inspect source, licence, third-party notices, dependencies, accessibility, responsive behavior, keyboard behavior and mobile fallback. Record the winning candidate. The 21st.dev free account currently allows two code retrievals per day; search first and retrieve only after shortlisting.
 
 Output: a reviewed component inventory, not a pile of unfiltered snippets.
 
-### Stage 4 — Implementation and motion ownership
+### Stage 4 — Implementation, state and motion ownership
 
-Implement approved tokens and components in project-owned source. Adapt imported code to the contract.
+Implement approved tokens and components in project-owned source. Adapt imported code to the contract. Select supporting libraries only when a feature needs their capability:
+
+- TanStack Query for remote/server state; TanStack Table for complex data grids.
+- React Hook Form for complex forms; Zod for runtime schemas shared across boundaries.
+- Zustand only when shared client state outgrows local React state/context.
+- Mock Service Worker for realistic network-level tests; never present mocked data as real persistence.
+- Recharts only when the product needs actual data visualization.
+- Keep simple forms, static tables, local state and hand-authored CSS dependency-free where possible.
 
 - **CSS** owns simple hover/focus and local transitions.
 - **Motion for React** owns React component state transitions, gestures, layout and presence transitions.
@@ -113,28 +136,35 @@ Implement approved tokens and components in project-owned source. Adapt imported
 
 Use Haikei only when a generated background or vector is needed. Export approved assets, optimize them and commit them under the project's asset directory with any required attribution. Do not load the Haikei editor at runtime.
 
-### Stage 6 — Browser exploration and repeatable tests
+### Stage 6 — Browser exploration, component and accessibility tests
 
-**Alibaba Page Agent** may explore the running local/staging page with natural-language actions and report interaction gaps. It is exploratory, not a deterministic assertion framework.
+**Alibaba Page Agent** or **Playwright MCP** may explore the running local/staging page with natural-language actions and report interaction gaps. Choose one for each exploration pass; neither replaces repeatable assertions.
 
-**Playwright** encodes repeatable journeys and assertions. **Taste** reviews mobile, tablet and desktop visuals. The orchestrator converts accepted findings into explicit implementation tasks.
+**Chrome DevTools MCP** is an optional browser diagnostics organ for console/network/performance traces. Use isolated browser profiles; it can inspect the full browser context.
+
+**Storybook** provides isolated component stories and state/variant references once the component system warrants it. The Storybook MCP addon exposes those component facts to compatible agents.
+
+**Playwright** encodes repeatable journeys and assertions. **Vitest + React Testing Library** cover unit and component behavior where a React/Vite stack is chosen. **axe-core** can run inside tests for automated accessibility regression checks; retain manual keyboard and assistive-technology review. **Taste** reviews mobile, tablet and desktop visuals. The orchestrator converts accepted findings into explicit implementation tasks.
 
 ### Stage 7 — Security and release gates
 
 **Strix** runs only after the repository or staging target exists and scope is explicitly authorized. Prefer local Ollama plus Docker; collect evidence, fix verified findings and retest. Do not run it in cloud CI or introduce hosted paid inference.
 
-GitHub CI remains the release gate: repository validation, Markdown lint, secret scanning, CodeQL when source exists, Playwright when the app exists, accessibility and Lighthouse audits against an authorized public HTTPS deployment. A skipped application test is not a passing application test.
+GitHub CI remains the release gate: repository validation, Markdown lint, secret scanning, CodeQL when source exists, Playwright when the app exists, accessibility and Lighthouse audits against an authorized public HTTPS deployment. For multi-route apps, Pa11y CI can scan a fixed URL list or sitemap; Lighthouse CI can enforce repeatable performance budgets. CSpell can check documentation terminology. These are candidates, not added workflow jobs yet. Consider OSV-Scanner for dependency advisories, Trivy for SBOM/container/filesystem/license coverage, and OWASP ZAP for an explicitly authorized staging DAST pass. Keep scanners complementary and scoped. A skipped application test is not a passing application test.
 
 ## 6. Conflict-resolution rules
 
 1. **Design source beats library defaults.** Project tokens and the selected design file outrank imported colors, spacing and typography.
-2. **shadcn is the primitive baseline.** Other libraries provide selective enhancements, not competing primitives or a second theme.
+2. **shadcn is the current primitive baseline.** Base UI, Radix and React Aria are alternative/underlying primitive choices; Mantine is a complete-system alternative. Select one foundation per component family and do not create parallel global themes.
 3. **One animation owner per target.** CSS, Motion and GSAP cannot compete for the same target/properties.
 4. **Do not duplicate Motion under two package names.** Motion for React was previously Framer Motion. For a new app, use package motion and imports from motion/react. Use legacy framer-motion only if a selected dependency requires it; do not add both without a documented compatibility reason.
 5. **Source ownership and licence are mandatory.** No paid/pro-only assets or components. Verify current component-specific licence and notices before copying source.
 6. **Real operation beats decorative feedback.** Upload progress, payment success, deletion and form submission must be driven by actual state/API results.
 7. **Exploration is not proof.** Page Agent and Taste can find issues; Playwright and CI provide repeatable checks.
-8. **Security is scoped.** Strix must never target an unapproved system.
+8. **Security is scoped.** Strix, ZAP, Trivy and other scanners must never target an unapproved system.
+9. **One icon and chart convention per product.** Choose Lucide or Tabler, and choose one charting library for each visualization layer.
+10. **No duplicate quality tools.** Choose Biome or ESLint plus Prettier for overlapping formatting/linting responsibilities.
+11. **Open source is not free infrastructure.** Supabase, Appwrite and Umami self-hosting requires compute and maintenance; managed free tiers have quotas. Do not activate without an explicit data/backend need and cost boundary.
 
 ## 7. Client and machine boundaries
 
@@ -175,4 +205,6 @@ A feature is synchronized only when:
 - [Haikei free exports](https://haikei.app/pricing/)
 - [Alibaba Page Agent](https://github.com/alibaba/page-agent)
 - [Strix open-source security agent](https://www.strix.ai/open-source-pentesting)
+- [Expanded web tool ecosystem catalogue](../references/EXPANDED-WEB-TOOL-ECOSYSTEM.md)
+- [Machine-readable tool registry](../contracts/toolchain.registry.json)
 - [Code and Chill UI playbook](../references/CODE-AND-CHILL-UI-PLAYBOOK.md)
